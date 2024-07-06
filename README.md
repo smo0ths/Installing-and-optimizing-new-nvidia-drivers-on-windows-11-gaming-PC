@@ -37,7 +37,7 @@ install driver (as admin)
 NVIDIA Control Panel:
 Adjust image settings with preview > Use my preference emphasizing > Performance > Apply
 Use the advanced 3D image settings > Apply
-Manage 3D settings > Global Settings > Anisotropic filtering > Appplication-controlled or off/8x/16x
+Manage 3D settings > Global Settings > Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
 Manage 3D settings > Global Settings > Low Latency Mode > Ultra
 Manage 3D settings > Global Settings > Power management mode > Prefer maximum performance
 Manage 3D settings > Global Settings > Preferred refresh rate > Highest available
