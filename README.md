@@ -102,11 +102,11 @@ HDR how to:
 
 1. download MicrosoftCorporationII.WindowsHDRCalibration_1.0.152.0_neutral_~_8wekyb3d8bbwe.Msixbundle or whatever is latest
 
-2. calibrate
+2. turn monitor on HDR mode
 
-3. turn monitor on HDR mode
+3. turn on HDR in windows
 
-4. turn on HDR in windows
+4. calibrate
 
 ///
 
