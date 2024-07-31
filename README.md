@@ -89,7 +89,7 @@ Optimizations for windowed games On
 ### Extra
 
 ```python
-Add resolutions 3328x1872 3.25K is mint for people who cant yet push 4k on 4k monitors
+Add resolutions 3328x1872 3.25K is mint for people who cant yet push 4k
 
 ///
 
