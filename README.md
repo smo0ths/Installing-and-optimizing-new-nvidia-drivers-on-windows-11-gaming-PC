@@ -49,7 +49,6 @@ Configure Surround, PhysX > set PhysX to GPU
 Change resolution > set resolutions and refresh rates
 Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
 Adjust desktop color settings > Digital vibrance 100% (all monitors) (this can reset after changing settings so make sure you check it)
-Set up G-SYNC > Enable settings for the selected display model (turn monitor off and on for windows to figure it out) (or turn off and disable in monitor OSD)
 Adjust video color settings > With the NVIDIA settings > Color 100% saturation > Advanced Full dynamic range (all monitors)
 ```
 
@@ -59,9 +58,6 @@ Adjust video color settings > With the NVIDIA settings > Color 100% saturation >
 nvidiaProfileInspector (as admin):
 Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow)
 CUDA - Force P2 State off or on (test per-game)
-rBAR Enabled (test per-game)
-rBAR Options set (test per-game)
-rBAR Size Limit set (test per-game)
 Apply
 ```
 
@@ -70,7 +66,6 @@ Apply
 ```python
 System > Display > Graphics > Default graphics settings:
 Hardware-accelerated GPU scheduling On
-Variable refresh rate On or off
 Optimizations for windowed games On
 ```
 
@@ -89,6 +84,22 @@ Optimizations for windowed games On
 ### Extra
 
 ```python
+rBAR in nvidiaProfileInspector (as admin):
+rBAR Enabled (rebar can cause games to stutter/lag randomly) (test per-game)
+rBAR Options set (test per-game)
+rBAR Size Limit set (test per-game)
+
+///
+
+VRR/FreeSync/GSYNC/AdaptiveSync is for lower fps consistancy games without animated fps logic built into physics ect. 
+to make them seem more fluid and even more at lower consistant fps with LFC. Off and high fps/refresh rates are better for lantency.
+NVIDIA Control Panel:
+Set up G-SYNC > Enable settings for the selected display model (turn monitor off and on for windows to figure it out) (or turn off and disable in monitor OSD)
+System > Display > Graphics > Default graphics settings:
+Variable refresh rate On or off
+
+///
+
 Add resolutions 3328x1872 3.25K is mint for people who cant yet push 4k
 
 ///
