@@ -112,7 +112,7 @@ rBAR Size Limit set (test per-game)
 
 🟩
 
-VRR/FreeSync/G-Sync/AdaptiveSync is for LFC (Low Framerate Compensation) and could be easier on the eyes Off for lower lantency (on can break fps based logic games also can flicker on some OLEDs)
+VRR (FreeSync/G-Sync/AdaptiveSync) could be easier on the eyes and the VRR with LFC (Low Framerate Compensation) could make games feel smoother. Set Off for lowest lantency.
 NVIDIA Control Panel:
 Set up G-SYNC > Enable settings for the selected display model (turn monitor off and on for windows to figure it out) (or turn off and disable in monitor OSD)
 System > Display > Graphics > Default graphics settings:
