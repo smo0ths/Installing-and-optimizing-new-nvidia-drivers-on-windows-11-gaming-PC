@@ -1,4 +1,5 @@
 ### Installing and optimizing new nvidia drivers on windows 11 gaming PC:
+#### more to come here i'm going to try to explained all the things like obs/audio/monitors :)
 
 ---
 
@@ -18,7 +19,8 @@ build package
 
 ---
 
-#### Reset GPU overclock and disable start with windows/apply at startup (MSI Afterburner)
+#### Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/Fan Control/ect)
+#### Disable internet
 
 ---
 
@@ -49,7 +51,8 @@ Configure Surround, PhysX > set PhysX to GPU
 Change resolution > set resolutions and refresh rates
 Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
 Adjust desktop color settings > Digital vibrance 100% (all monitors)
-Adjust video color settings > With the NVIDIA settings > Color 100% saturation > Advanced Full dynamic range (all monitors)
+Adjust desktop size and position > set Full-screen for all monitors (fixes HDR 1-3 second flicker after hours of gaming)
+Adjust video color settings > With the NVIDIA settings > Advanced > Dynamic range Full 0-255 (all monitors)
 ```
 
 ---
@@ -62,21 +65,20 @@ Optimizations for windowed games > On
 
 ---
 
-#### Enable GPU overclock User define fan control and check start with windows (MSI Afterburner)
-
-#### Set fan control to 40c 70% and 80c 100% (if its too loud turn down a bit but over nvidia defaults is better they are fans, stay cool and high clocked)
-
----
-
-### reboot
-
-### when changing settings things could need to be reapplied make sure you check everything before gaming
+#### Enable GPU overclock/Fans/Auto-startups (Afterburner/Fan Control/ect)
+#### Set fan control to 40c-60% and 80c-100% (Just stay above nvidia defaults and turn down if too loud)
 
 ---
+
+#### reboot
+#### when changing settings things could need to be reapplied make sure you check everything before gaming
+#### Enable internet
+
+---
 ---
 ---
 
-### Extra
+#### Extra
 
 ```python
 🟩
