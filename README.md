@@ -1,5 +1,5 @@
 ### Installing and optimizing new nvidia drivers on windows 11 gaming PC:
-#### more to come here i'm going to try to explained all the things like obs/audio/monitors :)
+#### more to come here i'm going to try to explain all the things like obs/audio/monitors :)
 
 ---
 
