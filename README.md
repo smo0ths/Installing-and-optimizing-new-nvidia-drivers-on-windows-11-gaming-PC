@@ -39,7 +39,7 @@ NVIDIA Control Panel:
 Adjust image settings with preview > Use my preference emphasizing > Performance > Apply
 Use the advanced 3D image settings > Apply
 Manage 3D settings > Global Settings > Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
-Manage 3D settings > Global Settings > Low Latency Mode > Ultra
+Manage 3D settings > Global Settings > Low Latency Mode > Ultra (Anything but a DX12 game uses this, off will show you more frames at cost of latency)
 Manage 3D settings > Global Settings > Power management mode > Prefer maximum performance
 Manage 3D settings > Global Settings > Preferred refresh rate > Highest available
 Manage 3D settings > Global Settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
@@ -103,6 +103,12 @@ CUDA - Force P2 State off or on (test per-game)
 
 🟩
 
+FPS cap (for keeping under max VRR or using LFC and keeping thermals and utilization down)
+Manage 3D settings > Global Settings > Max Frame Rate
+Manage 3D settings > Global Settings > Background Application Max Frame Rate
+
+🟩
+
 ReBAR:
 Enable above 4g and rebar in your bios (if its supported)
 rBAR in nvidiaProfileInspector (as admin):
@@ -120,7 +126,9 @@ Variable refresh rate On or off
 
 🟩
 
-Add resolutions 3328x1872 3.25K is mint for people who cant yet push 4k
+Custom resolutions:
+Change resolution > Customize... (can only do is DP1.2 cause nvidia sleeping)
+Add resolutions 3328x1872 (3.25K) is mint for people who cant yet push 4k
 
 🟩
 
