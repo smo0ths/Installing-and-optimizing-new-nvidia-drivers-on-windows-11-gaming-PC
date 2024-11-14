@@ -127,7 +127,7 @@ Variable refresh rate On or off
 🟩
 
 Custom resolutions:
-Change resolution > Customize... (can only do is DP1.2 cause nvidia sleeping)
+Change resolution > Customize... (can only do this in DP1.2 cause nvidia sleeping)
 Add resolutions 3328x1872 (3.25K) is mint for people who cant yet push 4k
 
 🟩
