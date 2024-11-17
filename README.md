@@ -51,7 +51,6 @@ Configure Surround, PhysX > set PhysX to GPU
 Change resolution > set resolutions and refresh rates
 Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
 Adjust desktop color settings > Digital vibrance 100% (all monitors)
-Adjust desktop size and position > set Full-screen for all monitors (fixes HDR 1-3 second flicker after hours of gaming)
 Adjust video color settings > With the NVIDIA settings > Advanced > Dynamic range Full 0-255 (all monitors)
 ```
 
@@ -66,7 +65,7 @@ Optimizations for windowed games > On
 ---
 
 #### Enable GPU overclock/Fans/Auto-startups (Afterburner/Fan Control/ect)
-#### Set fan control to 40c-60% and 80c-100% (Just stay above nvidia defaults and turn down if too loud)
+#### Set fan control to 60c-60% and 80c-100% (Just stay above nvidia defaults and turn down if too loud)
 
 ---
 
@@ -127,7 +126,7 @@ Variable refresh rate On or off
 🟩
 
 Custom resolutions:
-Change resolution > Customize... (can only do this in DP1.2 cause nvidia sleeping)
+Change resolution > Customize... (might have to lower a DP1.4 to DP1.2 and/or turn off DSC(Display Stream Compression) to get the button to work)
 Add resolutions 3328x1872 (3.25K) is mint for people who cant yet push 4k
 
 🟩
