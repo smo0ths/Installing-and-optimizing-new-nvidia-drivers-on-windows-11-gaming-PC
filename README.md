@@ -39,7 +39,7 @@ NVIDIA Control Panel:
 Adjust image settings with preview > Use my preference emphasizing > Performance > Apply
 Use the advanced 3D image settings > Apply
 Manage 3D settings > Global Settings > Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
-Manage 3D settings > Global Settings > Low Latency Mode > Ultra (Anything but a DX12 game uses this, off will show you more frames at cost of latency)
+Manage 3D settings > Global Settings > Low Latency Mode > On (DX12/Vulkan can -40fps and break framegen when set to ultra, set off or on)
 Manage 3D settings > Global Settings > Power management mode > Prefer maximum performance
 Manage 3D settings > Global Settings > Preferred refresh rate > Highest available
 Manage 3D settings > Global Settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
@@ -86,6 +86,7 @@ Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering (this is for
 nvidiaProfileInspector (as admin):
 set Maximum Pre-Rendered Frames to 1 for best latency (should be default), Nvidia Reflex/Low Latency Mode on On+Boost/Ultra should override this in most games
 Old school default was 3, 2 or more could give you more fps at cost of latency on lower end systems
+setting low latency mod to Ultra can break shit
 
 🟩
 
