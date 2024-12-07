@@ -86,7 +86,7 @@ Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering (this is for
 nvidiaProfileInspector (as admin):
 set Maximum Pre-Rendered Frames to 1 for best latency (should be default), Nvidia Reflex/Low Latency Mode on On+Boost/Ultra should override this in most games
 Old school default was 3, 2 or more could give you more fps at cost of latency on lower end systems
-setting low latency mod to Ultra can break shit
+setting low latency mode to Ultra can break shit
 
 🟩
 
