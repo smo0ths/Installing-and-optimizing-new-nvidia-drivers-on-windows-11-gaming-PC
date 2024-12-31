@@ -1,13 +1,13 @@
 ### Installing and optimizing new nvidia drivers on windows 11 gaming PC:
-#### more to come here i'm going to try to explain all the things like obs/audio/monitors :)
+#### more to come
 
 ---
 
 ```python
-NVCleanstall:
+run NVCleanstall.exe:
 download driver
 use driver files on disk
-check PhysX, Microsoft Visual C 2017 Runtimes and NV container
+check PhysX, Microsoft Visual C 2017 Runtimes and just NvApp checkbox (was NV container)
 disable installer telemetry & advertising
 perform clean install
 disable MPO
@@ -19,8 +19,8 @@ build package
 
 ---
 
-#### Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/Fan Control/ect)
-#### Disable internet
+#### Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/ect)
+#### Disable internet (win+r ncpa.cpl)
 
 ---
 
@@ -29,7 +29,7 @@ press ⊞ Win+R > type msconfig > boot > safe boot
 reboot
 press ⊞ Win+R > type msconfig > boot > safe boot > uncheck > exit without restarting*
 run DDU uninstall (as admin) > options > remove physX > Clean and restart
-install driver (as admin)
+install driver (as admin, just Driver w/o app/custom/clean install)
 ```
 
 ---
@@ -39,7 +39,7 @@ NVIDIA Control Panel:
 Adjust image settings with preview > Use my preference emphasizing > Performance > Apply
 Use the advanced 3D image settings > Apply
 Manage 3D settings > Global Settings > Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
-Manage 3D settings > Global Settings > Low Latency Mode > On (DX12/Vulkan can -40fps and break framegen when set to ultra, set off or on)
+Manage 3D settings > Global Settings > Low Latency Mode > On (Ultra low latency mode can cause games to lag test)
 Manage 3D settings > Global Settings > Power management mode > Prefer maximum performance
 Manage 3D settings > Global Settings > Preferred refresh rate > Highest available
 Manage 3D settings > Global Settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
@@ -64,8 +64,7 @@ Optimizations for windowed games > On
 
 ---
 
-#### Enable GPU overclock/Fans/Auto-startups (Afterburner/Fan Control/ect)
-#### Set fan control to 60c-60% and 80c-100% (Just stay above nvidia defaults and turn down if too loud)
+#### Enable GPU overclock/Set fans higher than defaults/Auto-startups (Afterburner/ect)
 
 ---
 
@@ -86,7 +85,7 @@ Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering (this is for
 nvidiaProfileInspector (as admin):
 set Maximum Pre-Rendered Frames to 1 for best latency (should be default), Nvidia Reflex/Low Latency Mode on On+Boost/Ultra should override this in most games
 Old school default was 3, 2 or more could give you more fps at cost of latency on lower end systems
-setting low latency mode to Ultra can break shit
+Ultra low latency mode can cause games to lag test
 
 🟩
 
