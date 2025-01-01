@@ -60,6 +60,7 @@ Adjust video color settings > With the NVIDIA settings > Advanced > Dynamic rang
 System > Display > Graphics > Default graphics settings:
 Hardware-accelerated GPU scheduling > On
 Optimizations for windowed games > On
+System > Display > Color management > Automatically manage color for apps > off (24h2 broke color fix)
 ```
 
 ---
