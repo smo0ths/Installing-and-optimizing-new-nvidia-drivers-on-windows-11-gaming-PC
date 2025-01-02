@@ -20,7 +20,7 @@ build package
 ---
 
 #### Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/ect)
-#### Disable internet (win+r ncpa.cpl)
+#### Disable internet (⊞ Win+R ncpa.cpl)
 
 ---
 
@@ -132,23 +132,27 @@ Add resolutions 3328x1872 (3.25K) is mint for people who cant yet push 4k
 
 🟩
 
-set Monitor .icc/icm profile:
+Monitor .icc/icm profile:
 
-put them in here ⊞ Win+R %SystemDrive%Windows/System32/spool/drivers/color
+1. put ICC Profiles in here open ⊞ Win+R %SystemDrive%Windows/System32/spool/drivers/color
+2. open ⊞ Win+R colorcpl.exe (click add and add ICC profiles, click Add as HDR Profile for hdr icc profiles)
+3. find manufactures icc profile or search for them or buy a monitor calibration tool (or use phone) (remember calibration is subjective)
 
-open colorcpl.exe add (sRGB Color Space Profile.icm or sRGB_ICC_v4_Appearance.icc or manufacturer calibration) as default for SDR and check box add advanced color profile .icc for HDR
+Quick SDR/HDR calibration:
 
-🟩
+1. System > Display > Color profile > sRGB to Gamma2.2 (srgb_to_gamma2p2_sdr.icm) (SDR)
+2. System > Display > Color profile > SDR ACM: srgb_d50 [ srgb_to_gamma2p2.cal ] (srgb_to_gamma2p2_400_mhc2.icm) (HDR)
+3. find these on github they have a nice gamma roll from zero its not 1998 anymore microsoft
 
-HDR how to:
+Windows HDR Calibration:
 
-1. download MicrosoftCorporationII.WindowsHDRCalibration_1.0.152.0_neutral_~_8wekyb3d8bbwe.Msixbundle or whatever is latest
-
+1. download MicrosoftCorporationII.WindowsHDRCalibration_1.0.152.0_neutral_~_8wekyb3d8bbwe.Msixbundle (or newer)
 2. turn monitor on HDR mode
-
 3. turn on HDR in windows
-
 4. calibrate
+x. this has Color Saturation (just make a realtime slider for this microsoft) but old sdr gamma ramp compaired to srgb to gamma2.2)
+x. imagine having a realtime gamma slider and saturation slider so HDR would be simple after peak brightness test
+
 
 🟩
 
@@ -162,7 +166,7 @@ Enable manually with registry editor:
 Open Device Manager > right click on GPU > Properties > Events (tab) > Device id
 &&&_&&&&&&&&_&&&&&&&&&&&_&&&&&&&&&&&&_&&\&&&&&&&&&&&&&&&&& (looks like this)
 replace with your GPU device ID
-reg add "HKLM\SYSTEM\CurrentControlSet\Enum\PCI\&&&_&&&&&&&&_&&&&&&&&&&&_&&&&&&&&&&&&_&&\&&&&&&&&&&&&&&&&&\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v MSISupported /t REG_DWORD /d 1 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Enum\PCI\&&&_&&&&&&&&_&&&&&&&&&&&_&&&&&&&&&&&&_&&\&&&&&&&&&&&&&&&&&\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d 1 /f
 reboot
 ```
 
