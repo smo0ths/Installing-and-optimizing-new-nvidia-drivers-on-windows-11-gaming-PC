@@ -153,7 +153,6 @@ Windows HDR Calibration:
 x. this has Color Saturation (just make a realtime slider for this microsoft) but old sdr gamma ramp compaired to srgb to gamma2.2)
 x. imagine having a realtime gamma slider and saturation slider so HDR would be simple after peak brightness test
 
-
 🟩
 
 High Precision event timer (HPET) on or off (test i leave it on)
