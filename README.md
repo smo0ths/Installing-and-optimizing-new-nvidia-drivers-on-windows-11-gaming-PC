@@ -118,8 +118,11 @@ rBAR Size Limit set (test per-game)
 🟩
 
 VRR (FreeSync/G-Sync/AdaptiveSync) could be easier on the eyes and the VRR with LFC (Low Framerate Compensation) could make games feel smoother. Set Off for lowest lantency.
+
+Only way to tell if VRR is working is in monitor on screen display (OSD) some games might need to be changed to fullscreen and/or boarderless back and forth for VRR to actually work.
+
 NVIDIA Control Panel:
-Set up G-SYNC > Enable settings for the selected display model (turn monitor off and on for windows to figure it out) (or turn off and disable in monitor OSD)
+Set up G-SYNC > Enable settings for the selected display model (might need turn monitor on/off) (or turn off and disable in monitor OSD)
 System > Display > Graphics > Default graphics settings:
 Variable refresh rate On or off
 
