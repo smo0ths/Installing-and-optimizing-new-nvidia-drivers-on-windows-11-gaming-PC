@@ -39,14 +39,14 @@ NVIDIA Control Panel:
 Adjust image settings with preview > Use my preference emphasizing > Performance > Apply
 Use the advanced 3D image settings > Apply
 Manage 3D settings > Global Settings > Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
-Manage 3D settings > Global Settings > Low Latency Mode > On (Ultra low latency mode can cause games to lag test)
+Manage 3D settings > Global Settings > Low Latency Mode > Off (Ultra can cause lag/stutter on certain API, new API decide this for you usually)
 Manage 3D settings > Global Settings > Power management mode > Prefer maximum performance
 Manage 3D settings > Global Settings > Preferred refresh rate > Highest available
 Manage 3D settings > Global Settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
-Manage 3D settings > Global Settings > Anisotropic sample optimization > On (Off for quality)
-Manage 3D settings > Global Settings > Negative LOD bias > Clamp
-Manage 3D settings > Global Settings > Texture filtering Quality set to High performance (or Quality for quality*)
-Manage 3D settings > Global Settings > Trilinear optimization On
+Manage 3D settings > Global Settings > Anisotropic sample optimization > On (nul on High quality)
+Manage 3D settings > Global Settings > Negative LOD bias > Allow (Clamp if not scaling)
+Manage 3D settings > Global Settings > Texture filtering Quality set to High performance (or High quality)
+Manage 3D settings > Global Settings > Trilinear optimization On (nul on High quality)
 Configure Surround, PhysX > set PhysX to GPU
 Change resolution > set resolutions and refresh rates
 Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
@@ -82,11 +82,10 @@ System > Display > Color management > Automatically manage color for apps > off 
 ```python
 🟩
 
-Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering (this is for CPU)
-nvidiaProfileInspector (as admin):
-set Maximum Pre-Rendered Frames to 1 for best latency (should be default), Nvidia Reflex/Low Latency Mode on On+Boost/Ultra should override this in most games
-Old school default was 3, 2 or more could give you more fps at cost of latency on lower end systems
-Ultra low latency mode can cause games to lag test
+Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering/Nvidia Reflex On+Boost(Prefer maximum performance)/AMD Anti-Lag/ULLM
+you can change this 1 threw 8 in nvidiaProfileInspector but new stuff like reflex and frame gen play with these (i mean ai)
+Old school default was 3, 2 or more could give you more fps at cost of latency
+best bet is the use whats in the game and lowest and go up from there if its stuttering/laggy because some settings don't like some modes
 
 🟩
 
@@ -142,7 +141,7 @@ Quick SDR/HDR calibration:
 
 1. System > Display > Color profile > sRGB to Gamma2.2 (srgb_to_gamma2p2_sdr.icm) (SDR)
 2. System > Display > Color profile > SDR ACM: srgb_d50 [ srgb_to_gamma2p2.cal ] (srgb_to_gamma2p2_400_mhc2.icm) (HDR)
-3. find these on github they have a nice gamma roll from zero its not 1998 anymore microsoft
+3. find these on github they have a nice gamma roll from zero
 
 Windows HDR Calibration:
 
@@ -150,8 +149,8 @@ Windows HDR Calibration:
 2. turn monitor on HDR mode
 3. turn on HDR in windows
 4. calibrate
-x. this has Color Saturation (just make a realtime slider for this microsoft) but old sdr gamma ramp compaired to srgb to gamma2.2)
-x. imagine having a realtime gamma slider and saturation slider so HDR would be simple after peak brightness test
+
+someone make a app that does peak brightness/save profile and we can adjust gamma/saturation with sliders in real time
 
 🟩
 
