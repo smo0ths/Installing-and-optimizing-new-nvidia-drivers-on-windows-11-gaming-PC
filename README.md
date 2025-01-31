@@ -83,7 +83,7 @@ System > Display > Color management > Automatically manage color for apps > off 
 🟩
 
 NVIDIA App (install from website)
-uses ~256mb if vram when open on home screen, 100mb vram in graphics, little more ram few more exes
+uses ~256mb of vram when open on home screen, 100mb vram in graphics, little more ram few more exes
 requires "nvidia corporation\nvcontainer\nvcontainer.exe" internet telemetry to work, then you can block it
 run Autoruns and uncheck \NVIDIA app SelfUpdate_{}
 run Autoruns and uncheck nvvad_WaveExtensible (nvvad64v.sys,NVIDIA Virtual Audio Device)
