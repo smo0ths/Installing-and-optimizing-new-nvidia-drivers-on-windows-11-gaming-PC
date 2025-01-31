@@ -83,7 +83,7 @@ System > Display > Color management > Automatically manage color for apps > off 
 ```python
 🟩
 
-NVIDIA App (install from website)
+NVIDIA App (install from website) (Alt+Z)
 uses ~256mb of vram when open on home screen, 100mb vram in graphics, little more ram few more exes
 requires "nvcontainer.exe" and/or "NVIDIA app.exe" internet telemetry to work, then you can block it (restart app for it to work)
 run Autoruns and uncheck \NVIDIA app SelfUpdate_{}
@@ -91,7 +91,9 @@ run Autoruns and uncheck nvvad_WaveExtensible (nvvad64v.sys,NVIDIA Virtual Audio
 
 FrameView App for overlay (testing)
 NVIDIA Overlay.exe(s) run at higher priority
-run Autoruns and uncheck FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK)
+FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
+
+Reboots your PC when you go to play a game if you have apps running like "PresentMon_x64.exe" and maybe others
 
 🟩
 
