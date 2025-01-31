@@ -71,6 +71,7 @@ System > Display > Color management > Automatically manage color for apps > off 
 
 #### reboot
 #### Disable/Uninstall High Definition Audio Device if you dont need in sound, video and game controllers (⊞ Win+R devmgmt.msc)
+#### Block nvdisplay.container.exe
 #### Enable internet (⊞ Win+R ncpa.cpl)
 
 ---
@@ -84,7 +85,7 @@ System > Display > Color management > Automatically manage color for apps > off 
 
 NVIDIA App (install from website)
 uses ~256mb of vram when open on home screen, 100mb vram in graphics, little more ram few more exes
-requires "nvidia corporation\nvcontainer\nvcontainer.exe" internet telemetry to work, then you can block it
+requires "nvcontainer.exe" and/or "NVIDIA app.exe" internet telemetry to work, then you can block it (restart app for it to work)
 run Autoruns and uncheck \NVIDIA app SelfUpdate_{}
 run Autoruns and uncheck nvvad_WaveExtensible (nvvad64v.sys,NVIDIA Virtual Audio Device)
 
