@@ -93,7 +93,7 @@ FrameView App for overlay (testing)
 NVIDIA Overlay.exe(s) run at higher priority
 FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
 
-Reboots your PC when you go to play a game if you have apps running like "PresentMon_x64.exe" and maybe others
+Reboots your PC when you go to play a game if you have apps running like "PresentMon_x64.exe/HWiNFO64.exe" and probably others like this
 
 🟩
 
