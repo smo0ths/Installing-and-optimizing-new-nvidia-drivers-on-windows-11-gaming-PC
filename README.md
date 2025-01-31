@@ -7,7 +7,7 @@
 run NVCleanstall.exe:
 download driver
 use driver files on disk
-check PhysX, Microsoft Visual C 2017 Runtimes and just NvApp checkbox (was NV container)
+check Legacy Control Panel, Microsoft Visual C 2017 Runtimes, PhysX (for NvApp/FrameView you can install later more info below)
 disable installer telemetry & advertising
 perform clean install
 disable MPO
@@ -48,7 +48,7 @@ Manage 3D settings > Global Settings > Negative LOD bias > Allow (Clamp if not s
 Manage 3D settings > Global Settings > Texture filtering Quality set to High performance (or High quality)
 Manage 3D settings > Global Settings > Trilinear optimization On (nul on High quality)
 Configure Surround, PhysX > set PhysX to GPU
-Change resolution > set resolutions and refresh rates
+Change resolution > set resolutions and refresh rates (all monitors)
 Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
 Adjust desktop color settings > Digital vibrance 100% (all monitors)
 Adjust video color settings > With the NVIDIA settings > Advanced > Dynamic range Full 0-255 (all monitors)
@@ -70,8 +70,8 @@ System > Display > Color management > Automatically manage color for apps > off 
 ---
 
 #### reboot
-#### when changing settings things could need to be reapplied make sure you check everything before gaming
-#### Enable internet
+#### Disable/Uninstall High Definition Audio Device if you dont need in sound, video and game controllers (⊞ Win+R devmgmt.msc)
+#### Enable internet (⊞ Win+R ncpa.cpl)
 
 ---
 ---
@@ -82,10 +82,22 @@ System > Display > Color management > Automatically manage color for apps > off 
 ```python
 🟩
 
+NVIDIA App (install from website)
+uses ~256mb if vram when open on home screen, 100mb vram in graphics, little more ram few more exes
+requires "nvidia corporation\nvcontainer\nvcontainer.exe" internet telemetry to work, then you can block it
+run Autoruns and uncheck \NVIDIA app SelfUpdate_{}
+run Autoruns and uncheck nvvad_WaveExtensible (nvvad64v.sys,NVIDIA Virtual Audio Device)
+
+FrameView App for overlay (testing)
+NVIDIA Overlay.exe(s) run at higher priority
+run Autoruns and uncheck FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK)
+
+🟩
+
 Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering/Nvidia Reflex On+Boost(Prefer maximum performance)/AMD Anti-Lag/ULLM
 you can change this 1 threw 8 in nvidiaProfileInspector but new stuff like reflex and frame gen play with these (i mean ai)
 Old school default was 3, 2 or more could give you more fps at cost of latency
-best bet is the use whats in the game and lowest and go up from there if its stuttering/laggy because some settings don't like some modes
+best bet is the use whats in the game and lowest and go up from there if its stuttering/laggy because some settings/modes conflict
 
 🟩
 
@@ -152,8 +164,6 @@ Windows HDR Calibration:
 2. turn monitor on HDR mode
 3. turn on HDR in windows
 4. calibrate
-
-someone make a app that does peak brightness/save profile and we can adjust gamma/saturation with sliders in real time
 
 🟩
 
