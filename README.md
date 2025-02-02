@@ -81,6 +81,23 @@ System > Display > Color management > Automatically manage color for apps > off 
 #### Extra
 
 ```python
+🟩 HWiNFO64: 
+
+(best way to monitor PC)
+only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
+disable everything in Safety tab (main settings)
+Shrink window by removing rightmost table (arrows pointing on bottom of program)
+disable monitoring/logging everything but these (disable everything then add them in Layout tab)
+Framerate (Presented)
+GPU Temperature
+CPU Package (temp)
+GPU Core Load
+Max CPU/Thread Usage (100% on a core could be memory leak)
+GPU Memory Allocated (VRAM)
+Physical Memory Used (RAM)
+
+-------------------------------------------------------------
+
 🟩 nvidia Profile Inspector:
 
 nvidiaProfileInspector (as admin) (click magnifying glass for more options)
@@ -98,7 +115,7 @@ CUDA - Force P2 State off or on (test per-game)
 
 🟩 NVIDIA App/FrameView App:
 
-NVIDIA App (install exe) (Alt+Z) (nvidiaProfileInspector is what i will probably use exclusivly for DLSS4)
+NVIDIA App (install exe) (Alt+Z) (nvidiaProfileInspector is better)
 uses ~256mb of vram when open on home screen, 100mb vram in graphics, little more ram few more exes
 requires "nvcontainer.exe" and/or "NVIDIA app.exe" internet telemetry to work, then you can block it (restart app for it to work)
 run Autoruns and uncheck \NVIDIA app SelfUpdate_{}
@@ -106,7 +123,7 @@ run Autoruns and uncheck nvvad_WaveExtensible (nvvad64v.sys,NVIDIA Virtual Audio
 FrameView App for overlay (install exe) (testing)
 NVIDIA Overlay.exe(s) run at higher priority
 FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
-Reboots your PC when you go to play a game if you have apps running like "PresentMon_x64.exe/HWiNFO64.exe" and probably others like this
+Reboots your PC if you have other programs using "PresentMon_x64.exe"
 
 -------------------------------------------------------------
 
