@@ -20,7 +20,8 @@ build package
 ---
 
 #### Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/ect)
-#### Disable internet (⊞ Win+R ncpa.cpl)
+#### Disable internet (press ⊞ Win+R ncpa.cpl)
+#### unplug all but main monitor
 
 ---
 
@@ -29,7 +30,7 @@ press ⊞ Win+R > type msconfig > boot > safe boot
 reboot
 press ⊞ Win+R > type msconfig > boot > safe boot > uncheck > exit without restarting*
 run DDU uninstall (as admin) > options > remove physX > Clean and restart
-install driver (w/o app,custom)
+install driver
 ```
 
 ---
@@ -48,6 +49,7 @@ Manage 3D settings > Global Settings > Negative LOD bias > Allow (Clamp if not s
 Manage 3D settings > Global Settings > Texture filtering Quality set to High performance (or High quality)
 Manage 3D settings > Global Settings > Trilinear optimization On (nul on High quality)
 Configure Surround, PhysX > set PhysX to GPU
+plug in other monitors (Rotate display/Set up G-SYNC/Set up multiple displays if needed)
 Change resolution > set resolutions and refresh rates (all monitors)
 Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
 Adjust desktop color settings > Digital vibrance 100% (all monitors)
@@ -57,10 +59,17 @@ Adjust video color settings > With the NVIDIA settings > Advanced > Dynamic rang
 ---
 
 ```python
-System > Display > Graphics > Default graphics settings
-Hardware-accelerated GPU scheduling > On
+press ⊞ Win+R type "colorcpl" add and remove correct profiles
+
+System > Display > Graphics > Default settings
 Optimizations for windowed games > On
+Advanced graphics settings > Hardware-accelerated GPU scheduling > On
+Advanced graphics settings > Variable refresh rate > On (if using)
+Custom settings for applications (remove apps or make sure the games are set to high performance)
+
 System > Display > Color management > Automatically manage color for apps > off (24h2 broke color fix)
+
+turn HDR on and make sure SDR content brightness is on 80 and turn off if not using
 ```
 
 ---
@@ -70,9 +79,9 @@ System > Display > Color management > Automatically manage color for apps > off 
 ---
 
 #### reboot
-#### Disable/Uninstall High Definition Audio Device if you dont need in sound, video and game controllers (⊞ Win+R devmgmt.msc)
+#### Disable/Uninstall High Definition Audio Device if you dont need in sound, video and game controllers (press ⊞ Win+R devmgmt.msc)
 #### Block nvdisplay.container.exe
-#### Enable internet (⊞ Win+R ncpa.cpl)
+#### Enable internet (press ⊞ Win+R ncpa.cpl)
 
 ---
 ---
@@ -81,9 +90,11 @@ System > Display > Color management > Automatically manage color for apps > off 
 #### Extra
 
 ```python
-🟩 HWiNFO64: 
+🟩 HWiNFO64:
 
+*currently i think newer PresetMon code breaks nvidia 572.16 drivers and reboots pc best to turn off PresetMon support in hwinfo
 (best way to monitor PC)
+set polling period global 2000ms (general tab)
 only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
 disable everything in Safety tab (main settings)
 Shrink window by removing rightmost table (arrows pointing on bottom of program)
@@ -102,8 +113,7 @@ Physical Memory Used (RAM)
 
 nvidiaProfileInspector (as admin) (click magnifying glass for more options)
 edit _GLOBAL_DRIVER_PROFILE (Base Profile) or game name to add RR/DLSS/ect
-NVIDIA Predefined Ansel Usage - 0x00000001 ANSEL_ALLOW_DISALLOWED (test)
-Enable DLSS-FG override -
+Enable DLSS-FG override - (Enhanced FG)
 Enable DLSS-RR override -
 Enable DLSS-SR override - (DLSS4 override DLSS3) (test)
 Override DLSSG multi-frame count -
@@ -204,7 +214,7 @@ Windows HDR Calibration
 
 🟩 High Precision event timer:
 
-High Precision event timer (HPET) on or off (test i leave it on) (⊞ Win+R devmgmt.msc)
+High Precision event timer (HPET) on or off (test i leave it on) (press ⊞ Win+R devmgmt.msc)
 
 -------------------------------------------------------------
 
