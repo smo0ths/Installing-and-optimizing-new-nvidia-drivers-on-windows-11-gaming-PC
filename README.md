@@ -94,7 +94,7 @@ Override DLSS-SR presets -
 Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 CUDA - Force P2 State off or on (test per-game)
 
----
+-------------------------------------------------------------
 
 🟩 NVIDIA App/FrameView App:
 
@@ -108,7 +108,7 @@ NVIDIA Overlay.exe(s) run at higher priority
 FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
 Reboots your PC when you go to play a game if you have apps running like "PresentMon_x64.exe/HWiNFO64.exe" and probably others like this
 
----
+-------------------------------------------------------------
 
 🟩 frame latency stuff:
 
@@ -117,7 +117,7 @@ you can change this 1 threw 8 in nvidiaProfileInspector
 Old school default was 3, 2 or more could give you more fps at cost of latency
 best bet is the use whats in the game and lowest and go up from there if its stuttering/laggy because some settings/modes conflict
 
----
+-------------------------------------------------------------
 
 🟩 Windows Game Mode:
 
@@ -126,7 +126,7 @@ Settings > Gaming > Game Mode > Off
 reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AllowAutoGameMode" /t REG_DWORD /d 0 /f
 reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d 0 /f
 
----
+-------------------------------------------------------------
 
 🟩 FPS cap:
 
@@ -135,7 +135,7 @@ NVIDIA Control Panel
 Manage 3D settings > Global Settings > Max Frame Rate
 Manage 3D settings > Global Settings > Background Application Max Frame Rate
 
----
+-------------------------------------------------------------
 
 🟩 ReBAR:
 
@@ -145,7 +145,7 @@ rBAR Enabled (rebar can cause games to stutter/lag randomly) (test per-game)
 rBAR Options set (test per-game)
 rBAR Size Limit set (test per-game)
 
----
+-------------------------------------------------------------
 
 🟩 VRR:
 
@@ -156,14 +156,14 @@ Set up G-SYNC > Enable settings for the selected display model (might need turn 
 System > Display > Graphics > Default graphics settings:
 Variable refresh rate On or off
 
----
+-------------------------------------------------------------
 
 🟩 Custom resolutions:
 
 Change resolution > Customize... (might have to lower a DP1.4 to DP1.2 and/or turn off DSC(Display Stream Compression) to get the button to work)
 Add resolutions 3328x1872 (3.25K) is mint for people who cant yet push 4k
 
----
+-------------------------------------------------------------
 
 🟩 HDR/SDR profiles:
 
@@ -183,13 +183,13 @@ Windows HDR Calibration
 3. turn on HDR in windows
 4. calibrate
 
----
+-------------------------------------------------------------
 
 🟩 High Precision event timer:
 
 High Precision event timer (HPET) on or off (test i leave it on) (⊞ Win+R devmgmt.msc)
 
----
+-------------------------------------------------------------
 
 🟩 Message Signaled Interrupts:
 
