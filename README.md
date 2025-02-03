@@ -87,7 +87,7 @@ turn HDR on and make sure SDR content brightness is on 80 and turn off if not us
 ---
 ---
 
-#### Extra
+#### 🟩 Extra
 
 ```python
 
