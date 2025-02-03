@@ -234,5 +234,6 @@ GPU Core Load
 Max CPU/Thread Usage (100% on a core could be memory leak)
 GPU Memory Allocated (VRAM)
 Physical Memory Used (RAM)
+```
 
 ---
