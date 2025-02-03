@@ -90,24 +90,6 @@ turn HDR on and make sure SDR content brightness is on 80 and turn off if not us
 #### Extra
 
 ```python
-🟩 HWiNFO64:
-
-*currently i think newer PresetMon code breaks nvidia 572.16 drivers and reboots pc best to turn off PresetMon support in hwinfo
-(best way to monitor PC)
-set polling period global 2000ms (general tab)
-only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
-disable everything in Safety tab (main settings)
-Shrink window by removing rightmost table (arrows pointing on bottom of program)
-disable monitoring/logging everything but these (disable everything then add them in Layout tab)
-Framerate (Presented)
-GPU Temperature
-CPU Package (temp)
-GPU Core Load
-Max CPU/Thread Usage (100% on a core could be memory leak)
-GPU Memory Allocated (VRAM)
-Physical Memory Used (RAM)
-
--------------------------------------------------------------
 
 🟩 nvidia Profile Inspector:
 
@@ -130,7 +112,7 @@ uses ~256mb of vram when open on home screen, 100mb vram in graphics, little mor
 requires "nvcontainer.exe" and/or "NVIDIA app.exe" internet telemetry to work, then you can block it (restart app for it to work)
 run Autoruns and uncheck \NVIDIA app SelfUpdate_{}
 run Autoruns and uncheck nvvad_WaveExtensible (nvvad64v.sys,NVIDIA Virtual Audio Device)
-FrameView App for overlay (install exe) (testing)
+FrameView App for overlay (install exe) (test)
 NVIDIA Overlay.exe(s) run at higher priority
 FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
 Reboots your PC if you have other programs using "PresentMon_x64.exe"
@@ -168,7 +150,7 @@ Manage 3D settings > Global Settings > Background Application Max Frame Rate
 
 Enable above 4g and rebar in your bios (if its supported)
 rBAR in nvidiaProfileInspector (as admin)
-rBAR Enabled (rebar can cause games to stutter/lag randomly) (test per-game)
+rBAR Enabled (rebar can cause games to stutter/lag randomly/crash) (test per-game)
 rBAR Options set (test per-game)
 rBAR Size Limit set (test per-game)
 
@@ -230,5 +212,23 @@ replace with your GPU device ID
 reg add "HKLM\SYSTEM\CurrentControlSet\Enum\PCI\&&&_&&&&&&&&_&&&&&&&&&&&_&&&&&&&&&&&&_&&\&&&&&&&&&&&&&&&&&\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d 1 /f
 reboot
 ```
+
+-------------------------------------------------------------
+
+🟩 HWiNFO64:
+
+*nvidia 572.16 drivers reboot pc when gaming with HWiNFO64.exe (Afterburner should be working)
+set polling period global 2000ms (general tab)
+only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
+disable everything in Safety tab (main settings)
+Shrink window by removing rightmost table (arrows pointing on bottom of program)
+disable monitoring/logging everything but these (disable everything then add them in Layout tab)
+Framerate (Presented)
+GPU Temperature
+CPU Package (temp)
+GPU Core Load
+Max CPU/Thread Usage (100% on a core could be memory leak)
+GPU Memory Allocated (VRAM)
+Physical Memory Used (RAM)
 
 ---
