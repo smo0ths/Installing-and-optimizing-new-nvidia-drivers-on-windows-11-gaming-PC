@@ -1,5 +1,5 @@
 ### Installing and optimizing new nvidia drivers on windows 11 gaming PC:
-#### more to come
+#### check 🟩 Extra after you install for advanced info
 
 ---
 
