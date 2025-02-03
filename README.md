@@ -215,7 +215,6 @@ Open Device Manager > right click on GPU > Properties > Events (tab) > Device id
 replace with your GPU device ID
 reg add "HKLM\SYSTEM\CurrentControlSet\Enum\PCI\&&&_&&&&&&&&_&&&&&&&&&&&_&&&&&&&&&&&&_&&\&&&&&&&&&&&&&&&&&\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d 1 /f
 reboot
-```
 
 -------------------------------------------------------------
 
