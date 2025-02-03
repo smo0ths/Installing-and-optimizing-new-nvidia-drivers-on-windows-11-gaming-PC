@@ -96,8 +96,8 @@ turn HDR on and make sure SDR content brightness is on 80 and turn off if not us
 nvidiaProfileInspector (as admin) (click magnifying glass for more options)
 edit _GLOBAL_DRIVER_PROFILE (Base Profile) or game name to add RR/DLSS/ect
 Enable DLSS-FG override - (Enhanced FG)
-Enable DLSS-RR override -
-Enable DLSS-SR override - (DLSS4 override DLSS3) (test)
+Enable DLSS-RR override - (Ray Reconstruction, use if you RTX)
+Enable DLSS-SR override - (DLSS4 override DLSS3)
 Override DLSSG multi-frame count -
 Override DLSS-SR presets - 
 Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
