@@ -130,7 +130,7 @@ best bet is the use whats in the game and lowest and go up from there if its stu
 
 🟩 Windows Game Mode:
 
-(test yourself an optimized system wont benefit in my experience)
+test yourself an optimized system wont benefit in my experience
 Settings > Gaming > Game Mode > Off
 reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AllowAutoGameMode" /t REG_DWORD /d 0 /f
 reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d 0 /f
@@ -139,7 +139,9 @@ reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD 
 
 🟩 FPS cap:
 
-(for keeping under max VRR or using LFC and/or keeping thermals and utilization down) (best practice -2fps under refresh rate) (do not use with frame gen)
+for keeping under max VRR or using LFC and/or keeping thermals and utilization down
+best practice -2fps under refresh rate
+do not use with frame gen
 NVIDIA Control Panel
 Manage 3D settings > Global Settings > Max Frame Rate
 Manage 3D settings > Global Settings > Background Application Max Frame Rate
@@ -158,8 +160,10 @@ rBAR Size Limit set (test per-game)
 
 🟩 VRR:
 
-(FreeSync/G-Sync/AdaptiveSync) could be easier on the eyes and the VRR with LFC (Low Framerate Compensation) could make games feel smoother. Set Off for lowest lantency.
-Only way to tell if VRR is working is in monitor on screen display (OSD) some games might need to be changed to fullscreen and/or boarderless back and forth for VRR to actually work.
+FreeSync/G-Sync/AdaptiveSync
+could be easier on the eyes and the VRR with LFC (Low Framerate Compensation) could make games feel smoother
+Set Off for lowest lantency
+Only way to tell if VRR is working is in monitor on screen display (OSD) some games might need to be changed to fullscreen and/or boarderless back and forth for VRR to actually work
 NVIDIA Control Panel
 Set up G-SYNC > Enable settings for the selected display model (might need turn monitor on/off) (or turn off and disable in monitor OSD)
 System > Display > Graphics > Default graphics settings:
@@ -202,9 +206,9 @@ High Precision event timer (HPET) on or off (test i leave it on) (press ⊞ Win+
 
 🟩 Message Signaled Interrupts:
 
-Enable Message Signaled Interrupts with programs like NVCleanstall 
+Enable Message Signaled Interrupts with programs like NVCleanstall
 default 40 series cards drivers enable MSIs on default
-high/irqPolicySpreadMessagesAcrossAllProcessors (test)
+
 Enable manually with registry editor
 Open Device Manager > right click on GPU > Properties > Events (tab) > Device id
 &&&_&&&&&&&&_&&&&&&&&&&&_&&&&&&&&&&&&_&&\&&&&&&&&&&&&&&&&& (looks like this)
