@@ -49,7 +49,7 @@ Manage 3D settings > Global Settings > Negative LOD bias > Allow (Clamp if not s
 Manage 3D settings > Global Settings > Texture filtering Quality set to High performance (or High quality)
 Manage 3D settings > Global Settings > Trilinear optimization On (nul on High quality)
 Configure Surround, PhysX > set PhysX to GPU
-plug in other monitors (Rotate display/Set up G-SYNC/Set up multiple displays if needed)
+plug in other monitors (Rotate display/Set up G-SYNC(checkbox)/Set up multiple displays if needed)
 Change resolution > set resolutions and refresh rates (all monitors)
 Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
 Adjust desktop color settings > Digital vibrance 100% (all monitors)
@@ -162,7 +162,7 @@ rBAR Size Limit set (test per-game)
 
 FreeSync/G-Sync/AdaptiveSync
 could be easier on the eyes and the VRR with LFC (Low Framerate Compensation) could make games feel smoother
-Set Off for lowest lantency
+Set Off for lowest latency
 Only way to tell if VRR is working is in monitor on screen display (OSD) some games might need to be changed to fullscreen and/or boarderless back and forth for VRR to actually work
 NVIDIA Control Panel
 Set up G-SYNC > Enable settings for the selected display model (might need turn monitor on/off) (or turn off and disable in monitor OSD)
