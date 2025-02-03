@@ -29,7 +29,7 @@ build package
 press ⊞ Win+R > type msconfig > boot > safe boot
 reboot
 press ⊞ Win+R > type msconfig > boot > safe boot > uncheck > exit without restarting*
-run Display Driver Uninstaller.exe (DDU) > options > remove physX > Clean and restart
+run Display Driver Uninstaller.exe (DDU) > options > remove physX > Clean and restart (reboot*)
 install driver
 ```
 
