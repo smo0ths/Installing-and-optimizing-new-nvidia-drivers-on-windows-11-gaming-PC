@@ -94,12 +94,21 @@ turn HDR on and make sure SDR content brightness is on 80 and turn off if not us
 🟩 nvidia Profile Inspector:
 
 nvidiaProfileInspector (as admin) (click magnifying glass for more options)
-edit _GLOBAL_DRIVER_PROFILE (Base Profile) or game name to add RR/DLSS/ect
-Enable DLSS-FG override - (Enhanced FG)
-Enable DLSS-RR override - (Ray Reconstruction, use if you RTX)
-Enable DLSS-SR override - (DLSS4 override DLSS3)
-Override DLSSG multi-frame count -
-Override DLSS-SR presets - 
+edit _GLOBAL_DRIVER_PROFILE (Base Profile) or games name to add/edit settings (create profile)
+i guess the "override" functions change to latest DLSS4 version baked into the driver over dlss3? (test)
+Enable DLSS-FG override (Enhanced FG/lower vram usage and better)
+Enable DLSS-RR override (Ray Reconstruction/test fps/quality difference)
+Enable DLSS-SR override (DLSS4 will override DLSS3 from driver somehow test what version)
+Override DLSSG multi-frame count (50 series)
+
+to see what preset you are using type this on/off command in cmd.exe (press ⊞ Win+R cmd)
+on*
+reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 1024 /f
+off*
+reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 0 /f
+Override DLSS-RR preset (set to 0x0000000A "Preset J" is the Transformer model)
+Override DLSS-SR presets (set to 0x0000000A "Preset J" is the Transformer model)
+
 Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 CUDA - Force P2 State off or on (test per-game)
 
@@ -220,7 +229,7 @@ reboot
 
 🟩 HWiNFO64:
 
-*nvidia 572.16 drivers reboot pc when gaming with HWiNFO64.exe (Afterburner should be working)
+*nvidia 572.16 drivers reboot pc when gaming with HWiNFO64.exe (Afterburner/RTSS should be working)
 set polling period global 2000ms (general tab)
 only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
 disable everything in Safety tab (main settings)
