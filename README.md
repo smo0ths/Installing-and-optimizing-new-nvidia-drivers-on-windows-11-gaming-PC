@@ -106,8 +106,12 @@ on*
 reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 1024 /f
 off*
 reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 0 /f
-Override DLSS-RR preset (set to 0x0000000A "Preset J" is the Transformer model)
-Override DLSS-SR presets (set to 0x0000000A "Preset J" is the Transformer model)
+Override DLSS-RR preset (set to 0x0000000B is "Preset K" its the transformer model preset)
+Override DLSS-SR presets (set to 0x0000000B is "Preset K" its the transformer model preset)
+(0x0000000A is "Preset J" an older version)
+
+"nvngx_dlss.dll" "nvngx_dlssd.dll" "nvngx_dlssg.dll" (can be updated manually from github "NVIDIA/DLSS" and frame gen from "NVIDIAGameWorks/Streamline" or both)
+you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
 
 Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 CUDA - Force P2 State off or on (test per-game)
