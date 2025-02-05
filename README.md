@@ -118,6 +118,39 @@ CUDA - Force P2 State off or on (test per-game)
 
 -------------------------------------------------------------
 
+🟩 HWiNFO64:
+
+set polling period global 2000ms (general tab)
+only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
+disable everything in Safety tab (main settings)
+Shrink window by removing rightmost table (arrows pointing on bottom of program)
+disable monitoring/logging everything but these (disable everything then add them in Layout tab)
+Framerate (Presented)
+GPU Temperature
+CPU Package (temp)
+GPU Core Load
+Max CPU/Thread Usage (100% on a core could be memory leak)
+GPU Memory Allocated (VRAM)
+Physical Memory Used (RAM)
+
+-------------------------------------------------------------
+
+🟩 Afterburner/RTSS:
+
+afterburner just needs enable hardware control and monitoring (general tab) for fan enable user defined software automatic fan control (fan tab)
+set fan curve (40% @40c 100% @90c @5000ms) also set your fans in pc case in bios (80% @40c 100% @60c @3000ms-5000ms)
+afterburner needs enable low-level IO driver (general tab) to monitor cpu temps
+hardware polling period 2000ms (monitoring tab)
+for fps to show in rts just check Framerate (monitoring tab)
+start with windows (general tab)
+apply overclocking at system startup (if overclocking)
+
+rtss needs enable 64-bit applications support service (general tab)
+disable plugins (plugins tab)
+framerate averaging interval 2000ms
+
+-------------------------------------------------------------
+
 🟩 NVIDIA App/FrameView App:
 
 NVIDIA App (install exe) (Alt+Z) (nvidiaProfileInspector is better)
@@ -125,10 +158,10 @@ uses ~256mb of vram when open on home screen, 100mb vram in graphics, little mor
 requires "nvcontainer.exe" and/or "NVIDIA app.exe" internet telemetry to work, then you can block it (restart app for it to work)
 run Autoruns and uncheck \NVIDIA app SelfUpdate_{}
 run Autoruns and uncheck nvvad_WaveExtensible (nvvad64v.sys,NVIDIA Virtual Audio Device)
-FrameView App for overlay (install exe) (test)
+
+FrameView App for overlay (install exe) (uses modified PresentMon)
 NVIDIA Overlay.exe(s) run at higher priority
 FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
-Reboots your PC if you have other programs using "PresentMon_x64.exe"
 
 -------------------------------------------------------------
 
@@ -198,16 +231,16 @@ Monitor .icc/icm profile
 2. open ⊞ Win+R colorcpl.exe (click add and add ICC profiles, click Add as HDR Profile for hdr icc profiles)
 3. find manufactures icc profile or search for them or buy a monitor calibration tool (or use phone) (remember calibration is subjective)
 
-Quick SDR/HDR calibration
-1. System > Display > Color profile > sRGB to Gamma2.2 (srgb_to_gamma2p2_sdr.icm) (SDR)
-2. System > Display > Color profile > SDR ACM: srgb_d50 [ srgb_to_gamma2p2.cal ] (srgb_to_gamma2p2_400_mhc2.icm) (HDR)
-3. find these on github they have a nice gamma roll from zero
-
 Windows HDR Calibration
 1. download MicrosoftCorporationII.WindowsHDRCalibration_1.0.152.0_neutral_~_8wekyb3d8bbwe.Msixbundle (or newer)
 2. turn monitor on HDR mode
 3. turn on HDR in windows
 4. calibrate
+
+Quick SDR/HDR calibration
+1. System > Display > Color profile > sRGB to Gamma2.2 (srgb_to_gamma2p2_sdr.icm) (SDR)
+2. System > Display > Color profile > SDR ACM: srgb_d50 [ srgb_to_gamma2p2.cal ] (srgb_to_gamma2p2_400_mhc2.icm) (HDR)
+3. find these on github they have a nice gamma roll from zero
 
 -------------------------------------------------------------
 
@@ -228,24 +261,6 @@ Open Device Manager > right click on GPU > Properties > Events (tab) > Device id
 replace with your GPU device ID
 reg add "HKLM\SYSTEM\CurrentControlSet\Enum\PCI\&&&_&&&&&&&&_&&&&&&&&&&&_&&&&&&&&&&&&_&&\&&&&&&&&&&&&&&&&&\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d 1 /f
 reboot
-
--------------------------------------------------------------
-
-🟩 HWiNFO64:
-
-*nvidia 572.16 drivers reboot pc when gaming with HWiNFO64.exe (Afterburner/RTSS should be working)
-set polling period global 2000ms (general tab)
-only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
-disable everything in Safety tab (main settings)
-Shrink window by removing rightmost table (arrows pointing on bottom of program)
-disable monitoring/logging everything but these (disable everything then add them in Layout tab)
-Framerate (Presented)
-GPU Temperature
-CPU Package (temp)
-GPU Core Load
-Max CPU/Thread Usage (100% on a core could be memory leak)
-GPU Memory Allocated (VRAM)
-Physical Memory Used (RAM)
 ```
 
 ---
