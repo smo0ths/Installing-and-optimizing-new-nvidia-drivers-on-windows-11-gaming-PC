@@ -99,18 +99,16 @@ Enable DLSS-FG override (does nothing, you do it manually, nvngx_dlssg.dll) (Enh
 Enable DLSS-RR override (does nothing, you do it manually, nvngx_dlssd.dll) (Ray Reconstruction/test fps/quality difference)
 Enable DLSS-SR override (does nothing, you do it manually, nvngx_dlss.dll) (DLSS-SR/DLSS/12345679)
 Override DLSSG multi-frame count (50 series)
+Override DLSS-SR presets (set to 0x0000000B is "Preset K" its the transformer model preset) (0x0000000A is "Preset J" an older version)
+
+"nvngx_dlss.dll" "nvngx_dlssd.dll" "nvngx_dlssg.dll" (can be updated manually from github "NVIDIA/DLSS" and frame gen from "NVIDIAGameWorks/Streamline" or both)
+you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
 
 to see what preset you are using type this on/off command in cmd.exe (press ⊞ Win+R cmd)
 on*
 reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 1024 /f
 off*
 reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 0 /f
-Override DLSS-RR preset (set to 0x0000000B is "Preset K" its the transformer model preset)
-Override DLSS-SR presets (set to 0x0000000B is "Preset K" its the transformer model preset)
-(0x0000000A is "Preset J" an older version)
-
-"nvngx_dlss.dll" "nvngx_dlssd.dll" "nvngx_dlssg.dll" (can be updated manually from github "NVIDIA/DLSS" and frame gen from "NVIDIAGameWorks/Streamline" or both)
-you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
 
 in my test DLSS transformers model cost 5 fps lower but looks better at perfromance quality(1080p) to 4k(2160p) and other, can cause weird aa stuff just like any scaler
 
