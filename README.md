@@ -96,9 +96,9 @@ turn HDR on and make sure SDR content brightness is on 80 and turn off if not us
 nvidiaProfileInspector (as admin) (click magnifying glass for more options)
 edit _GLOBAL_DRIVER_PROFILE (Base Profile) or games name to add/edit settings (create profile)
 i guess the "override" functions change to latest DLSS4 version baked into the driver over dlss3? (test)
-Enable DLSS-FG override (Enhanced FG/lower vram usage and better)
-Enable DLSS-RR override (Ray Reconstruction/test fps/quality difference)
-Enable DLSS-SR override (does nothing, you do it manually)
+Enable DLSS-FG override (does nothing, you do it manually, nvngx_dlssg.dll) (Enhanced FG/lower vram usage and better)
+Enable DLSS-RR override (does nothing, you do it manually, nvngx_dlssd.dll) (Ray Reconstruction/test fps/quality difference)
+Enable DLSS-SR override (does nothing, you do it manually, nvngx_dlss.dll) (DLSS-SR/DLSS/12345679)
 Override DLSSG multi-frame count (50 series)
 
 to see what preset you are using type this on/off command in cmd.exe (press ⊞ Win+R cmd)
@@ -113,7 +113,7 @@ Override DLSS-SR presets (set to 0x0000000B is "Preset K" its the transformer mo
 "nvngx_dlss.dll" "nvngx_dlssd.dll" "nvngx_dlssg.dll" (can be updated manually from github "NVIDIA/DLSS" and frame gen from "NVIDIAGameWorks/Streamline" or both)
 you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
 
-in my test DLSS transformers model cost 5 fps lower but looks better at perfromance quality(1080p) to 4k(2160p)
+in my test DLSS transformers model cost 5 fps lower but looks better at perfromance quality(1080p) to 4k(2160p) and other, can cause weird aa stuff just like any scaler
 
 Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 CUDA - Force P2 State off or on (test per-game)
