@@ -95,7 +95,6 @@ turn HDR on and make sure SDR content brightness is on 80 and turn off if not us
 
 nvidiaProfileInspector (as admin) (click magnifying glass for more options)
 edit _GLOBAL_DRIVER_PROFILE (Base Profile) or games name to add/edit settings (create profile)
-i guess the "override" functions change to latest DLSS4 version baked into the driver over dlss3? (test)
 Enable DLSS-FG override (does nothing, you do it manually, nvngx_dlssg.dll) (Enhanced FG/lower vram usage and better)
 Enable DLSS-RR override (does nothing, you do it manually, nvngx_dlssd.dll) (Ray Reconstruction/test fps/quality difference)
 Enable DLSS-SR override (does nothing, you do it manually, nvngx_dlss.dll) (DLSS-SR/DLSS/12345679)
