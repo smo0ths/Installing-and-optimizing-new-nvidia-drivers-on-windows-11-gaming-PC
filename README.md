@@ -120,7 +120,7 @@ CUDA - Force P2 State off or on (test per-game)
 
 🟩 HWiNFO64:
 
-set polling period global 2000ms (general tab)
+set polling period global 2000ms and check only current in show columns (general tab)
 only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
 disable everything in Safety tab (main settings)
 Shrink window by removing rightmost table (arrows pointing on bottom of program)
