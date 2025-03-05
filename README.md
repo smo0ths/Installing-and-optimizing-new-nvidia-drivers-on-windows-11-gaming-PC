@@ -21,7 +21,8 @@ build package
 
 #### Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/ect)
 #### Disable internet (press ⊞ Win+R ncpa.cpl)
-#### unplug all but main monitor
+#### turn off any program running on gpu (if you want)
+#### unplug all but main monitor (if you want)
 
 ---
 
@@ -30,7 +31,7 @@ press ⊞ Win+R > type msconfig > boot > safe boot
 reboot
 press ⊞ Win+R > type msconfig > boot > safe boot > uncheck > exit without restarting*
 run Display Driver Uninstaller.exe (DDU) > options > remove physX > Clean and restart (reboot*)
-install driver
+install driver click custom (advanced)
 ```
 
 ---
@@ -44,10 +45,10 @@ Manage 3D settings > Global Settings > Low Latency Mode > Off (Ultra can cause l
 Manage 3D settings > Global Settings > Power management mode > Prefer maximum performance
 Manage 3D settings > Global Settings > Preferred refresh rate > Highest available
 Manage 3D settings > Global Settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
-Manage 3D settings > Global Settings > Anisotropic sample optimization > On (nul on High quality)
-Manage 3D settings > Global Settings > Negative LOD bias > Allow (Clamp if not scaling)
-Manage 3D settings > Global Settings > Texture filtering Quality set to High performance (or High quality)
-Manage 3D settings > Global Settings > Trilinear optimization On (nul on High quality)
+Manage 3D settings > Global Settings > Anisotropic sample optimization > On (nul on High quality)          (or leave default)
+Manage 3D settings > Global Settings > Negative LOD bias > Allow (Clamp if not scaling)                    (or leave default)
+Manage 3D settings > Global Settings > Texture filtering Quality set to High performance (or High quality) (or leave default)
+Manage 3D settings > Global Settings > Trilinear optimization > On (nul on High quality)                   (or leave default)
 Configure Surround, PhysX > set PhysX to GPU
 plug in other monitors (Rotate display/Set up G-SYNC(checkbox)/Set up multiple displays if needed)
 Change resolution > set resolutions and refresh rates (all monitors)
@@ -80,7 +81,7 @@ turn HDR on and make sure SDR content brightness is on 80 and turn off if not us
 
 #### reboot
 #### Disable/Uninstall High Definition Audio Device if you dont need in sound, video and game controllers (press ⊞ Win+R devmgmt.msc)
-#### Block nvdisplay.container.exe
+#### Block nvdisplay.container.exe and nvngx_update.exe
 #### Enable internet (press ⊞ Win+R ncpa.cpl)
 
 ---
