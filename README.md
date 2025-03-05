@@ -47,7 +47,7 @@ Manage 3D settings > Global Settings > Preferred refresh rate > Highest availabl
 Manage 3D settings > Global Settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
 Manage 3D settings > Global Settings > Anisotropic sample optimization > On (nul on High quality)          (or leave default)
 Manage 3D settings > Global Settings > Negative LOD bias > Allow (Clamp if not scaling)                    (or leave default)
-Manage 3D settings > Global Settings > Texture filtering Quality set to High performance (or High quality) (or leave default)
+Manage 3D settings > Global Settings > Texture filtering Quality > High performance (or High quality)      (or leave default)
 Manage 3D settings > Global Settings > Trilinear optimization > On (nul on High quality)                   (or leave default)
 Configure Surround, PhysX > set PhysX to GPU
 plug in other monitors (Rotate display/Set up G-SYNC(checkbox)/Set up multiple displays if needed)
