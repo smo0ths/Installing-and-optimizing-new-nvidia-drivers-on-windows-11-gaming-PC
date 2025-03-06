@@ -100,7 +100,10 @@ Enable DLSS-FG override (does nothing, you do it manually, nvngx_dlssg.dll) (Enh
 Enable DLSS-RR override (does nothing, you do it manually, nvngx_dlssd.dll) (Ray Reconstruction/test fps/quality difference)
 Enable DLSS-SR override (does nothing, you do it manually, nvngx_dlss.dll) (DLSS-SR/DLSS/12345679)
 Override DLSSG multi-frame count (50 series)
-Override DLSS-SR presets (set to 0x0000000B is "Preset K" its the transformer model preset) (0x0000000A is "Preset J" an older version)
+
+Override DLSS-SR presets
+set to 0x0000000B is "Preset K" its the transformer model preset, 0x0000000A is "Preset J" is an older version for transformer model
+set to 0x00000003 is "Preset C" best setting for DLSS3 (YMMV)
 
 "nvngx_dlss.dll" "nvngx_dlssd.dll" "nvngx_dlssg.dll" (can be updated manually from github "NVIDIA/DLSS" and frame gen from "NVIDIAGameWorks/Streamline" or both)
 you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
