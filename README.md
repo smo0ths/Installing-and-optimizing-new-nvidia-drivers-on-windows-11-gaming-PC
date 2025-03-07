@@ -233,7 +233,7 @@ System > Display > Color management > Automatically manage color for apps > off
 Only used in SDR, ACM reads the EDID and tries to clamp to sRGB if your monitor has a wide gamut
 If your monitor does not have wide gamut or is clamped to sRGB this will only make colors even less accurate (desaturate colors)
 ACM will turn itself back on when changing output color depth in NvCpl (destroying colors as it does)
-Also right click > properties > compatibility > use legacy display ICC colour management (bypasses ACM and is SDR only)
+Also right click > properties > compatibility > use legacy display ICC colour management > on a programs .exe (bypasses ACM and is SDR only)
 
 -------------------------------------------------------------
 
