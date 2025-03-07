@@ -80,7 +80,6 @@ turn HDR on and make sure SDR content brightness is on 80 and turn off if not us
 ---
 
 #### reboot
-#### Disable/Uninstall High Definition Audio Device if you dont need in sound, video and game controllers (press ⊞ Win+R devmgmt.msc)
 #### Block nvdisplay.container.exe and nvngx_update.exe
 #### Enable internet (press ⊞ Win+R ncpa.cpl)
 
