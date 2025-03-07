@@ -1,5 +1,5 @@
 ### Installing and optimizing new nvidia drivers on windows 11 gaming PC:
-#### check 🟩 Extra after you install for advanced info
+#### check 🟩 Extra after you install for advanced info [(twitch)](https://twitch.tv/smoothschannel) [(paypal support)](https://www.paypal.com/donate/?business=krtr5pj8dlata&no_recurring=0&item_name=dono&currency_code=usd) [(streamlabs support)](https://streamlabs.com/smoothschannel/tip)
 
 ---
 
@@ -68,7 +68,7 @@ Advanced graphics settings > Hardware-accelerated GPU scheduling > On
 Advanced graphics settings > Variable refresh rate > On (if using)
 Custom settings for applications (remove apps or make sure the games are set to high performance)
 
-System > Display > Color management > Automatically manage color for apps > off (24h2 broke color fix)
+System > Display > Color management > Automatically manage color for apps > off (use your monitor for color or this will destroy colors, check 🟩 for more info)
 
 turn HDR on and make sure SDR content brightness is on 80 and turn off if not using
 ```
@@ -224,6 +224,16 @@ Variable refresh rate On or off
 
 Change resolution > Customize... (might have to lower a DP1.4 to DP1.2 and/or turn off DSC(Display Stream Compression) to get the button to work)
 Add resolutions 3328x1872 (3.25K) is mint for people who cant yet push 4k
+
+-------------------------------------------------------------
+
+🟩 Automatically manage color/automatic color management (ACM)
+
+System > Display > Color management > Automatically manage color for apps > off
+Only used in SDR, ACM reads the EDID and tries to clamp to sRGB if your monitor has a wide gamut
+If your monitor does not have wide gamut or is clamped to sRGB this will only make colors even less accurate (desaturate colors)
+ACM will turn itself back on when changing output color depth in NvCpl (destroying colors as it does)
+Also right click > properties > compatibility > use legacy display ICC colour management (bypasses ACM and is SDR only)
 
 -------------------------------------------------------------
 
