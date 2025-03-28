@@ -157,7 +157,7 @@
 * rBAR Size Limit set (test per-game)
 ---
 ---
-## 🟩 VRR:
+## 🟩 VRR ect:
 * Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/ULMB2
 * could be easier on the eyes and the VRR (variable refresh rate) with LFC (Low Framerate Compensation) could make games feel smoother
 #
