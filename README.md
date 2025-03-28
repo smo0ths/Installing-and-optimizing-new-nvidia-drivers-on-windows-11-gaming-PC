@@ -143,7 +143,7 @@
 ---
 ---
 ## 🟩 FPS cap:
-* for VRR (variable refresh rate or LFC (Low Framerate Compensation) and/or keeping thermals/utilization down
+* for VRR (variable refresh rate) or LFC (Low Framerate Compensation) and/or keeping thermals/utilization down
 * 1 fps buffer caps are lowest latency use in game fps limiter first then rtss/nvidia ect
 * best practice -2fps under refresh rate
 * do not use with frame gen
