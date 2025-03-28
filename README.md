@@ -143,7 +143,7 @@
 ---
 ---
 ## 🟩 FPS cap:
-* for VRR or LFC (Low Framerate Compensation) and/or keeping thermals/utilization down
+* for VRR (variable refresh rate or LFC) (Low Framerate Compensation) and/or keeping thermals/utilization down
 * 1 fps buffer caps are lowest latency
 * best practice -2fps under refresh rate
 * do not use with frame gen
@@ -161,14 +161,13 @@
 ---
 ---
 ## 🟩 VRR:
-* FreeSync/G-Sync/AdaptiveSync/ULMB2
-* could be easier on the eyes and the VRR with LFC (Low Framerate Compensation) could make games feel smoother
+* Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/ULMB2
+* could be easier on the eyes and the VRR (variable refresh rate) with LFC (Low Framerate Compensation) could make games feel smoother
 #
-* loweset latency is
-1. reflex no fps cap
-2. reflex/syncs no fps cap (or reflex/syncs fps cap)
-3. ullm no fps cap
-4. ultra low latency mode/syncs no fps cap (ultra low latency mode fps cap (Maximum Pre-Rendered Frames 1 which is the same as low latency mode on))
+* loweset latency is this order from written
+1. reflex no fps cap                                                (or snycs no fps cap/fps cap)
+2. ultra low latency mode no fps cap                                (or snycs no fps cap/fps cap)
+3. Maximum Pre-Rendered Frames 1 (low latency mode on) no fps cap   (or snycs no fps cap/fps cap)
 #
 * blur busters recommend force on vsync in nvcpl so than when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
 * ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
