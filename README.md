@@ -158,7 +158,7 @@ FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
 
 Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering/Nvidia Reflex
 games without reflex will need low latency mode on ultra to work properly with sync modes (rarely ultra can cause stutter/lag on some API)
-if you are not using syncs/low latency mode ultra/reflex then use -2 fps frame cap of max hz and low latency mode on(Maximum Pre-Rendered Frames 1, or low latency mode off and 1 threw 8 in nvidiaProfileInspector)
+if you are not using syncs/low latency mode ultra/reflex then use -2 fps frame cap of max hz and low latency mode on(Maximum Pre-Rendered Frames 1, or low latency mode off and Maximum Pre-Rendered Frames 1 threw 8 in nvidiaProfileInspector)
 
 -------------------------------------------------------------
 
