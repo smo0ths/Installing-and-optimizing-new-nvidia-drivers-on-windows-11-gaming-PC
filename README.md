@@ -59,9 +59,7 @@
 * Enable internet (press ⊞ Win+R ncpa.cpl)
 ---
 ---
----
 ## 🟩 Extra
----
 ---
 ---
 ## 🟩 nvidia Profile Inspector:
@@ -90,6 +88,7 @@
 * Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 * CUDA - Force P2 State off or on (test per-game)
 ---
+---
 ## 🟩 HWiNFO64:
 * set polling period global 2000ms and check only current in show columns (general tab)
 * only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
@@ -104,6 +103,7 @@
 * GPU Memory Allocated (VRAM)
 * Physical Memory Used (RAM)
 ---
+---
 ## 🟩 Afterburner/RTSS:
 * afterburner just needs enable hardware control and monitoring (general tab) for fan enable user defined software automatic fan control (fan tab)
 * set fan curve (40% @40c 100% @90c @5000ms) also set your fans in pc case in bios (80% @40c 100% @60c @3000ms-5000ms)
@@ -116,6 +116,7 @@
 * disable plugins (plugins tab)
 * framerate averaging interval 2000ms
 ---
+---
 ## 🟩 NVIDIA App/FrameView App:
 * NVIDIA App (Alt+Z)
 * uses ~256mb of vram when open on home screen, 100mb vram in graphics, little more ram few more exes
@@ -127,16 +128,19 @@
 * NVIDIA Overlay.exe(s) run at higher priority
 * FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
 ---
+---
 ## 🟩 frame latency stuff:
 * Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering/Nvidia Reflex
 * games without reflex will need low latency mode on ultra to work properly with sync modes (rarely ultra can cause stutter/lag on some API)
 * if you are not using syncs/low latency mode ultra/reflex then use -2 fps frame cap of max hz and low latency mode on(Maximum Pre-Rendered Frames 1, or low latency mode off and Maximum Pre-Rendered Frames 1 threw 8 in nvidiaProfileInspector)
+---
 ---
 ## 🟩 Windows Game Mode:
 * test yourself an optimized system wont benefit in my experience
 * Settings > Gaming > Game Mode > Off
 * reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AllowAutoGameMode" /t REG_DWORD /d 0 /f
 * reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d 0 /f
+---
 ---
 ## 🟩 FPS cap:
 * for keeping under max VRR or using LFC and/or keeping thermals and utilization down
@@ -146,6 +150,7 @@
 * Manage 3D settings > Global Settings > Max Frame Rate
 * Manage 3D settings > Global Settings > Background Application Max Frame Rate
 ---
+---
 ## 🟩 ReBAR:
 * Enable above 4g and rebar in your bios (if its supported)
 * rBAR in nvidiaProfileInspector (as admin)
@@ -153,19 +158,20 @@
 * rBAR Options set (test per-game)
 * rBAR Size Limit set (test per-game)
 ---
+---
 ## 🟩 VRR:
 * FreeSync/G-Sync/AdaptiveSync
 * could be easier on the eyes and the VRR with LFC (Low Framerate Compensation) could make games feel smoother
-* Set Off for lowest latency
+* loweset latency is reflex(syncs or without syncs/with fps cap) > ullm(syncs or without syncs/with fps cap), 1 frame buffer fps caps are lowest latency
 * Only way to tell if VRR is working is in monitor on screen display (OSD) some games might need to be changed to fullscreen and/or boarderless back and forth for VRR to actually work
-* NVIDIA Control Panel
-* Set up G-SYNC > Enable settings for the selected display model (might need turn monitor on/off) (or turn off and disable in monitor OSD)
-* System > Display > Graphics > Default graphics settings:
-* Variable refresh rate On or off
+* NVIDIA Control Panel > Set up G-SYNC > Enable settings for the selected display model (might need turn monitor on/off) (or turn off and disable in monitor OSD)
+* System > Display > Graphics > Default graphics settings: Variable refresh rate On or off
+---
 ---
 ## 🟩 Custom resolutions:
 * Change resolution > Customize... (might have to lower a DP1.4 to DP1.2 and/or turn off DSC(Display Stream Compression) to get the button to work)
 * Add resolutions 3328x1872 (3.25K) is mint for people who cant yet push 4k
+---
 ---
 ## 🟩 Automatically manage color/automatic color management (ACM)
 * System > Display > Color management > Automatically manage color for apps > off
@@ -173,6 +179,7 @@
 * If your monitor does not have wide gamut or is clamped to sRGB this will only make colors even less accurate (desaturate colors)
 * ACM will turn itself back on when changing output color depth in NvCpl (destroying colors as it does)
 * Also right click > properties > compatibility > use legacy display ICC colour management > on a programs .exe (bypasses ACM and is SDR only)
+---
 ---
 ## 🟩 HDR/SDR profiles:
 * Monitor .icc/icm profile
@@ -191,8 +198,10 @@
 * System > Display > Color profile > SDR ACM: srgb_d50 [ srgb_to_gamma2p2.cal ] (srgb_to_gamma2p2_400_mhc2.icm) (HDR)
 * find these on github they have a nice gamma roll from zero
 ---
+---
 ## 🟩 High Precision event timer:
 * High Precision event timer (HPET) on or off (test i leave it on) (press ⊞ Win+R devmgmt.msc)
+---
 ---
 ## 🟩 Message Signaled Interrupts:
 * Enable Message Signaled Interrupts with programs like NVCleanstall
@@ -204,6 +213,7 @@
 * replace with your GPU device ID
 * reg add "HKLM\SYSTEM\CurrentControlSet\Enum\PCI\&&&_&&&&&&&&_&&&&&&&&&&&_&&&&&&&&&&&&_&&\&&&&&&&&&&&&&&&&&\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d 1 /f
 * reboot
+---
 ---
 ## 🟩 Adjust desktop size and position:
 * scaling mode test no scaling
