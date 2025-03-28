@@ -156,10 +156,9 @@ FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
 
 🟩 frame latency stuff:
 
-Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering/Nvidia Reflex On+Boost(Prefer maximum performance)/AMD Anti-Lag/ULLM
-best bet is the use whats in the game and lowest and go up from there if its stuttering/laggy because some settings/modes conflict
-games without reflex will need low latency mode on ultra to work properly with sync modes theoretically (ultra can cause stutter/lag on some API rarely so test)
-you can change this 1(on mode) threw 8 in nvidiaProfileInspector default in drivers say off(or 1) so api does it automatically if setup in engine (Old school default was 3, 2 or more could give you more fps at cost of latency)
+Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering/Nvidia Reflex
+games without reflex will need low latency mode on ultra to work properly with sync modes (rarely ultra can cause stutter/lag on some API)
+if you are not using syncs/low latency mode ultra/reflex then use -2 fps frame cap of max hz and low latency mode on(Maximum Pre-Rendered Frames 1, or low latency mode off and 1 threw 8 in nvidiaProfileInspector)
 
 -------------------------------------------------------------
 
