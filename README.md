@@ -1,9 +1,8 @@
 ### Installing and optimizing new nvidia drivers on windows 11 gaming PC:
 #### check 🟩 Extra after you install for advanced info [(twitch)](https://twitch.tv/smoothschannel) [(paypal support)](https://www.paypal.com/donate/?business=krtr5pj8dlata&no_recurring=0&item_name=dono&currency_code=usd) [(streamlabs support)](https://streamlabs.com/smoothschannel/tip)
 
----
-
 ```python
+#1.
 run NVCleanstall.exe
 download driver
 use driver files on disk
@@ -15,33 +14,26 @@ disable Ansel
 show expert tweaks
 disable HDCP
 build package
-```
 
----
+#2.
+Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/ect)
+Disable internet (press ⊞ Win+R ncpa.cpl)
+turn off any program running on gpu (if you want)
+unplug all but main monitor (if you want)
 
-#### Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/ect)
-#### Disable internet (press ⊞ Win+R ncpa.cpl)
-#### turn off any program running on gpu (if you want)
-#### unplug all but main monitor (if you want)
-
----
-
-```python
+#3.
 press ⊞ Win+R > type msconfig > boot > safe boot
 reboot
 press ⊞ Win+R > type msconfig > boot > safe boot > uncheck > exit without restarting*
-run Display Driver Uninstaller.exe (DDU) > options > remove physX > Clean and restart (reboot*)
+run Display Driver Uninstaller.exe (DDU) > options > remove physX > uncheck prevent downloads of drivers from "windows update" when "windows" search for a driver for a device (you are offline) > Clean and restart (reboot*)
 install driver click custom (advanced)
-```
 
----
-
-```python
+#4.
 NVIDIA Control Panel
 Adjust image settings with preview > Use my preference emphasizing > Performance > Apply
 Use the advanced 3D image settings > Apply
 Manage 3D settings > Global Settings > Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
-Manage 3D settings > Global Settings > Low Latency Mode > Off (Ultra can cause lag/stutter on certain API, new API decide this for you usually)
+Manage 3D settings > Global Settings > Low Latency Mode > Ultra (test and check 🟩 for more info)
 Manage 3D settings > Global Settings > Power management mode > Prefer maximum performance
 Manage 3D settings > Global Settings > Preferred refresh rate > Highest available
 Manage 3D settings > Global Settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
@@ -55,34 +47,29 @@ Change resolution > set resolutions and refresh rates (all monitors)
 Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
 Adjust desktop color settings > Digital vibrance 100% (all monitors)
 Adjust video color settings > With the NVIDIA settings > Advanced > Dynamic range Full 0-255 (all monitors)
-```
 
----
-
-```python
-press ⊞ Win+R type "colorcpl" add and remove correct profiles
-
+#5.
 System > Display > Graphics > Default settings
 Optimizations for windowed games > On
 Advanced graphics settings > Hardware-accelerated GPU scheduling > On
 Advanced graphics settings > Variable refresh rate > On (if using)
 Custom settings for applications (remove apps or make sure the games are set to high performance)
 
+#6.
+press ⊞ Win+R type "colorcpl" add and remove correct profiles
 System > Display > Color management > Automatically manage color for apps > off (use your monitor for color or this will destroy colors, check 🟩 for more info)
-
 turn HDR on and make sure SDR content brightness is on 80 and turn off if not using
+
+#7.
+Enable GPU overclock/Set fans higher than defaults/Auto-startups (Afterburner/ect)
+reboot
+Block nvdisplay.container.exe and nvngx_update.exe
+Enable internet (press ⊞ Win+R ncpa.cpl)
 ```
 
 ---
-
-#### Enable GPU overclock/Set fans higher than defaults/Auto-startups (Afterburner/ect)
-
 ---
-
-#### reboot
-#### Block nvdisplay.container.exe and nvngx_update.exe
-#### Enable internet (press ⊞ Win+R ncpa.cpl)
-
+---
 ---
 ---
 ---
@@ -155,13 +142,13 @@ framerate averaging interval 2000ms
 
 🟩 NVIDIA App/FrameView App:
 
-NVIDIA App (install exe) (Alt+Z) (nvidiaProfileInspector is better)
+NVIDIA App (Alt+Z)
 uses ~256mb of vram when open on home screen, 100mb vram in graphics, little more ram few more exes
 requires "nvcontainer.exe" and/or "NVIDIA app.exe" internet telemetry to work, then you can block it (restart app for it to work)
 run Autoruns and uncheck \NVIDIA app SelfUpdate_{}
 run Autoruns and uncheck nvvad_WaveExtensible (nvvad64v.sys,NVIDIA Virtual Audio Device)
 
-FrameView App for overlay (install exe) (uses modified PresentMon)
+FrameView App for overlay (uses modified PresentMon)
 NVIDIA Overlay.exe(s) run at higher priority
 FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
 
@@ -170,9 +157,9 @@ FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
 🟩 frame latency stuff:
 
 Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering/Nvidia Reflex On+Boost(Prefer maximum performance)/AMD Anti-Lag/ULLM
-you can change this 1 threw 8 in nvidiaProfileInspector
-Old school default was 3, 2 or more could give you more fps at cost of latency
 best bet is the use whats in the game and lowest and go up from there if its stuttering/laggy because some settings/modes conflict
+games without reflex will need low latency mode on ultra to work properly with sync modes theoretically (ultra can cause stutter/lag on some API rarely so test)
+you can change this 1(on mode) threw 8 in nvidiaProfileInspector default in drivers say off(or 1) so api does it automatically if setup in engine (Old school default was 3, 2 or more could give you more fps at cost of latency)
 
 -------------------------------------------------------------
 
@@ -273,6 +260,12 @@ Open Device Manager > right click on GPU > Properties > Events (tab) > Device id
 replace with your GPU device ID
 reg add "HKLM\SYSTEM\CurrentControlSet\Enum\PCI\&&&_&&&&&&&&_&&&&&&&&&&&_&&&&&&&&&&&&_&&\&&&&&&&&&&&&&&&&&\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d 1 /f
 reboot
-```
 
----
+-------------------------------------------------------------
+
+🟩 Adjust desktop size and position:
+
+scaling mode test no scaling
+perform scaling test on display or gpu
+integer scaling setup (can't use with DSC)
+```
