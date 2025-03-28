@@ -143,7 +143,8 @@
 ---
 ---
 ## 🟩 FPS cap:
-* for keeping under max VRR or using LFC and/or keeping thermals and utilization down
+* for VRR or LFC (Low Framerate Compensation) and/or keeping thermals/utilization down
+* 1 fps buffer caps are lowest latency
 * best practice -2fps under refresh rate
 * do not use with frame gen
 * NVIDIA Control Panel
@@ -160,9 +161,17 @@
 ---
 ---
 ## 🟩 VRR:
-* FreeSync/G-Sync/AdaptiveSync
+* FreeSync/G-Sync/AdaptiveSync/ULMB2
 * could be easier on the eyes and the VRR with LFC (Low Framerate Compensation) could make games feel smoother
-* loweset latency is reflex(syncs or without syncs/with fps cap) > ullm(syncs or without syncs/with fps cap), 1 frame buffer fps caps are lowest latency
+#
+* loweset latency is
+1. reflex no fps cap
+2. reflex/syncs no fps cap (or reflex/syncs fps cap)
+3. ullm no fps cap
+4. ultra low latency mode/syncs no fps cap (ultra low latency mode fps cap (Maximum Pre-Rendered Frames 1 which is the same as low latency mode on))
+#
+* blur busters recommend force on vsync in nvcpl so than when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
+* ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
 * Only way to tell if VRR is working is in monitor on screen display (OSD) some games might need to be changed to fullscreen and/or boarderless back and forth for VRR to actually work
 * NVIDIA Control Panel > Set up G-SYNC > Enable settings for the selected display model (might need turn monitor on/off) (or turn off and disable in monitor OSD)
 * System > Display > Graphics > Default graphics settings: Variable refresh rate On or off
