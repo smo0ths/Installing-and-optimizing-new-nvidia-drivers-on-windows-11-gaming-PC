@@ -4,10 +4,10 @@
 * run NVCleanstall.exe
 * download driver
 * use driver files on disk
-* check Legacy Control Panel/Microsoft Visual C 2017 Runtimes/PhysX
+* check Legacy Control Panel > Microsoft Visual C 2017 Runtimes > PhysX
 * disable installer telemetry & advertising
-* perform clean install/disable MPO/disable Ansel
-* show expert tweaks/disable HDCP
+* perform clean install > disable MPO > disable Ansel
+* show expert tweaks > disable HDCP
 * build package
 #
 * Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/ect)
@@ -40,16 +40,14 @@
 * System > Display > Graphics > Default settings
 * Optimizations for windowed games > On
 * Advanced graphics settings > Hardware-accelerated GPU scheduling > On
-* Advanced graphics settings > Variable refresh rate > On (if using)
 * Custom settings for applications (remove apps or make sure the games are set to high performance)
 #
 * press ⊞ Win+R type "colorcpl" add and remove correct profiles
 * System > Display > Color management > Automatically manage color for apps > off (use your monitor for color or this will destroy colors, check 🟩 for more info)
-* turn HDR on and make sure SDR content brightness is on 80 and turn off if not using
+* turn HDR on and make sure SDR content brightness is on 80 and turn off if not using (HDR adds latency so use for entertainment)
 #
-* Enable GPU overclock/Set fans higher than defaults/Auto-startups (Afterburner/ect)
+* Enable GPU overclock > Set fans higher than defaults > Auto-startups (Afterburner/ect)
 * reboot
-* Block nvdisplay.container.exe and nvngx_update.exe
 * Enable internet (press ⊞ Win+R ncpa.cpl)
 ---
 ---
@@ -58,6 +56,9 @@
 ---
 ## 🟩 VRR ect:
 * Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/ULMB2
+#
+* your monitor will have an option on turn it on or off
+* NVIDIA Control Panel > Set up G-SYNC > Enable settings for the selected display model (checkbox)
 #
 * loweset latency is this order from written
 1. reflex no fps cap
@@ -69,8 +70,6 @@
 * blur busters recommend force on vsync in nvcpl so than when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
 * ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
 * Only way to tell if VRR is working is in monitor on screen display (OSD) some games might need to be changed to fullscreen and/or boarderless back and forth for VRR to actually work
-* NVIDIA Control Panel > Set up G-SYNC > Enable settings for the selected display model (might need turn monitor on/off) (or turn off and disable in monitor OSD)
-* System > Display > Graphics > Default graphics settings: Variable refresh rate On or off
 ---
 ---
 ## 🟩 nvidia Profile Inspector:
