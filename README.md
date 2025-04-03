@@ -4,19 +4,14 @@
 * run NVCleanstall.exe
 * download driver
 * use driver files on disk
-* check Legacy Control Panel, Microsoft Visual C 2017 Runtimes, PhysX
+* check Legacy Control Panel/Microsoft Visual C 2017 Runtimes/PhysX
 * disable installer telemetry & advertising
-* perform clean install
-* disable MPO
-* disable Ansel
-* show expert tweaks
-* disable HDCP
+* perform clean install/disable MPO/disable Ansel
+* show expert tweaks/disable HDCP
 * build package
 #
 * Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/ect)
 * Disable internet (press ⊞ Win+R ncpa.cpl)
-* turn off any program running on gpu (if you want)
-* unplug all but main monitor (if you want)
 #
 * press ⊞ Win+R > type msconfig > boot > safe boot
 * reboot
@@ -37,7 +32,6 @@
 * Manage 3D settings > Global Settings > Texture filtering Quality > High performance (or High quality)      (or leave default)
 * Manage 3D settings > Global Settings > Trilinear optimization > On (nul on High quality)                   (or leave default)
 * Configure Surround, PhysX > set PhysX to GPU
-* plug in other monitors (Rotate display/Set up G-SYNC(checkbox)/Set up multiple displays if needed)
 * Change resolution > set resolutions and refresh rates (all monitors)
 * Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
 * Adjust desktop color settings > Digital vibrance 100% (all monitors)
@@ -64,12 +58,13 @@
 ---
 ## 🟩 VRR ect:
 * Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/ULMB2
-* could be easier on the eyes and the VRR (variable refresh rate) with LFC (Low Framerate Compensation) could make games feel smoother
 #
 * loweset latency is this order from written
-1. reflex no fps cap                                                (or snycs no fps cap/fps cap)
-2. ultra low latency mode no fps cap                                (or snycs no fps cap/fps cap)
-3. Maximum Pre-Rendered Frames 1 (low latency mode on) no fps cap   (or snycs no fps cap/fps cap)
+1. reflex no fps cap
+2. ultra low latency mode no fps cap
+3. Maximum Pre-Rendered Frames 1 (low latency mode on) no fps cap
+4. snycs/all the above with no fps cap or fps cap (gsync range)
+5. snycs/all the above with fps cap with LFC(Low Framerate Compensation)
 #
 * blur busters recommend force on vsync in nvcpl so than when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
 * ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
@@ -80,15 +75,9 @@
 ---
 ## 🟩 nvidia Profile Inspector:
 * nvidiaProfileInspector (as admin) (click magnifying glass for more options)
-* edit _GLOBAL_DRIVER_PROFILE (Base Profile) or games name to add/edit settings (create profile)
-* Enable DLSS-FG override (does nothing, you do it manually, nvngx_dlssg.dll) (Enhanced FG/lower vram usage and better)
-* Enable DLSS-RR override (does nothing, you do it manually, nvngx_dlssd.dll) (Ray Reconstruction/test fps/quality difference)
-* Enable DLSS-SR override (does nothing, you do it manually, nvngx_dlss.dll) (DLSS-SR/DLSS/12345679)
-* Override DLSSG multi-frame count (50 series)
+* search for game or edit global or add game and edit
 #
-* Override DLSS-SR presets
-* set to 0x0000000B is "Preset K" its the transformer model preset, 0x0000000A is "Preset J" is an older version for transformer model
-* set to 0x00000003 is "Preset C" best setting for DLSS3 (YMMV)
+* DLSS - Forced Preset Letter (Preset K is for DLSS4 and Preset C is for DLSS3)
 #
 * "nvngx_dlss.dll" "nvngx_dlssd.dll" "nvngx_dlssg.dll" (can be updated manually from github "NVIDIA/DLSS" and frame gen from "NVIDIAGameWorks/Streamline" or both)
 * you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
@@ -98,8 +87,6 @@
 * reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 1024 /f
 * off*
 * reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 0 /f
-#
-* in my test DLSS transformers model cost 5 fps lower but looks better at perfromance quality(1080p) to 4k(2160p) and other, can cause weird aa stuff just like any scaler
 #
 * Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 * CUDA - Force P2 State off or on (test per-game)
@@ -163,12 +150,15 @@
 * 1 fps buffer caps are lowest latency use in game fps limiter first then rtss/nvidia ect
 * best practice -2fps under refresh rate
 * do not use with frame gen
+* rtss > fraterate limit -2 under monitor max hz (or lower for stable/and/or LFC)
+* rtss > setup > enable framerate limiter > NVIDIA reflex (is ultra low latency if not used with reflex)
 ---
 ---
 ## 🟩 ReBAR:
-* Enable above 4g and rebar in your bios (if its supported)
+* Enable rebar in your bios (if its supported, it will also turn on )
 * rBAR in nvidiaProfileInspector (as admin)
 * rBAR Enabled (rebar can cause games to stutter/lag randomly/crash) (test per-game)
+* rBAR - Intel CPU Exclusion (idk)
 * rBAR Options set (test per-game)
 * rBAR Size Limit set (test per-game)
 ---
@@ -220,7 +210,8 @@
 * reboot
 ---
 ---
-## 🟩 Adjust desktop size and position:
+## 🟩 Adjust desktop size and position (nvcpl):
+* No scaling > GPU > check override the mode (test)
 * scaling mode test no scaling
-* perform scaling test on display or gpu
+* perform scaling on display or gpu (test)
 * integer scaling setup (can't use with DSC)
