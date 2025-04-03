@@ -155,7 +155,7 @@
 ---
 ---
 ## 🟩 ReBAR:
-* Enable rebar in your bios (if its supported, it will also turn on )
+* Enable rebar in your bios (if its supported)
 * rBAR in nvidiaProfileInspector (as admin)
 * rBAR Enabled (rebar can cause games to stutter/lag randomly/crash) (test per-game)
 * rBAR - Intel CPU Exclusion (idk)
