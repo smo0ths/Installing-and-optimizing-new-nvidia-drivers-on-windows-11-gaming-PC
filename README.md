@@ -67,7 +67,7 @@
 4. snycs/all the above with no fps cap or fps cap (gsync range)
 5. snycs/all the above with fps cap with LFC(Low Framerate Compensation)
 #
-* blur busters recommend force on vsync in nvcpl so than when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
+* blur busters recommend force on vsync in nvcpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
 * ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
 * Only way to tell if VRR is working is in monitor on screen display (OSD) some games might need to be changed to fullscreen and/or boarderless back and forth for VRR to actually work
 ---
