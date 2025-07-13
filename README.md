@@ -1,5 +1,5 @@
 ## Installing and optimizing new nvidia drivers on windows 11 gaming PC:
-#### check 🟩 Extra for advanced info [(twitch)](https://twitch.tv/smoothschannel)
+#### check 🟩 Extra for advanced info
 #
 * run NVCleanstall.exe
 * download driver
