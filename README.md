@@ -5,9 +5,8 @@
 * download driver
 * use driver files on disk
 * check Legacy Control Panel > Microsoft Visual C 2017 Runtimes > PhysX
-* disable installer telemetry & advertising
-* perform clean install > disable MPO > disable Ansel
-* show expert tweaks > disable HDCP
+* check disable installer telemetry & advertising > perform clean install > disable MPO > disable Ansel
+* check show expert tweaks > disable HDCP
 * build package
 #
 * Reset/disable GPU overclock/Fans/Auto-startups (Afterburner/ect)
@@ -16,35 +15,45 @@
 * press ⊞ Win+R > type msconfig > boot > safe boot
 * reboot
 * press ⊞ Win+R > type msconfig > boot > safe boot > uncheck > exit without restarting*
-* run Display Driver Uninstaller.exe (DDU) > options > remove physX > uncheck prevent downloads of drivers from "windows update" when "windows" search for a driver for a device (you are offline) > Clean and restart (reboot*)
-* install driver click custom (advanced)
+* run Display Driver Uninstaller.exe (DDU) > options > remove physX > uncheck prevent downloads of drivers... (you are offline)
+* select device type > GPU > Clean and restart (reboot*)
 #
-* open NVIDIA Control Panel
-* Adjust image settings with preview > Use my preference emphasizing > Performance > Apply
-* Use the advanced 3D image settings > Apply
-* Manage 3D settings > Global Settings > Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
-* Manage 3D settings > Global Settings > Low Latency Mode > Ultra (test and check 🟩 for more info)
-* Manage 3D settings > Global Settings > Power management mode > Prefer maximum performance
-* Manage 3D settings > Global Settings > Preferred refresh rate > Highest available
-* Manage 3D settings > Global Settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
-* Manage 3D settings > Global Settings > Anisotropic sample optimization > On (nul on High quality)          (or leave default)
-* Manage 3D settings > Global Settings > Negative LOD bias > Allow (Clamp if not scaling)                    (or leave default)
-* Manage 3D settings > Global Settings > Texture filtering Quality > High performance (or High quality)      (or leave default)
-* Manage 3D settings > Global Settings > Trilinear optimization > On (nul on High quality)                   (or leave default)
-* Configure Surround, PhysX > set PhysX to GPU
-* Change resolution > set resolutions and refresh rates (all monitors)
-* Change resolution > NVIDIA color settings set Output color depth and Full dynamic range (all monitors)
-* Adjust desktop color settings > Digital vibrance 100% (all monitors)
-* Adjust video color settings > With the NVIDIA settings > Advanced > Dynamic range Full 0-255 (all monitors)
+* install driver click custom (advanced) and next
 #
-* System > Display > Graphics > Default settings
+* open Display settings (right click) set up main display/orientations
+#
+* open NVIDIA Control Panel (right click)
+* in Adjust image settings with preview > check Use my preference emphasizing Performance > Apply
+* check Use the advanced 3D image settings > Apply
+#
+* Manage 3D settings:
+* Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
+* Low Latency Mode > Ultra (test and check 🟩 for more info)
+* Power management mode > Prefer maximum performance
+* Preferred refresh rate > Highest available
+* Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
+* Anisotropic sample optimization > On (nul on High quality)             (or leave default)
+* Negative LOD bias > Allow (Clamp if not scaling)                       (or leave default)
+* Texture filtering Quality > High performance (or quality/high quality) (or leave default)
+* Trilinear optimization > On (nul on High quality)                      (or leave default)
+#
+* Configure Surround, PhysX: set PhysX to GPU
+#
+* Change resolution: 
+* set resolutions and refresh rates (all monitors)
+* check use NVIDIA color settings set Output color depth (10bpc) and output dynamic range to full (all monitors)
+#
+* Adjust desktop color settings: Digital vibrance 100% (all monitors)
+* Adjust video color settings: With the NVIDIA settings > Advanced > Dynamic range Full 0-255 (all monitors)
+#
+* open Display settings (right click):
+* Color profile > Automatically manage color for apps > off (very important) (use your monitor for color or this will destroy colors, ACM will turn itself back on when changing output color depth in NvCpl so dont do that after, check 🟩 for more info)
 * Optimizations for windowed games > On
 * Advanced graphics settings > Hardware-accelerated GPU scheduling > On
 * Custom settings for applications (remove apps or make sure the games are set to high performance)
 #
 * press ⊞ Win+R type "colorcpl" add and remove correct profiles
-* System > Display > Color management > Automatically manage color for apps > off (use your monitor for color or this will destroy colors, check 🟩 for more info)
-* turn HDR on and make sure SDR content brightness is on 80 and turn off if not using (HDR adds latency so use for entertainment)
+* open Display settings > turn HDR on SDR content brightness should be 80 and set calibrated color profile then turn off if not using (HDR adds latency so use for entertainment)
 #
 * Enable GPU overclock > Set fans higher than defaults > Auto-startups (Afterburner/ect)
 * reboot
