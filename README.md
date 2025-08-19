@@ -202,8 +202,8 @@
 * find these on github they have a nice gamma roll from zero
 ---
 ---
-## 🟩 High Precision event timer:
-* High Precision event timer (HPET) on or off (test i leave it on) (press ⊞ Win+R devmgmt.msc)
+## 🟩 High Precision event timer/Time Stamp Counter:
+* HPET should be off, in cmd type "bcdedit /enum" "useplatformclock" should not be there win11 uses invariant TSC "bcdedit /deletevalue useplatformclock" to delete
 ---
 ---
 ## 🟩 Message Signaled Interrupts:
