@@ -26,25 +26,20 @@
 * in Adjust image settings with preview > check Use my preference emphasizing Performance > Apply
 * check Use the advanced 3D image settings > Apply
 #
-* Manage 3D settings:
-* Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
-* Low Latency Mode > Ultra (test and check 🟩 for more info)
-* Power management mode > Prefer maximum performance
-* Preferred refresh rate > Highest available
-* Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
-* Anisotropic sample optimization > On (nul on High quality)             (or leave default)
-* Negative LOD bias > Allow (Clamp if not scaling)                       (or leave default)
-* Texture filtering Quality > High performance (or quality/high quality) (or leave default)
-* Trilinear optimization > On (nul on High quality)                      (or leave default)
-#
-* Configure Surround, PhysX: set PhysX to GPU
-#
-* Change resolution: 
-* set resolutions and refresh rates (all monitors)
-* check use NVIDIA color settings set Output color depth (10bpc) and output dynamic range to full (all monitors)
-#
-* Adjust desktop color settings: Digital vibrance 100% (all monitors)
-* Adjust video color settings: With the NVIDIA settings > Advanced > Dynamic range Full 0-255 (all monitors)
+* 3D Settings > Manage 3D settings > Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
+* 3D Settings > Manage 3D settings > Low Latency Mode > Ultra (test and check 🟩 for more info)
+* 3D Settings > Manage 3D settings > Power management mode > Prefer maximum performance
+* 3D Settings > Manage 3D settings > Preferred refresh rate > Highest available
+* 3D Settings > Manage 3D settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
+* 3D Settings > Manage 3D settings > Anisotropic sample optimization > On
+* 3D Settings > Manage 3D settings > Negative LOD bias > Allow (Clamp for 0 LOD bias, 0/+ helps GPU bound, -0 used in dlss ect for image quality)
+* 3D Settings > Manage 3D settings > Texture filtering Quality > High performance (high quality if you are cpu bound)
+* 3D Settings > Manage 3D settings > Trilinear optimization > On
+* 3D Settings > Configure Surround, PhysX > set PhysX to GPU
+* Display > Change resolution > set res and hz (all monitors)
+* Display > Change resolution > check use NVIDIA color settings set BPC (8bpc or 10bpc) and output dynamic range to full (0-255 rgb) (all monitors)
+* Display > Adjust desktop color settings > Digital vibrance 100% (all monitors)
+* Video > Adjust video color settings > With the NVIDIA settings > Advanced > Dynamic range > Full (0-255) (all monitors)
 #
 * open Display settings (right click):
 * Color profile > Automatically manage color for apps > off (very important) (use your monitor for color or this will destroy colors, ACM will turn itself back on when changing output color depth in NvCpl so dont do that after, check 🟩 for more info)
