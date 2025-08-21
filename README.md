@@ -152,7 +152,7 @@
 * for VRR (variable refresh rate) or LFC (Low Framerate Compensation) and/or keeping thermals/utilization down
 * 1 fps buffer caps are lowest latency use in game fps limiter first then rtss/nvidia ect
 * best practice -2fps under refresh rate
-* do not use with frame gen
+* AI frame gens can be capped (reflex limiter or others) to lower utilizations, smooth motion seems to like no cap
 * rtss > fraterate limit -2 under monitor max hz (or lower for stable/and/or LFC)
 * rtss > setup > enable framerate limiter > NVIDIA reflex (is ultra low latency if not used with reflex)
 ---
