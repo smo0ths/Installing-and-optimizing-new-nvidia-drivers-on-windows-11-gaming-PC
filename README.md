@@ -142,6 +142,7 @@
 ---
 ---
 ## 🟩 MPO Multi-Plane Overlay:
+* on can help cpu bound ect, off can fix display problems ect, can you even disable it? idk
 * test type dxdiag save search for "MPO MaxPlanes"
 * MPO on*
 * reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /f
