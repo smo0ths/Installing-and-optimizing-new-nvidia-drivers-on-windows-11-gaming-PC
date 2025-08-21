@@ -5,7 +5,7 @@
 * download driver
 * use driver files on disk
 * check Legacy Control Panel > Microsoft Visual C 2017 Runtimes > PhysX
-* check disable installer telemetry & advertising > perform clean install > disable MPO > disable Ansel
+* check disable installer telemetry & advertising > perform clean install > MPO(check 🟩 for more info) > disable Ansel
 * check show expert tweaks > disable HDCP
 * build package
 #
@@ -139,6 +139,14 @@
 * Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering/Nvidia Reflex
 * games without reflex will need low latency mode on ultra to work properly with sync modes (rarely ultra can cause stutter/lag on some API)
 * if you are not using syncs/low latency mode ultra/reflex then use -2 fps frame cap of max hz and low latency mode on(Maximum Pre-Rendered Frames 1, or low latency mode off and Maximum Pre-Rendered Frames 1 threw 8 in nvidiaProfileInspector)
+---
+---
+## 🟩 MPO Multi-Plane Overlay:
+* test type dxdiag save search for "MPO MaxPlanes"
+* MPO on*
+* reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /f
+* MPO off*
+* reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d 5 /f
 ---
 ---
 ## 🟩 Windows Game Mode:
