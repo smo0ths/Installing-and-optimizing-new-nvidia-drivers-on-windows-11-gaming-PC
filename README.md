@@ -263,7 +263,7 @@
 * download MicrosoftCorporationII.WindowsHDRCalibration_1.0.152.0_neutral_~_8wekyb3d8bbwe.Msixbundle (or newer)
 * turn monitor on HDR mode
 * turn on HDR in windows
-* games can override max nits and keep it mind you are calibrating a white box
+* games can override max nits and keep it in mind you are calibrating a white box
 * leave the color saturation section on 0 and do that elsewhere or make multiple profiles
 * calibrate
 #
