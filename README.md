@@ -8,7 +8,7 @@
 * next > build package
 #
 * Disable GPU stuff (afterburner ect/auto-startups)
-* Disable internet (press ⊞ Win+R ncpa.cpl)
+* Disable internet (press <kbd>⊞ Win+R</kbd> type ncpa.cpl)
 #
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot
 * reboot*
@@ -48,12 +48,12 @@
 * Graphics > Advanced graphics settings > Hardware-accelerated GPU scheduling (HAGS) (Required* for framegen) > On
 * Graphics > Custom settings for applications (remove apps or make sure the games are set to high performance)
 #
-* press <kbd>⊞ Win+R</kbd> type "colorcpl" add and remove correct profiles
+* press <kbd>⊞ Win+R</kbd> type "colorcpl" add and remove correct profiles (click add... and add profiles, check Add as HDR Profile for hdr ones)
 * open Display settings > turn HDR on* then turn off if not using (check 🟩 for more info)
 #
 * Enable GPU stuff (afterburner ect/auto-startups)
 * reboot
-* Enable internet (press <kbd>⊞ Win+R</kbd> type "ncpa.cpl")
+* Enable internet (press <kbd>⊞ Win+R</kbd> type ncpa.cpl)
 ---
 ---
 ---
@@ -72,7 +72,7 @@
 ---
 ---
 ## 🟩 VRR ect:
-* Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/ULMB2
+* Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/vsync/ULMB2
 #
 * your monitor will have an option to turn it on or off
 * Only way to tell if VRR is working is in monitor on screen display (OSD)
@@ -107,7 +107,7 @@
 * update your DLSS files manualy from NVIDIAGameWorks/Streamline github (devs dont do it and idk what nvidia is doing)
 * you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
 #
-* to see what preset you are using type this on/off command in cmd.exe (press ⊞ Win+R cmd)
+* to see what preset you are using type this on/off command in cmd.exe (press <kbd>⊞ Win+R</kbd> type "cmd")
 * on*
 * reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 1024 /f
 * off*
@@ -116,6 +116,38 @@
 * Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 * CUDA - Force P2 State off or on (test per-game)
 * Smooth Motion - Enable off/on (test if you cant use FG or OptiScaler*)
+---
+---
+---
+## 🟩 Proper HDR calibration info:
+* install Windows HDR Calibration app, turn monitor in HDR mode, enable HDR in windows
+* Minimum luminance: ~0 nits OLED, ~0.001/0.02 nits MiniLED set to 0 (HDR10 cant encode literal zero)
+* Maximum luminance (MaxCLL): find yours on RTINGS or somewhere on the internet
+* Maximum full frame luminance (MaxFALL): find yours on RTINGS or somewhere on the internet
+* color saturation: set to 0
+#
+* MaxCLL = brightest pixel (single brightest pixel in the entire content in nits) 
+* MaxFALL = brightest average frame (brightest average frame in the entire content in nits)
+* MaxCLL/MaxFALL dont change the panels physical brightness, they guide tone mapping
+* Incorrectly low values = conservative metadata → flatter bright scenes, earlier highlight clipping (not good)
+#
+* Paper white (reference UI/mid‑tone brightness): ~400 nits default; ~200–250 nits in bright rooms, ~100–150 nits in dark rooms usually recommended
+* Paper white = a creative/mastering choice for HDR mid‑tones
+#
+* On Windows, the "SDR content brightness slider" controls how "SDR white maps into HDR mode" its relative to your displays peak brightness, not a fixed nit value*
+* SDR white mapping = a Windows system setting that decides how legacy SDR content is displayed inside HDR mode
+* This setting doesnt change MaxCLL/MaxFALL (content metadata), but it affects how comfortable SDR looks alongside HDR highlights
+* Reference HDR1000 → ~75/80% for ~400/600 nits → 100% for ~700/800 nits (SDR white mapping)
+* Reference HDR1700/2000 → ~50/75% for ~400/600 nits → ~75/80% for ~600/800 nits → 100% for ~1000/1200 nits (SDR white mapping)
+#
+* movies/shows: MaxCLL/MaxFALL = static metadata values from mastering data (conservative, fixed for entire title)
+* games: HDR tone mapping is variable/dynamic, not bound to static MaxCLL/MaxFALL the values can shift in real time
+* games can override max nits
+#
+* HDR adds a little latency
+* use Video > Adjust video image settings > RTX video enhancement > super resolution/high dynamic range to enhance content
+* put ICC Profiles in here press <kbd>⊞ Win+R</kbd> type %SystemDrive%Windows/System32/spool/drivers/color
+* find manufactures icc profile they are for SDR or just use windows default
 ---
 ---
 ---
@@ -202,7 +234,7 @@
 ---
 ## 🟩 MPO Multi-Plane Overlay:
 * on can help cpu bound ect, off can fix display problems ect, can you even disable it? idk
-* test type dxdiag save search for "MPO MaxPlanes"
+* test press <kbd>⊞ Win+R</kbd> type "dxdiag" save all information... and search for "MPO MaxPlanes"
 * MPO on*
 * reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /f
 * MPO off*
@@ -251,29 +283,6 @@
 ---
 ---
 ---
-## 🟩 HDR/SDR profiles:
-* Monitor .icc/icm profile
-* put ICC Profiles in here open ⊞ Win+R %SystemDrive%Windows/System32/spool/drivers/color
-* open ⊞ Win+R colorcpl.exe (click add and add ICC profiles, click Add as HDR Profile for hdr icc profiles)
-* find manufactures icc profile or search for them or buy a monitor calibration tool (or use phone) (calibration is subjective in color spaces because nobody knows what they are doing)
-* HDR adds a little latency
-* use Video > Adjust video image settings > RTX video enhancement > super resolution/high dynamic range to enhance content
-#
-* Windows HDR Calibration
-* download MicrosoftCorporationII.WindowsHDRCalibration_1.0.152.0_neutral_~_8wekyb3d8bbwe.Msixbundle (or newer)
-* turn monitor on HDR mode
-* turn on HDR in windows
-* games can override max nits and keep it in mind you are calibrating a white box
-* leave the color saturation section on 0 and do that elsewhere or make multiple profiles
-* calibrate
-#
-* interesting SDR/HDR calibration (not recommended just test)
-* System > Display > Color profile > sRGB to Gamma2.2 (srgb_to_gamma2p2_sdr.icm) (SDR)
-* System > Display > Color profile > SDR ACM: srgb_d50 [ srgb_to_gamma2p2.cal ] (srgb_to_gamma2p2_400_mhc2.icm) (HDR)
-* find these on github they have a nice gamma roll from zero but crush black levels
----
----
----
 ## 🟩 monitors:
 * ideal distance your eyes should be for 4k 27inch monitor (min 16.8inch/max 20.4inch) and pointing at 33.3% below the top of your monitor flat
 * only ever use your monitor to change sharpness disable it everywhere else
@@ -311,7 +320,7 @@
 ---
 ---
 ## 🟩 High Precision event timer/Time Stamp Counter:
-* HPET should be off, in cmd type "bcdedit /enum" "useplatformclock" should not be there win11 uses invariant TSC "bcdedit /deletevalue useplatformclock" to delete
+* HPET should be off, press <kbd>⊞ Win+R</kbd> type "cmd" then type "bcdedit /enum" useplatformclock should not be there win11 uses invariant TSC type "bcdedit /deletevalue useplatformclock" to delete
 ---
 ---
 ---
