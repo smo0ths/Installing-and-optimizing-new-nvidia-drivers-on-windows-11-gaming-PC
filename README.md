@@ -48,7 +48,7 @@
 * Graphics > Advanced graphics settings > Hardware-accelerated GPU scheduling (HAGS) (Required* for framegen) > On
 * Graphics > Custom settings for applications (remove apps or make sure the games are set to high performance)
 #
-* press <kbd>⊞ Win+R</kbd> type "colorcpl" add and remove correct profiles (click add... and add profiles, check Add as HDR Profile for hdr ones)
+* press <kbd>⊞ Win+R</kbd> type "colorcpl" add/remove color profiles (click add... and add profiles, check Add as HDR Profile for hdr ones)
 * open Display settings > turn HDR on* then turn off if not using (check 🟩 for more info)
 #
 * Enable GPU stuff (afterburner ect/auto-startups)
