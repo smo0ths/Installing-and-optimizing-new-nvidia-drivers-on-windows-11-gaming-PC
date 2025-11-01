@@ -166,7 +166,11 @@
 * audio path: Audio decoding → Resampling (Windows) → DAC (Hardware) → Your ears
 * surround sound can make games/movies/shows sound great
 * stereo is best for most music
-* EQ audio: for 10band set 0/-1/-1/+1/-1/0/+1/-1/-1 for most headsets, 0,0,+1,-1,+1,0,0,+1,+1 for more bass/treble and raise 62Hz/4kHz if you need more bass/treble
+#
+* EQ audio(10band):
+* (31Hz/62Hz/125Hz/250Hz/500Hz/1kHz/2kHz/4kHz/8kHz/16kHz) (0/-1/-1/+1/-1/+1/0/+1/-1/-1) for clean listening higher or lower volumes
+* (31Hz/62Hz/125Hz/250Hz/500Hz/1kHz/2kHz/4kHz/8kHz/16kHz) (0/0/+1/0/-1/+1/0/0/+1/+1) i usually use this lower/medium volumes
+* for more bass/treble raise 62Hz/4kHz might need to raise higher freqs when you do for brightness
 #
 * EQ voice: set your format to 1 channel* and 24bit/48kHz 
 * everyone has a different sound freq and women might need a bit different eq
