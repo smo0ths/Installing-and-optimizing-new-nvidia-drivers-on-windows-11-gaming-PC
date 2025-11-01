@@ -90,6 +90,10 @@
 * blur busters recommend force on vsync in nvcpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
 * ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
 * DyAc(1/2) fastest TN panel stuff
+#
+* find stable frame times:
+* find your lowest fluctuation fps(or 1% lows) during high intensity multiplayer or heavy rpg game ect and set fps cap there or just rely on gsnyc
+* dont go lower than 130 fps cap with framegens or you will start to notice it (some might be fine with that)
 ---
 ---
 ---
