@@ -420,7 +420,7 @@
 * install m.2 drivers
 * overclock: a stable cpu should be able to prime95 default(avx) smallfft 48k pass(first pass), takes few minutes monitor temps and mind avx offsets
 * make sure drives/pci devices are not sharing lanes (causes instability) check your bios manual(RTFM)
-* you can unplug and hold down button for 15 to 30 seconds to discharge residual electricity
+* you can unplug and hold down power button for 15 to 30 seconds to discharge residual electricity
 ---
 ---
 ---
