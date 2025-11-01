@@ -13,7 +13,8 @@
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot
 * reboot*
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot > uncheck > exit without restarting*
-* run Display Driver Uninstaller.exe (DDU) > options > remove physX > uncheck prevent downloads of drivers... (you are offline)
+* run Display Driver Uninstaller.exe (DDU) > options > remove physX > uncheck prevent downloads of drivers >
+* uncheck save log files > uncheck create a restore point > uncheck auto check for DDU updates > uncheck show offers
 * select device type > GPU > Clean and restart (reboots*)
 #
 * install driver click custom (advanced) and next
@@ -24,14 +25,14 @@
 * in Adjust image settings with preview > check Use my preference emphasizing Performance > Apply
 * check Use the advanced 3D image settings > Apply
 #
-* 3D Settings > Manage 3D settings > Anisotropic filtering > Appplication-controlled or off/4x/8x/16x
+* 3D Settings > Manage 3D settings > Anisotropic filtering > Appplication-controlled (or off/4x/8x/16x)
 * 3D Settings > Manage 3D settings > Low Latency Mode > Ultra (check 🟩 for more info)
 * 3D Settings > Manage 3D settings > Power management mode > Prefer maximum performance
 * 3D Settings > Manage 3D settings > Preferred refresh rate > Highest available (now is default)
 * 3D Settings > Manage 3D settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
 * 3D Settings > Manage 3D settings > Anisotropic sample optimization > On (or leave default)
-* 3D Settings > Manage 3D settings > Negative LOD bias > Allow (Clamp for 0 LOD bias, 0/+ helps GPU bound, -0 used in dlss ect for image quality) (or leave default)
-* 3D Settings > Manage 3D settings > Texture filtering Quality > High performance (high quality if you are cpu bound) (or leave default)
+* 3D Settings > Manage 3D settings > Negative LOD bias > Allow (Clamp for 0 LOD bias, 0/+ helps GPU bound, -0 used in dlss ect for image quality)
+* 3D Settings > Manage 3D settings > Texture filtering Quality > High performance (or leave default)
 * 3D Settings > Manage 3D settings > Trilinear optimization > On (or leave default)
 * Apply
 * 3D Settings > Configure Surround, PhysX > set PhysX to GPU
@@ -51,8 +52,8 @@
 * press <kbd>⊞ Win+R</kbd> type "colorcpl" add/remove color profiles (click add... and add profiles, check Add as HDR Profile for hdr ones)
 * open Display settings > turn HDR on* then turn off if not using (check 🟩 for more info)
 #
-* Enable GPU stuff (afterburner ect/auto-startups)
 * reboot
+* Enable GPU stuff (afterburner ect/auto-startups)
 * Enable internet (press <kbd>⊞ Win+R</kbd> type ncpa.cpl)
 ---
 ---
@@ -63,16 +64,15 @@
 ---
 ---
 ## 🟩 Extra (ADVANCED)
-## 🟩 Advanced github i do:
-* use [Registry Tweaks Refresh](https://github.com/smo0ths/Registry-Tweaks-Refresh.bat)
-* use [My Network Adaptor Settings](https://github.com/smo0ths/My-Network-Adaptor-Settings)
-* use [FIREWALL lock down but functional ruleset](https://github.com/smo0ths/FIREWALL-lock-down-but-functional-ruleset)
-* optimize that shit
+## 🟩 Advanced github i made and use:
+* [Registry Tweaks Refresh](https://github.com/smo0ths/Registry-Tweaks-Refresh.bat)
+* [My Network Adaptor Settings](https://github.com/smo0ths/My-Network-Adaptor-Settings)
+* [FIREWALL lock down but functional ruleset](https://github.com/smo0ths/FIREWALL-lock-down-but-functional-ruleset)
 ---
 ---
 ---
 ## 🟩 VRR ect:
-* Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/vsync/ULMB2
+* Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/vsync/ULMB2/DyAc
 #
 * your monitor will have an option to turn it on or off
 * Only way to tell if VRR is working is in monitor on screen display (OSD)
@@ -80,7 +80,7 @@
 * G‑Sync for windowed and full screen mode (can cause rare desktop stutter issues so dont use)
 #
 * loweset latency is this order from written
-* 1 → reflex no fps cap
+* 1 → reflex no fps cap (with high fps)
 * 2 → ultra low latency mode no fps cap
 * 3 → all the above with fps cap (stable frame times)
 * 4 → Maximum Pre-Rendered Frames 1 (low latency mode on) no fps cap
@@ -88,9 +88,11 @@
 * 4b → snycs/all the above with or w/o fps cap (gsync range) (recommended for most games and use 1 → for competitive)
 * 5 → snycs/all the above with fps cap for LFC(Low Framerate Compensation)
 #
+* gsnyc helps if a games fps is unstable and fluctuates around 70-130 fps because 130 fps as the lowest fluctiation would be harder to notice
 * latency is: Input → Game logic → GPU → Display → Your eyes
 * blur busters recommend force on vsync in nvcpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
 * ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
+* DyAc(1/2) fastest TN panel stuff
 ---
 ---
 ---
@@ -101,7 +103,7 @@
 * what i use in _GLOBAL_DRIVER_PROFILE (Base Profile)
 * DLSS > Forced Preset Letter > set Preset K (Transformer) or Preset E (CNN) (recommended K)
 * DLSS-RR > Forced Preset Letter > set Preset J (Transformer) or Preset E (CNN) (recommended J)
-* rBar - Enable > Enable
+* rBar - Enable > Enable (test per-game this it could cause problems)
 * Apply changes
 #
 * update your DLSS files manualy from NVIDIAGameWorks/Streamline github (devs dont do it and idk what nvidia is doing)
@@ -143,18 +145,26 @@
 * movies/shows: MaxCLL/MaxFALL = static metadata values from mastering data (conservative, fixed for entire title)
 * games: HDR tone mapping is variable/dynamic, not bound to static MaxCLL/MaxFALL the values can shift in real time
 * games can override max nits
+* higher UI values can fix tonemapping in complex UI elements like maps in games (450+ nits values)
+* HDR is about contrast and color space
 #
 * HDR adds a little latency
 * use Video > Adjust video image settings > RTX video enhancement > super resolution/high dynamic range to enhance content
 * put ICC Profiles in here press <kbd>⊞ Win+R</kbd> type %SystemDrive%Windows/System32/spool/drivers/color
 * find manufactures icc profile they are for SDR or just use windows default
+* search for sRGB to Gamma 2.2 to test aswell it actually does something to SDR
+* cables, make sure you have proper cables
+* ABL (Automatic Brightness Limiter) is a thing
 ---
 ---
 ---
 ## 🟩 audio:
-* set bits to 24 or 32bits and 48kHz or 96kHz (i use 24/96kHz i hear the extra points in 96kHz)
+* set to 32 bit (avoids truncation/dither/conversion step) 24khz is fine, and 48kHz or match kHz of the content you are listening to
 * bits is dynamic range to noise floor and sample rate is time points of a wave signal (Bits = vertical resolution, Sample rate = horizontal resolution)
-* Exclusive Mode: Uncheck for multitasking (OBS/Discord/games/etc). Check for audiophile music listening or studio recording (bit‑perfect)
+* Exclusive Mode: always use exclusive mode on DAC/AMP/SOUNDCARD (unless you have problems with capture cards or something)
+* Exclusive Mode: Uncheck on microphone multitasking (OBS/Discord/games/etc) unless you are studio recording and need less latency ect.
+* Exclusive Mode: again check for audiophile music listening or studio recording (bit‑perfect)
+* Exclusive Mode: think of it as switching modes: streaming mode (shared) vs listening mode (exclusive)
 * keep all audio windows/games at 100% until the last stage (DAC/AMP/soundcard software) for audiophile/bit perfect sound
 * audio path: Audio decoding → Resampling (Windows) → DAC (Hardware) → Your ears
 * use surround sound > HTRF > (for games/movies/shows) and stereo is best for most music
@@ -168,16 +178,20 @@
 * 2(band)            500.0/-2.5/0.70 (Hz/dB/oct)
 * 3(band)           3000.0/ 1.0/0.70 (Hz/dB/oct)
 * 4(change to Band) 7000.0/ 3.5/0.70 (Hz/dB/oct)
+#
+* RNNoise for noise cancellation settings: vad threshold 0.95 / grace period 50 / retroactive 0 (this can remove whispering/whisling and adds a little latency)
+* disable all other audio devices  press <kbd>⊞ Win+R</kbd> type "mmsys.cpl"
 ---
 ---
 ---
 ## 🟩 HWiNFO64:
+* sensors-only
 * set polling period global 2000ms and check only current in show columns (general tab)
 * only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
 * disable everything in Safety tab (main settings)
 * Shrink window by removing rightmost table (arrows pointing on bottom of program)
 * disable monitoring/logging everything but these (disable everything then add them in Layout tab)
-* Framerate (Presented)
+* Framerate (Presented) (uncheck PresentMon Support and disable this when not in use, anticheats don't like it either)
 * GPU Temperature
 * CPU Package (temp)
 * GPU Core Load
@@ -225,10 +239,15 @@
 ---
 ## 🟩 mouse/keyboard:
 * dpi should be 1000/1300 for lowest latency (1000 recommended)
-* hz should be 1000 or whatever crazy max you have
+* hz should be 1000 or 2000hz (higher will raise cpu % usage and 8000hz should be fine for a keyboard all you need for these is USB 2.0)
 * sensitivity, i like 1:1 6in 1080° turn for freelook/reflex sights and 9in 90° for anything 4x+ scopes (for 3rd person RPG games 4in 1080° for freelook)
 * keep your sensitivity the same so you dont suck, find that perfect 1:1 sens for competitive i used to use 7in 1080° turn
-* other to do
+#
+* best rapid trigger settings all keys (0.6 actuation is pretty much a mouse click)
+* actuation point(0.6) continuous rapid trigger(0.2 sensitivity) 1000hz/8000hz (faster)
+* actuation point(0.6) traditional rapid trigger(0.6 sensitivity) 1000hz/8000hz (momentum movement games faster)
+* actuation point(0.8) continuous rapid trigger(0.2 sensitivity) 1000hz/8000hz (fast)
+* actuation point(0.8) traditional rapid trigger(0.8 sensitivity) 1000hz/8000hz (momentum movement games)
 ---
 ---
 ---
@@ -243,10 +262,10 @@
 ---
 ---
 ## 🟩 Windows Game Mode:
-* test yourself an optimized system wont benefit in my experience
-* Settings > Gaming > Game Mode > Off
-* reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AllowAutoGameMode" /t REG_DWORD /d 0 /f
-* reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d 0 /f
+* test yourself 1/0 i think this maybe messing with nvidia nvenc encoding
+* Settings > Gaming > Game Mode > On/Off
+* reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AllowAutoGameMode" /t REG_DWORD /d 1 /f
+* reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d 1 /f
 ---
 ---
 ---
@@ -255,7 +274,7 @@
 * framerate limiter types async/front edge sync/back edge sync/nvidia reflex/nvidia/game engines
 * 1 fps buffer caps are lowest latency (some limiters are actually 2/3 frame buffers like nvidia's non reflex one)
 * best practice -2fps under refresh rate
-* AI frame gens can be capped (reflex limiter or others) to lower utilizations, smooth motion seems to like no cap
+* AI frame gens can be capped (reflex limiter or others) to lower utilizations, smooth motion seems to like no cap (maybe fixed in newer driver)
 * rtss > fraterate limit -2 under monitor max hz (or lower for stable/and/or LFC)
 * rtss > setup > enable framerate limiter > NVIDIA reflex (is ultra low latency if not used with reflex i think)
 ---
@@ -294,15 +313,17 @@
 ---
 ## 🟩 OBS:
 * settings > stream > ignore stream serv setting recommendations
-* output > rescale output disabled > constant bitrate > 6000/7500kbps > keyframe 2s > P5 > HQ > two pass (quarter res) > uncheck both > 2 b-frames
+* output > rescale output disabled > constant bitrate > 6000/7500kbps > keyframe 2s > P5 > HQ > uncheck both > 2 b-frames
 * output > audio > 256kbps or 320kbps
 * audio > 48kHz
 * video > output 1664x936 > 60fps
 * advanced > sRGB > limited > sources uncheck browser source hardware acceleration
 #
-* set game capture RGB10A2 Color Space set to Rec. 2100 (PQ) when you are playing in HDR so your stream can see the game tone‑mapped to SDR
+* set game capture RGB10A2 Color Space set to Rec. 2100 (PQ) when you are playing in HDR so your stream can see the game tone‑mapped to SDR (remember* to turn it back to sRGB* when playing in SDR)
 * set your display captures for desktop checkbox to Force SDR for if you are ever in HDR for viewers
 * turn off Docks > Audio Mixer because it cost you 2fps in every game
+* -5dB on obs desktop audio can help keep your sound balanced
+* two pass (quarter res) can help quality a little if you want to test
 ---
 ---
 ---
@@ -314,7 +335,56 @@
 ---
 ---
 ---
+## 🟩 random windows stuff:
+* delete random credentials
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "control.exe keymgr.dll"
+* add/remove accounts
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "ms-settings:emailandaccounts"
+---
+---
+---
+## 🟩 power stuff:
+* press <kbd>⊞ Win+R</kbd> type "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61" unlocks ultimate Performance
+* press <kbd>⊞ Win+R</kbd> type "powercfg.cpl" > check ultimate Performance
+* i also do
+* press <kbd>⊞ Win+R</kbd> type "powercfg -setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0" default 15 minutes
+* press <kbd>⊞ Win+R</kbd> type "control.exe powercfg.cpl,,3" > desktop background settings > slide show > setting: paused
+* press <kbd>⊞ Win+R</kbd> type "control.exe powercfg.cpl,,3" > usb settings > usb selective suspend setting > setting: disabled
+#
+* debug or start over press <kbd>⊞ Win+R</kbd> type "powercfg -restoredefaultschemes"
+---
+---
+---
+## 🟩 device manager:
+* disable/fix stuff
+* press <kbd>⊞ Win+R</kbd> type "devmgmt.msc"
+---
+---
+---
+## 🟩 task scheduler:
+* disable things you dont want
+* press <kbd>⊞ Win+R</kbd> type "taskschd.msc"
+---
+---
+---
+## 🟩 windows performance options:
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "SystemPropertiesPerformance"
+* click custom check only show window contents while dragging and smooth edges of screen fonts (or do whatever)
+---
+---
+---
+## 🟩 Windows Features (optionalfeatures):
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "optionalfeatures" (in appwiz.cpl)
+* only things needed for gaming pc is
+* .NET Framework 3.5 (includes .NET 2.0 and 3.0) (no sub checkboxes needed)
+* .NET Framework 4.8 Advanced Services (no sub checkboxes needed)
+* Also press <kbd>⊞ Win+R</kbd> type "cmd" then type "ms-settings:optionalfeatures" (in SystemSettings.exe)
+* click view features and remove stuff you dont use
+---
+---
+---
 ## 🟩 game deals:
+* buy from offical main launchers
 * use [gg.deals/deals](https://gg.deals/deals/?platform=1&sort=date&store=4,5,6,22,38,57,1169&tag=-117,-79,-25&type=1,2)
 ---
 ---
@@ -339,8 +409,19 @@
 ---
 ## 🟩 bios:
 * update your bios
-* overclocking to do
 * CSM off + UEFI on + 4G Decoding on = ReBAR works
+* install m.2 drivers
+* overclock: a stable cpu should be able to prime95 default(avx) smallfft 48k pass(first pass), takes few minutes monitor temps and mind avx offsets
+* make sure drives/pci devices are not sharing lanes (causes instability) check your bios manual(RTFM)
+* you can unplug and hold down button for 15 to 30 seconds to discharge residual electricity
+---
+---
+---
+## 🟩 delete stuff not using or is security vulnerability:
+* don't delete things that microsoft regularly updates that may have Common Vulnerabilities and Exposures (CVE)
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "%windir%\system32\drivers"
+* get list: 
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "dir C:\Windows\System32\drivers\*.sys /b"
 ---
 ---
 ---
