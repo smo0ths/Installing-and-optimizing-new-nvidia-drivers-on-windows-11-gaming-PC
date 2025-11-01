@@ -8,13 +8,12 @@
 * next > build package
 #
 * Disable GPU stuff (afterburner ect/auto-startups)
-* Disable internet (press <kbd>⊞ Win+R</kbd> type ncpa.cpl)
+* Disable internet (press <kbd>⊞ Win+R</kbd> type "ncpa.cpl")
 #
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot
 * reboot*
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot > uncheck > exit without restarting*
-* run Display Driver Uninstaller.exe (DDU) > options > remove physX > uncheck prevent downloads of drivers >
-* uncheck save log files > uncheck create a restore point > uncheck auto check for DDU updates > uncheck show offers
+* run Display Driver Uninstaller.exe (DDU) > options > check remove physX > uncheck prevent downloads of drivers/save log files/create a restore point/auto check for DDU updates/show offers
 * select device type > GPU > Clean and restart (reboots*)
 #
 * install driver click custom (advanced) and next
@@ -58,12 +57,10 @@
 ---
 ---
 ---
----
----
----
----
----
 ## 🟩 Extra (ADVANCED)
+---
+---
+---
 ## 🟩 Advanced github i made and use:
 * [Registry Tweaks Refresh](https://github.com/smo0ths/Registry-Tweaks-Refresh.bat)
 * [My Network Adaptor Settings](https://github.com/smo0ths/My-Network-Adaptor-Settings)
@@ -163,11 +160,12 @@
 * bits is dynamic range to noise floor and sample rate is time points of a wave signal (Bits = vertical resolution, Sample rate = horizontal resolution)
 * Exclusive Mode: always use exclusive mode on DAC/AMP/SOUNDCARD (unless you have problems with capture cards or something)
 * Exclusive Mode: Uncheck on microphone multitasking (OBS/Discord/games/etc) unless you are studio recording and need less latency ect.
-* Exclusive Mode: again check for audiophile music listening or studio recording (bit‑perfect)
+* Exclusive Mode: again check for audiophile music listening or studio recording (bit‑perfect/lowest latency)
 * Exclusive Mode: think of it as switching modes: streaming mode (shared) vs listening mode (exclusive)
 * keep all audio windows/games at 100% until the last stage (DAC/AMP/soundcard software) for audiophile/bit perfect sound
 * audio path: Audio decoding → Resampling (Windows) → DAC (Hardware) → Your ears
-* use surround sound > HTRF > (for games/movies/shows) and stereo is best for most music
+* surround sound can make games/movies/shows sound great
+* stereo is best for most music
 * EQ audio: for 10band set 0/-1/-1/+1/-1/0/+1/-1/-1 for most headsets, 0,0,+1,-1,+1,0,0,+1,+1 for more bass/treble and raise 62Hz/4kHz if you need more bass/treble
 #
 * EQ voice: set your format to 1 channel* and 24bit/48kHz 
@@ -180,6 +178,7 @@
 * 4(change to Band) 7000.0/ 3.5/0.70 (Hz/dB/oct)
 #
 * RNNoise for noise cancellation settings: vad threshold 0.95 / grace period 50 / retroactive 0 (this can remove whispering/whisling and adds a little latency)
+* press <kbd>⊞ Win+R</kbd> type "mmsys.cpl" disable* Signal Enhancements (bass boost/virtual surround/room correction/loudness equalization/speaker fill/noise suppression/echo cancellation/automatic gain control)
 * disable all other audio devices  press <kbd>⊞ Win+R</kbd> type "mmsys.cpl"
 ---
 ---
@@ -244,10 +243,10 @@
 * keep your sensitivity the same so you dont suck, find that perfect 1:1 sens for competitive i used to use 7in 1080° turn
 #
 * best rapid trigger settings all keys (0.6 actuation is pretty much a mouse click)
-* actuation point(0.6) continuous rapid trigger(0.2 sensitivity) 1000hz/8000hz (faster)
-* actuation point(0.6) traditional rapid trigger(0.6 sensitivity) 1000hz/8000hz (momentum movement games faster)
-* actuation point(0.8) continuous rapid trigger(0.2 sensitivity) 1000hz/8000hz (fast)
-* actuation point(0.8) traditional rapid trigger(0.8 sensitivity) 1000hz/8000hz (momentum movement games)
+* actuation point(0.6) continuous rapid trigger(0.2 sensitivity) 1000hz/8000hz (competitive games faster)
+* actuation point(0.6) traditional rapid trigger(0.6 sensitivity) 1000hz/8000hz (momentum/physics heavier movement games faster)
+* actuation point(0.8) continuous rapid trigger(0.2 sensitivity) 1000hz/8000hz (competitive games fast)
+* actuation point(0.8) traditional rapid trigger(0.8 sensitivity) 1000hz/8000hz (momentum/physics heavier movement games fast)
 ---
 ---
 ---
