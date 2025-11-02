@@ -323,7 +323,7 @@
 * output > audio > 256kbps or 320kbps
 * audio > 48kHz
 * video > output 1664x936 > 60fps
-* advanced > sRGB > limited > sources uncheck browser source hardware acceleration
+* advanced > sRGB > limited > enable browser source hardware acceleration (check if GPU is better uncheck if CPU is better or test it)
 #
 * 🔴 Re-add your browser(browser sources) after updates and often to fix old rendering bugs/memory leaks/Trigger optimized versions of embedded web content/reset any lingering settings or permissions that raise 3D gpu usage and lower performance
 * paste browser(browser sources) as reference in other scenes
