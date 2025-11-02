@@ -269,7 +269,6 @@
 ---
 ---
 ## 🟩 Windows Game Mode:
-* test yourself 1/0 i think this maybe messing with nvidia nvenc encoding
 * Settings > Gaming > Game Mode > On/Off
 * reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AllowAutoGameMode" /t REG_DWORD /d 1 /f
 * reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d 1 /f
