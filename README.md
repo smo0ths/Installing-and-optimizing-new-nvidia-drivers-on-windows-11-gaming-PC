@@ -325,7 +325,7 @@
 * video > output 1664x936 > 60fps
 * advanced > sRGB > limited > sources uncheck browser source hardware acceleration
 #
-* 🔴 Re-add your browser(browser sources) after updates and often to fix old rendering bugs/memory leaks/Triggered optimized versions of the embedded web content/Reset any lingering settings or permissions that were dragging performance.
+* 🔴 Re-add your browser(browser sources) after updates and often to fix old rendering bugs/memory leaks/Trigger optimized versions of embedded web content/reset any lingering settings or permissions that raise 3D gpu usage and lower performance
 * paste browser(browser sources) as reference in other scenes
 * set game capture RGB10A2 Color Space set to Rec. 2100 (PQ) when you are playing in HDR so your stream can see the game tone‑mapped to SDR (remember* to turn it back to sRGB* when playing in SDR)
 * set your display captures for desktop checkbox to Force SDR for if you are ever in HDR for viewers
