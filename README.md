@@ -104,7 +104,7 @@
 * what i use in _GLOBAL_DRIVER_PROFILE (Base Profile)
 * DLSS > Forced Preset Letter > set Preset K (Transformer) or Preset E (CNN) (recommended K)
 * DLSS-RR > Forced Preset Letter > set Preset J (Transformer) or Preset E (CNN) (recommended J)
-* rBar - Enable > Enable (test per-game this it could cause problems)
+* rBAR - Enable > (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 * Apply changes
 #
 * update your DLSS files manualy from NVIDIAGameWorks/Streamline github (devs dont do it and idk what nvidia is doing)
@@ -178,7 +178,7 @@
 #
 * EQ voice: set your format to 1 channel* and 24bit/48kHz 
 * everyone has a different sound freq and women might need a bit different eq
-* use Equalizer APO or something
+* use Equalizer APO or something (Equalizer APO needs Signal Enhancements(enable audio enhancements) to function)
 * best universal from flat response eq: (i use VSTPlugins\ReaPlugs\reaeq-standalone.dll)
 * 1(change to Band)  125.0/ 2.5/0.70 (Hz/dB/oct)
 * 2(band)            500.0/-2.5/0.70 (Hz/dB/oct)
@@ -186,7 +186,7 @@
 * 4(change to Band) 7000.0/ 3.5/0.70 (Hz/dB/oct)
 #
 * RNNoise for noise cancellation settings: vad threshold 0.95 / grace period 50 / retroactive 0 (this can remove whispering/whisling and adds a little latency)
-* press <kbd>⊞ Win+R</kbd> type "mmsys.cpl" disable* Signal Enhancements (bass boost/virtual surround/room correction/loudness equalization/speaker fill/noise suppression/echo cancellation/automatic gain control)
+* press <kbd>⊞ Win+R</kbd> type "mmsys.cpl" disable* Signal Enhancements (bass boost/virtual surround/room correction/loudness equalization/speaker fill/noise suppression/echo cancellation/automatic gain control/ect)
 * disable all other audio devices  press <kbd>⊞ Win+R</kbd> type "mmsys.cpl"
 ---
 ---
@@ -201,7 +201,8 @@
 * Framerate (Presented) (uncheck PresentMon Support and disable this when not in use, anticheats don't like it either)
 * GPU Temperature
 * CPU Package (temp)
-* GPU Core Load
+* D3D(3D) utilization(GPU 3D rendering pipeline) more important for gaming performance information
+* GPU Core Load(general workloads/activity/busy) not just 3D rendering but other rendering/streaming/accelerated tasks/compute/decoding/encoding/simulations/AI/machine learning etc.
 * Max CPU/Thread Usage (100% on a core could be memory leak)
 * GPU Memory Allocated (VRAM)
 * Physical Memory Used (RAM)
@@ -287,9 +288,10 @@
 ---
 ---
 ## 🟩 ReBAR:
-* Enable rebar in your bios (if its supported)
-* rBAR in nvidiaProfileInspector (as admin)
-* rBar - Enable > Enable (rebar can cause games to stutter/lag randomly/crash) (test per-game)
+* Enable rebar in your bios
+#
+* rBAR in nvidiaProfileInspector:
+* rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 ---
 ---
 ---
@@ -332,6 +334,10 @@
 * turn off Docks > Audio Mixer because it cost you 2fps in every game
 * -5dB on obs desktop audio can help keep your sound balanced
 * two pass (quarter res) can help quality a little if you want to test
+#
+* clear/delete obs cookies and cache:
+* %AppData%\obs-studio\plugin_config\obs-browser\obs_profile_cookies
+* %AppData%\obs-studio\plugin_config\obs-browser\Cache
 ---
 ---
 ---
