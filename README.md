@@ -7,13 +7,16 @@
 * check show expert tweaks > disable HDCP
 * next > build package
 #
+* nvidiaProfileInspector delete "settings.xml" press <kbd>⊞ Win+R</kbd> type "%localappdata%\NVIDIA Profile Inspector"
+* update nvidiaProfileInspector: [nvidiaProfileInspector](https://github.com/Orbmu2k/nvidiaProfileInspector/releases)
+#
 * Disable GPU stuff (afterburner ect/auto-startups)
 * Disable internet (press <kbd>⊞ Win+R</kbd> type "ncpa.cpl")
 #
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot
 * reboot*
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot > uncheck > exit without restarting*
-* run Display Driver Uninstaller.exe (DDU) > options > check remove physX > uncheck prevent downloads of drivers/save log files/create a restore point/auto check for DDU updates/show offers
+* run Display Driver Uninstaller.exe as admin (DDU) > options > check remove physX > uncheck prevent downloads of drivers/save log files/create a restore point/auto check for DDU updates/show offers
 * select device type > GPU > Clean and restart (reboots*)
 #
 * install driver click custom (advanced) and next
@@ -27,7 +30,7 @@
 * 3D Settings > Manage 3D settings > Anisotropic filtering > Appplication-controlled (or off/4x/8x/16x)
 * 3D Settings > Manage 3D settings > Low Latency Mode > Ultra (check 🟩 for more info)
 * 3D Settings > Manage 3D settings > Power management mode > Prefer maximum performance
-* 3D Settings > Manage 3D settings > Preferred refresh rate > Highest available (now is default)
+* 3D Settings > Manage 3D settings > Preferred refresh rate > Highest available
 * 3D Settings > Manage 3D settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
 * 3D Settings > Manage 3D settings > Anisotropic sample optimization > On (or leave default)
 * 3D Settings > Manage 3D settings > Negative LOD bias > Allow (Clamp for 0 LOD bias, 0/+ helps GPU bound, -0 used in dlss ect for image quality)
@@ -38,7 +41,7 @@
 * Display > Change resolution > set res and hz (all monitors) > Apply
 * Display > Change resolution > check use NVIDIA color settings set BPC (8bpc or 10bpc) and output dynamic range to full (0-255 rgb) (all monitors) > Apply
 * Display > Adjust desktop color settings > Digital vibrance 100% (all monitors) > Apply
-* Display > Set up G-SYNC > check Enable settings for the selected display model (check 🟩 for more info)
+* Display > Set up G-SYNC > check Enable settings for the selected display model if you are using gsnyc (check 🟩 for more info)
 * Video > Adjust video color settings > check With the NVIDIA settings > Advanced > Dynamic range > Full (0-255) (all monitors) > Apply
 #
 * open Display settings (right click):
@@ -49,11 +52,12 @@
 * Graphics > Custom settings for applications (remove apps or make sure the games are set to high performance)
 #
 * press <kbd>⊞ Win+R</kbd> type "colorcpl" add/remove color profiles (click add... and add profiles, check Add as HDR Profile for hdr ones)
-* open Display settings > turn HDR on* then turn off if not using (check 🟩 for more info)
+* open Display settings > turn HDR on* and set SDR content brightness then turn off if not using (check 🟩 for more info)
 #
 * reboot
 * Enable GPU stuff (afterburner ect/auto-startups)
 * Enable internet (press <kbd>⊞ Win+R</kbd> type ncpa.cpl)
+* reboot (again)
 ---
 ---
 ---
@@ -292,6 +296,11 @@
 #
 * rBAR in nvidiaProfileInspector:
 * rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
+---
+---
+---
+## 🟩 check nvidia driver security fixes:
+* [Security Bulletins](https://www.nvidia.com/en-us/security/)
 ---
 ---
 ---
