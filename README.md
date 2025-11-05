@@ -245,6 +245,8 @@
 * FrameView App for overlay (uses modified PresentMon)
 * NVIDIA Overlay.exe(s) run at higher priority
 * FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
+#
+* you can also just install FrameView App by itself its lightweight
 ---
 ---
 ---
