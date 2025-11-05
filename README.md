@@ -108,7 +108,6 @@
 * what i use in _GLOBAL_DRIVER_PROFILE (Base Profile)
 * DLSS > Forced Preset Letter > set Preset K (Transformer) or Preset E (CNN) (recommended K)
 * DLSS-RR > Forced Preset Letter > set Preset J (Transformer) or Preset E (CNN) (recommended J)
-* rBAR - Enable > (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 * Apply changes
 #
 * update your DLSS files manualy from NVIDIAGameWorks/Streamline github (devs dont do it and idk what nvidia is doing)
@@ -225,6 +224,14 @@
 * rtss needs enable 64-bit applications support service (general tab)
 * disable plugins (plugins tab)
 * framerate averaging interval 2000ms
+#
+* afterburner general uncheck synchronize settings for similar graphics processors
+* afterburner profiles > profile contents > check both boxes
+#
+* general > uncheck/check rtss Inject NVIDIA Reflex latency markers
+* can measure end-to-end latency more accurately
+* you can break down where latency is introduced (CPU, GPU, or display)
+* markers only appear if the game itself supports Reflex and exposes those hooks
 ---
 ---
 ---
@@ -273,10 +280,37 @@
 ---
 ---
 ---
+## 🟩 Microsoft Program Install Uninstall Tool:
+* if things wont uninstall use this
+* [Download troubleshooter](https://support.microsoft.com/en-us/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d)
+---
+---
+---
 ## 🟩 Windows Game Mode:
 * Settings > Gaming > Game Mode > On/Off
 * reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AllowAutoGameMode" /t REG_DWORD /d 1 /f
 * reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d 1 /f
+---
+---
+---
+## 🟩 my Cleanup Windows 11 PowerShell Script:
+* [Cleanup Windows 11 PowerShell Script](https://github.com/smo0ths/Cleanup-Windows-11-PowerShell-Script)
+---
+---
+---
+## 🟩 after updating windows cleanup:
+* Use /ResetBase only if you're sure you won’t need to uninstall updates and want to reclaim maximum space
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase"
+* or
+* Use /StartComponentCleanup for regular maintenance
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "Dism.exe /online /Cleanup-Image /StartComponentCleanup"
+---
+---
+---
+## 🟩 you think your windows is currupt:
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "sfc /scannow"
+* then
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "DISM /Online /Cleanup-Image /RestoreHealth"
 ---
 ---
 ---
@@ -292,8 +326,7 @@
 ---
 ---
 ## 🟩 ReBAR:
-* Enable rebar in your bios
-#
+* Enable rebar in your bios (or don't to avoid problems)
 * rBAR in nvidiaProfileInspector:
 * rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 ---
@@ -321,7 +354,8 @@
 ---
 ## 🟩 monitors:
 * ideal distance your eyes should be for 4k 27inch monitor (min 16.8inch/max 20.4inch) and pointing at 33.3% below the top of your monitor flat
-* only ever use your monitor to change sharpness disable it everywhere else
+* only ever use your monitor to change sharpness disable it everywhere else (unless its dlss then default is prob intentional for PQ without monitor sharpness or any PQ accurate filter in game engines who knows)
+* make sure max brightness is on, anything that dims your screen is set off, OLED users research what your settings do, then adjust brightness
 * OLED = perfect blacks, but brightness + burn‑in concerns.
 * Mini‑LED = brightness champ, but local dimming zones matter.
 * Micro‑LED = the dream tech that does it all (someday).
@@ -347,6 +381,14 @@
 * clear/delete obs cookies and cache:
 * %AppData%\obs-studio\plugin_config\obs-browser\obs_profile_cookies
 * %AppData%\obs-studio\plugin_config\obs-browser\Cache
+---
+---
+---
+## 🟩 Interrupt Affinity Policy Tool and Msi Utility v3:
+* these are tools to see Interrupt Affinity and interrupt priority and they edit the registry so there's a manual way
+* all i know is drives set interrupt priority to high and advanced policies to IrqPolicySpreadMessagesAcrossAllProcessors and internet adaptors/pci/usb host controllers are defaulted
+* only tweak i can see helping latency is interrupt priorites to high for a sound card on one host controller or maybe anything, as long as you dont have too much on high interrupt prioirity
+* if there is data on any actual differences let me know
 ---
 ---
 ---
@@ -432,11 +474,16 @@
 ---
 ## 🟩 bios:
 * update your bios
-* CSM off + UEFI on + 4G Decoding on = ReBAR works
 * install m.2 drivers
 * overclock: a stable cpu should be able to prime95 default(avx) smallfft 48k pass(first pass), takes few minutes monitor temps and mind avx offsets
 * make sure drives/pci devices are not sharing lanes (causes instability) check your bios manual(RTFM)
 * you can unplug and hold down power button for 15 to 30 seconds to discharge residual electricity
+#
+* Enable Above 4G memory/Crypto Currency mining/MMIO BIOS assignment (if you have more than 4gb of vram)
+* Above Above 4G memory/Crypto Currency mining/MMIO BIOS assignment lets the system map all of your GPUs VRAM/PCIe resources above the 4GB address limit, preventing conflicts and ensuring full stability/compatibility
+#
+* set rebar off in bios to avoid a potential mess
+* ReBAR needs CSM off/UEFI on/Above 4G memory/Crypto Currency mining/MMIO BIOS assignment
 ---
 ---
 ---
