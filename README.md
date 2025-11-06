@@ -404,17 +404,17 @@
 ---
 ## 🟩 random windows stuff:
 * delete random credentials
-* press <kbd>⊞ Win+R</kbd> type "cmd" then type "control.exe keymgr.dll"
+* press <kbd>⊞ Win+R</kbd> type "control.exe keymgr.dll"
 * add/remove accounts
-* press <kbd>⊞ Win+R</kbd> type "cmd" then type "ms-settings:emailandaccounts"
+* press <kbd>⊞ Win+R</kbd> type "ms-settings:emailandaccounts"
 ---
 ---
 ---
 ## 🟩 power stuff:
-* press <kbd>⊞ Win+R</kbd> type "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61" unlocks ultimate Performance
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61" unlocks ultimate Performance
 * press <kbd>⊞ Win+R</kbd> type "powercfg.cpl" > check ultimate Performance
 * i also do
-* press <kbd>⊞ Win+R</kbd> type "powercfg -setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0" default 15 minutes
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "powercfg -setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0" default 15 minutes
 * press <kbd>⊞ Win+R</kbd> type "control.exe powercfg.cpl,,3" > desktop background settings > slide show > setting: paused
 * press <kbd>⊞ Win+R</kbd> type "control.exe powercfg.cpl,,3" > usb settings > usb selective suspend setting > setting: disabled
 #
@@ -435,17 +435,17 @@
 ---
 ---
 ## 🟩 windows performance options:
-* press <kbd>⊞ Win+R</kbd> type "cmd" then type "SystemPropertiesPerformance"
+* press <kbd>⊞ Win+R</kbd> type "SystemPropertiesPerformance"
 * click custom check only show window contents while dragging and smooth edges of screen fonts (or do whatever)
 ---
 ---
 ---
 ## 🟩 Windows Features (optionalfeatures):
-* press <kbd>⊞ Win+R</kbd> type "cmd" then type "optionalfeatures" (in appwiz.cpl)
+* press <kbd>⊞ Win+R</kbd> type "optionalfeatures" (in appwiz.cpl)
 * only things needed for gaming pc is
 * .NET Framework 3.5 (includes .NET 2.0 and 3.0) (no sub checkboxes needed)
 * .NET Framework 4.8 Advanced Services (no sub checkboxes needed)
-* Also press <kbd>⊞ Win+R</kbd> type "cmd" then type "ms-settings:optionalfeatures" (in SystemSettings.exe)
+* Also press <kbd>⊞ Win+R</kbd> type "ms-settings:optionalfeatures" (in SystemSettings.exe)
 * click view features and remove stuff you dont use
 ---
 ---
