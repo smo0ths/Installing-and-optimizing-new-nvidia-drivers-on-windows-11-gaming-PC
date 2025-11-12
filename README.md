@@ -110,7 +110,7 @@
 * DLSS-RR > Forced Preset Letter > set Preset J (Transformer) or Preset E (CNN) (recommended J)
 * Apply changes
 #
-* update your DLSS files manualy from NVIDIAGameWorks/Streamline github (devs dont do it and idk what nvidia is doing)
+* update your DLSS files manualy from [streamline-sdk-v#.#.#\bin\x64](https://github.com/NVIDIA-RTX/Streamline/releases) (devs dont do it and idk what nvidia is doing)
 * you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
 #
 * to see what preset you are using type this on/off command in cmd.exe (press <kbd>⊞ Win+R</kbd> type "cmd")
@@ -171,8 +171,8 @@
 * Exclusive Mode: think of it as switching modes: streaming mode (shared) vs listening mode (exclusive)
 * keep all audio windows/games at 100% until the last stage (DAC/AMP/soundcard software) for audiophile/bit perfect sound
 * audio path: Audio decoding → Resampling (Windows) → DAC (Hardware) → Your ears
-* surround sound can make games/movies/shows sound great
-* stereo is best for most music
+* virtual surround sound can make games/movies/shows sound good but it almost always makes voices and music sound worse
+* stereo is what you want to use unless your system and the content supports real surround sound
 #
 * EQ audio(10band):
 * (31Hz/62Hz/125Hz/250Hz/500Hz/1kHz/2kHz/4kHz/8kHz/16kHz) (0/-1/-1/+1/-1/+1/0/+1/-1/-1) for clean listening higher or lower volumes
@@ -214,7 +214,7 @@
 ---
 ## 🟩 Afterburner/RTSS:
 * afterburner just needs enable hardware control and monitoring (general tab) for fan enable user defined software automatic fan control (fan tab)
-* set fan curve (40% @30c 100% @70/80/or90c if noisy @5000ms) also set your fans in pc case in bios (80% @40c 100% @60c @3000ms-5000ms)
+* set fan curve (40% @30c 100% @70c/80c/90c if noisy) also set your fans in pc case in bios (80% @40c 100% @60c or just run them max unless they are <1400rpm and loud)
 * for modern GPU's turning down power limit to 80/90% can lower heat/power output and not lose much fps
 * afterburner needs enable low-level IO driver (general tab) to monitor cpu temps
 * hardware polling period 2000ms (monitoring tab)
@@ -279,6 +279,12 @@
 * reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /f
 * MPO off*
 * reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d 5 /f
+---
+---
+---
+## 🟩 UUP dump:
+* something to look into if you are making windows iso
+* [UUP dump](https://uupdump.net/)
 ---
 ---
 ---
@@ -477,7 +483,7 @@
 ## 🟩 bios:
 * update your bios
 * install m.2 drivers
-* overclock: a stable cpu should be able to prime95 default(avx) smallfft 48k pass(first pass), takes few minutes monitor temps and mind avx offsets
+* overclock: Prime95 (p95v3019b20.win64 or >) Small FFTs(default) Self-test 48K passed! (takes few minutes/clocks should not fluctuate/check Core Thermal Throttling) is the unrealistic* stable standard imo
 * make sure drives/pci devices are not sharing lanes (causes instability) check your bios manual(RTFM)
 * you can unplug and hold down power button for 15 to 30 seconds to discharge residual electricity
 #
