@@ -218,7 +218,7 @@
 * for modern GPU's turning down power limit to 80/90% can lower heat/power output and not lose much fps
 * afterburner needs enable low-level IO driver (general tab) to monitor cpu temps
 * hardware polling period 2000ms (monitoring tab)
-* for fps to show in rts just check Framerate (monitoring tab)
+* for fps to show in rts click show OSD/show own statistics for Afterburner check Framerate/show OSD (monitoring tab)
 * start with windows (general tab)
 * apply overclocking at system startup (if overclocking)
 * rtss needs enable 64-bit applications support service (general tab)
