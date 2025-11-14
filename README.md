@@ -409,7 +409,7 @@
 ---
 ---
 ## 🟩 random windows stuff:
-* delete random credentials
+* delete random credentials (virtualapp/didlogical is for windows sign in stuff dont remove it)
 * press <kbd>⊞ Win+R</kbd> type "control.exe keymgr.dll"
 * add/remove accounts
 * press <kbd>⊞ Win+R</kbd> type "ms-settings:emailandaccounts"
