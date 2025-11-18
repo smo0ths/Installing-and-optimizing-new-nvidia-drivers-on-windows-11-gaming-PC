@@ -41,7 +41,11 @@
 * Display > Change resolution > set res and hz (all monitors) > Apply
 * Display > Change resolution > check use NVIDIA color settings set BPC (8bpc or 10bpc) and output dynamic range to full (0-255 rgb) (all monitors) > Apply
 * Display > Adjust desktop color settings > Digital vibrance 100% (all monitors) > Apply
+* Display > Adjust desktop size and position > No scaling* seems to be the best option keeping native rendering
+* Display > Adjust desktop size and position > Perform scaling on display or gpu (gpu scaling with new cards seems to be the move test or leave default)
 * Display > Set up G-SYNC > check Enable settings for the selected display model if you are using gsnyc (check 🟩 for more info)
+* toggling gsnyc/freesync(on monitor/NvCpl) can reset digital vibrance/ACM turn vibrance up* and ACM off* again
+* Display > Set up multiple displays > set your *Primary display
 * Video > Adjust video color settings > check With the NVIDIA settings > Advanced > Dynamic range > Full (0-255) (all monitors) > Apply
 #
 * open Display settings (right click):
@@ -91,7 +95,7 @@
 #
 * gsnyc helps if a games fps is unstable and fluctuates around 70-130 fps because 130 fps as the lowest fluctiation would be harder to notice
 * latency is: Input → Game logic → GPU → Display → Your eyes
-* blur busters recommend force on vsync in nvcpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
+* blur busters recommend force on vsync in NvCpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
 * ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
 * DyAc(1/2) fastest TN panel stuff
 #
@@ -165,6 +169,7 @@
 ## 🟩 audio:
 * set to 32 bit (avoids truncation/dither/conversion step) 24khz is fine, and 48kHz or match kHz of the content you are listening to
 * bits is dynamic range to noise floor and sample rate is time points of a wave signal (Bits = vertical resolution, Sample rate = horizontal resolution)
+* buffer size is latency and CPU stability for monitoring (lower it) mixing (raise it)
 * Exclusive Mode: always use exclusive mode on DAC/AMP/SOUNDCARD (unless you have problems with capture cards or something)
 * Exclusive Mode: Uncheck on microphone multitasking (OBS/Discord/games/etc) unless you are studio recording and need less latency ect.
 * Exclusive Mode: again check for audiophile music listening or studio recording (bit‑perfect/lowest latency)
@@ -175,9 +180,10 @@
 * stereo is what you want to use unless your system and the content supports real surround sound
 #
 * EQ audio(10band):
-* (31Hz/62Hz/125Hz/250Hz/500Hz/1kHz/2kHz/4kHz/8kHz/16kHz) (0/-1/-1/+1/-1/+1/0/+1/-1/-1) for clean listening higher or lower volumes
-* (31Hz/62Hz/125Hz/250Hz/500Hz/1kHz/2kHz/4kHz/8kHz/16kHz) (0/0/+1/0/-1/+1/0/0/+1/+1) i usually use this lower/medium volumes
-* for more bass/treble raise 62Hz/4kHz might need to raise higher freqs when you do for brightness
+* a 10band EQ is like painting with a roller when you need a fine brush (20bands make the most sense) so dont use this really
+* (31Hz/62Hz/125Hz/250Hz/500Hz/1kHz/2kHz/4kHz/8kHz/16kHz) (0/-1/-1/+1/-1/+1/0/+1/-1/-1) clean listening higher or lower volumes
+* (31Hz/62Hz/125Hz/250Hz/500Hz/1kHz/2kHz/4kHz/8kHz/16kHz) (0/0/+1/0/-1/+1/0/0/+1/+1) more color lower/medium volumes
+* for more bass/treble raise 62Hz/4kHz might need to raise higher freqs when you do for brightness (again 10bands kinda sucks)
 #
 * EQ voice: set your format to 1 channel* and 24bit/48kHz 
 * everyone has a different sound freq and women might need a bit different eq
@@ -333,6 +339,12 @@
 ---
 ---
 ---
+## 🟩 Integer scaling (NvCpl/Adjust desktop size and position):
+* massive performance gains can be had
+* Integer scaling (must be GPU scaling/can't use with DSC)
+---
+---
+---
 ## 🟩 ReBAR:
 * Enable rebar in your bios (or don't to avoid problems)
 * rBAR in nvidiaProfileInspector:
@@ -429,8 +441,23 @@
 ---
 ---
 ## 🟩 device manager:
-* disable/fix stuff
 * press <kbd>⊞ Win+R</kbd> type "devmgmt.msc"
+* disable/fix stuff
+* check device events for bugs
+#
+* what i do
+* universal serial bus controllers click on in power management uncheck allow to turn off to save power
+* same with network adapters/human interface devices
+#
+* disable intel management engine interface
+* disable high definition audio controller (if not using)
+* disable microsoft hyper-v virtualization driver
+* disable intel xeon gaussian mixture model
+* disable remote desktop device redirector bus
+* disable software components/generic software component
+* disable microsoft gs wavetable synth
+* disable microsoft radio device enumeration bus
+* disable Microsoft Kernel Debug Network Adapter
 ---
 ---
 ---
@@ -500,9 +527,3 @@
 * press <kbd>⊞ Win+R</kbd> type "cmd" then type "%windir%\system32\drivers"
 * get list: 
 * press <kbd>⊞ Win+R</kbd> type "cmd" then type "dir C:\Windows\System32\drivers\*.sys /b"
----
----
----
-## 🟩 Adjust desktop size and position (nvcpl):
-* perform scaling on display or gpu (test) (or leave default)
-* integer scaling setup (can't use with DSC)
