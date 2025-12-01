@@ -58,6 +58,7 @@
 * press <kbd>⊞ Win+R</kbd> type "colorcpl" add/remove color profiles (click add... and add profiles, check Add as HDR Profile for hdr ones)
 * open Display settings > turn HDR on* and set SDR content brightness then turn off if not using (check 🟩 for more info)
 #
+* turn off extra monitors on reboots (to avoid scaling/hz problems)
 * reboot
 * Enable GPU stuff (afterburner ect/auto-startups)
 * Enable internet (press <kbd>⊞ Win+R</kbd> type ncpa.cpl)
@@ -112,6 +113,7 @@
 * what i use in _GLOBAL_DRIVER_PROFILE (Base Profile)
 * DLSS > Forced Preset Letter > set Preset K (Transformer) or Preset E (CNN) (recommended K)
 * DLSS-RR > Forced Preset Letter > set Preset J (Transformer) or Preset E (CNN) (recommended J)
+* rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 * Apply changes
 #
 * update your DLSS files manualy from [streamline-sdk-v#.#.#\bin\x64](https://github.com/NVIDIA-RTX/Streamline/releases) (devs dont do it and idk what nvidia is doing)
@@ -125,7 +127,10 @@
 #
 * Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 * CUDA - Force P2 State off or on (test per-game)
-* Smooth Motion - Enable off/on (test if you cant use FG or OptiScaler*)
+* Smooth Motion - Enable off/on (test if you cant use FG or OptiScaler/smooth motion adds lots of latency)
+* DLSS - Enable DLL Override (test its a wip)
+* DLSS-FG - Enable DLL Override (test its a wip)
+* DLSS-RR - Enable DLL Override (test its a wip)
 ---
 ---
 ---
@@ -201,26 +206,33 @@
 ---
 ---
 ## 🟩 HWiNFO64:
-* sensors-only
-* set polling period global 2000ms and check only current in show columns (general tab)
-* only check validate windows positions/PresentMon Support/Remember Preferences (General/user interface)
-* disable everything in Safety tab (main settings)
-* Shrink window by removing rightmost table (arrows pointing on bottom of program)
-* disable monitoring/logging everything but these (disable everything then add them in Layout tab)
-* Framerate (Presented) (uncheck PresentMon Support and disable this when not in use, anticheats don't like it either)
+* make HWiNFO stuff folder
+* grab hwi_VERSION.zip portable
+* drop HWiNFO64.exe in a folder
+* select sensors-only then click settings
+* general/UI: uncheck all but remember preferences
+* safety: uncheck all and check disable drive scan
+* click ok and start
+* click cog/general: uncheck all but row shading on left
+* change font: Segoe UI/BLACK/28
+* i use these in this order (disable everything then add these in Layout tab)
+* shrink window by removing rightmost table (arrows pointing on bottom of program)
 * GPU Temperature
 * CPU Package (temp)
-* D3D(3D) utilization(GPU 3D rendering pipeline) more important for gaming performance information
-* GPU Core Load(general workloads/activity/busy) not just 3D rendering but other rendering/streaming/accelerated tasks/compute/decoding/encoding/simulations/AI/machine learning etc.
-* Max CPU/Thread Usage (100% on a core could be memory leak)
-* GPU Memory Allocated (VRAM)
-* Physical Memory Used (RAM)
+* GPU D3D Usage (3D): utilization(GPU 3D rendering pipeline) more important for gaming performance information
+* Max CPU/Thread Usage
+* GPU Memory Allocated
+* Physical Memory Used
+* GPU Core Load: (general workloads/activity/busy) not just 3D rendering but other rendering/streaming/accelerated tasks/compute/decoding/encoding/simulations/AI/machine learning etc
+#
+* not using:
+* Framerate (Presented) (need PresentMon Support, anticheats don't like it)
 ---
 ---
 ---
 ## 🟩 Afterburner/RTSS:
 * afterburner just needs enable hardware control and monitoring (general tab) for fan enable user defined software automatic fan control (fan tab)
-* set fan curve (40% @30c 100% @70c/80c/90c if noisy) also set your fans in pc case in bios (80% @40c 100% @60c or just run them max unless they are <1400rpm and loud)
+* set fan curve (high curves the gpu wont underclock when idle with newer cards)
 * for modern GPU's turning down power limit to 80/90% can lower heat/power output and not lose much fps
 * afterburner needs enable low-level IO driver (general tab) to monitor cpu temps
 * hardware polling period 2000ms (monitoring tab)
@@ -265,7 +277,7 @@
 ---
 ---
 ## 🟩 mouse/keyboard:
-* dpi should be 1000/1300 for lowest latency (1000 recommended)
+* dpi should be 1000/1300/1600 for lowest latency (1000 recommended)
 * hz should be 1000 or 2000hz (higher will raise cpu % usage and 8000hz should be fine for a keyboard all you need for these is USB 2.0)
 * sensitivity, i like 1:1 6in 1080° turn for freelook/reflex sights and 9in 90° for anything 4x+ scopes (for 3rd person RPG games 4in 1080° for freelook)
 * keep your sensitivity the same so you dont suck, find that perfect 1:1 sens for competitive i used to use 7in 1080° turn
@@ -330,12 +342,20 @@
 ---
 ## 🟩 FPS cap:
 * for VRR (variable refresh rate) or LFC (Low Framerate Compensation) and/or keeping thermals/utilization down
-* framerate limiter types async/front edge sync/back edge sync/nvidia reflex/nvidia/game engines
-* 1 fps buffer caps are lowest latency (some limiters are actually 2/3 frame buffers like nvidia's non reflex one)
+#
+* framerate limiter types (lowest latency from writen):
+* game engine(native reflex): latency=lowest, slight fps drop possible, always preferred when reflex sdk is integrated, lowest latency with proper pipeline control
+* async: latency=near‑lowest, frame pacing can look uneven, universal fallback when reflex isn’t available, competitive play where latency matters most
+* nvidia reflex (rtss): latency=near‑lowest(similar to ullm), frame pacing can look uneven, external substitute for reflex in games that don’t support it, forces near‑zero buffer
+* front edge sync: latency=moderate, balanced pacing, non‑reflex games where you want steadier frame pacing without huge latency penalties
+* nvidia driver limiter: latency=higher(adds buffer), stable pacing, only use if the game has no limiter at all, otherwise avoid due to added latency
+* back edge sync: latency=highest, best pacing, single‑player or cinematic experiences where smoothness matters more than responsiveness
+#
+* Reflex(0)/1 fps buffer caps are lowest latency (some limiters can add frame buffers adding latency)
 * best practice -2fps under refresh rate
 * AI frame gens can be capped (reflex limiter or others) to lower utilizations, smooth motion seems to like no cap (maybe fixed in newer driver)
-* rtss > fraterate limit -2 under monitor max hz (or lower for stable/and/or LFC)
-* rtss > setup > enable framerate limiter > NVIDIA reflex (is ultra low latency if not used with reflex i think)
+* rtss > set fraterate limit (-2 under monitor max hz)
+* rtss > setup > enable framerate limiter > choose
 ---
 ---
 ---
@@ -346,7 +366,8 @@
 ---
 ---
 ## 🟩 ReBAR:
-* Enable rebar in your bios (or don't to avoid problems)
+* Enable rebar in your bios (check 🟩 bios for more info)
+#
 * rBAR in nvidiaProfileInspector:
 * rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 ---
@@ -401,6 +422,13 @@
 * clear/delete obs cookies and cache:
 * %AppData%\obs-studio\plugin_config\obs-browser\obs_profile_cookies
 * %AppData%\obs-studio\plugin_config\obs-browser\Cache
+#
+* clear obs shader-cache:
+* %ProgramData%\obs-studio\shader-cache
+#
+* add obs as a profile for nvidia (to check if it has weird settings)
+* run obs as admin (for gamecapture to work)
+* CoreAudio AAC encoder not worth it unless streaming audio 128/160/192 flat out (unless FFmpeg AAC encoder is the best now idk)
 ---
 ---
 ---
@@ -457,7 +485,8 @@
 * disable software components/generic software component
 * disable microsoft gs wavetable synth
 * disable microsoft radio device enumeration bus
-* disable Microsoft Kernel Debug Network Adapter
+* disable microsoft kernel debug network adapter
+* disable microsoft rras root enumerator
 ---
 ---
 ---
@@ -509,7 +538,7 @@
 ---
 ## 🟩 bios:
 * update your bios
-* install m.2 drivers
+* set your fans (you can max them out if if they are not loud, 3 pins fans are DC)
 * overclock: Prime95 (p95v3019b20.win64 or >) Small FFTs(default) Self-test 48K passed! (takes few minutes/clocks should not fluctuate/check Core Thermal Throttling) is the unrealistic* stable standard imo
 * make sure drives/pci devices are not sharing lanes (causes instability) check your bios manual(RTFM)
 * you can unplug and hold down power button for 15 to 30 seconds to discharge residual electricity
@@ -517,8 +546,10 @@
 * Enable Above 4G memory/Crypto Currency mining/MMIO BIOS assignment (if you have more than 4gb of vram)
 * Above Above 4G memory/Crypto Currency mining/MMIO BIOS assignment lets the system map all of your GPUs VRAM/PCIe resources above the 4GB address limit, preventing conflicts and ensuring full stability/compatibility
 #
-* set rebar off in bios to avoid a potential mess
+* turn rebar off if/when microsoft or nvidia break it
 * ReBAR needs CSM off/UEFI on/Above 4G memory/Crypto Currency mining/MMIO BIOS assignment
+#
+* install m.2 drivers (random info)
 ---
 ---
 ---
@@ -527,3 +558,28 @@
 * press <kbd>⊞ Win+R</kbd> type "cmd" then type "%windir%\system32\drivers"
 * get list: 
 * press <kbd>⊞ Win+R</kbd> type "cmd" then type "dir C:\Windows\System32\drivers\*.sys /b"
+---
+---
+---
+## 🟩 Event Viewer (check if you are having weird problems):
+* press <kbd>⊞ Win+R</kbd> type "eventvwr /c:System"
+---
+---
+---
+## 🟩 find dlss versions for every game on your C:\ drive
+```python
+$FormatEnumerationLimit = -1
+Get-ChildItem -Path "C:\" -Filter "nvngx*.dll" -Recurse -ErrorAction SilentlyContinue |
+ForEach-Object {
+    $ver = (Get-Item $_.FullName).VersionInfo.FileVersion -replace ',', '.'
+    [PSCustomObject]@{
+        FullName      = $_.FullName
+        VersionNumber = $ver
+    }
+} | Format-Table -AutoSize
+```
+---
+---
+---
+## 🟩 RamDisk
+* its a thing
