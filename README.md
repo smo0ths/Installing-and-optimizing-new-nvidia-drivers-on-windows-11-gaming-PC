@@ -250,6 +250,9 @@
 * can measure end-to-end latency more accurately
 * you can break down where latency is introduced (CPU, GPU, or display)
 * markers only appear if the game itself supports Reflex and exposes those hooks
+#
+* rtss > setup > enable framerate limiter > choose (if using)
+* rtss > set fraterate limit (-2 under monitor max hz)
 ---
 ---
 ---
@@ -343,7 +346,7 @@
 ## 🟩 FPS cap:
 * for VRR (variable refresh rate) or LFC (Low Framerate Compensation) and/or keeping thermals/utilization down
 #
-* framerate limiter types (lowest latency from writen):
+* framerate limiter types (lowest latency from written):
 * game engine(native reflex): latency=lowest, slight fps drop possible, always preferred when reflex sdk is integrated, lowest latency with proper pipeline control
 * async: latency=near‑lowest, frame pacing can look uneven, universal fallback when reflex isn’t available, competitive play where latency matters most
 * nvidia reflex (rtss): latency=near‑lowest(similar to ullm), frame pacing can look uneven, external substitute for reflex in games that don’t support it, forces near‑zero buffer
@@ -354,8 +357,6 @@
 * Reflex(0)/1 fps buffer caps are lowest latency (some limiters can add frame buffers adding latency)
 * best practice -2fps under refresh rate
 * AI frame gens can be capped (reflex limiter or others) to lower utilizations, smooth motion seems to like no cap (maybe fixed in newer driver)
-* rtss > set fraterate limit (-2 under monitor max hz)
-* rtss > setup > enable framerate limiter > choose
 ---
 ---
 ---
