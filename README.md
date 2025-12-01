@@ -77,7 +77,7 @@
 ---
 ---
 ---
-## 🟩 VRR ect:
+## 🟩 LATENCY/VRR ect:
 * Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/vsync/ULMB2/DyAc
 #
 * your monitor will have an option to turn it on or off
@@ -103,6 +103,10 @@
 * find stable frame times:
 * find your lowest fluctuation fps(or 1% lows) during high intensity multiplayer or heavy rpg game ect and set fps cap there or just rely on gsnyc
 * dont go lower than 130 fps cap with framegens or you will start to notice it (some might be fine with that)
+#
+* your goal should be to have no more than 9ms latency in your frame times
+* games without reflex will need LLM ultra to work properly with sync modes (rarely ultra can cause stutter/lag on some API)
+* if you are not using syncs/LLM ultra/reflex then use -2 fps frame cap of max hz and LLM on(Maximum Pre-Rendered Frames 1) or LLM off and Maximum Pre-Rendered Frames 1 or more set in nvidiaProfileInspector
 ---
 ---
 ---
@@ -268,14 +272,6 @@
 * FvSvc (nvfvsdksvc_x64.exe,FrameViewSDK) allows statistics overlay
 #
 * you can also just install FrameView App by itself its lightweight
----
----
----
-## 🟩 frame latency stuff:
-* Maximum Pre-Rendered Frames/Low Latency Mode/Future Frame Rendering/Nvidia Reflex
-* your goal should be to have no more than 9ms latency in your frame times
-* games without reflex will need low latency mode on ultra to work properly with sync modes (rarely ultra can cause stutter/lag on some API)
-* if you are not using syncs/low latency mode ultra/reflex then use -2 fps frame cap of max hz and low latency mode on(Maximum Pre-Rendered Frames 1, or low latency mode off and Maximum Pre-Rendered Frames 1 threw 8 in nvidiaProfileInspector)
 ---
 ---
 ---
