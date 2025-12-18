@@ -1,7 +1,7 @@
 ## Installing and optimizing new nvidia drivers on windows 11 gaming PC:
 #### check 🟩 Extra for advanced info (i cover a lot)
 #
-* download driver > run NVCleanstall.exe > use driver files on disk
+* [download driver studio/GRD](https://www.nvidia.com/en-us/geforce/drivers/) > run NVCleanstall.exe > use driver files on disk
 * check Legacy Control Panel > Microsoft Visual C 2017 Runtimes > PhysX
 * check disable installer telemetry & advertising > perform clean install > disable Ansel
 * check show expert tweaks > disable HDCP
@@ -16,7 +16,7 @@
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot
 * reboot*
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot > uncheck > exit without restarting*
-* run Display Driver Uninstaller.exe as admin (DDU) > options > check remove physX > uncheck prevent downloads of drivers/save log files/create a restore point/auto check for DDU updates/show offers
+* run Display Driver Uninstaller.exe as admin (DDU) > options > check remove physX > uncheck prevent downloads of drivers/save log files/create a restore point/auto check for DDU updates/show offers/amd/intel specific options
 * select device type > GPU > Clean and restart (reboots*)
 #
 * install driver click custom (advanced) and next
@@ -50,7 +50,7 @@
 #
 * open Display settings (right click):
 * Color profile > Automatically manage color for apps > off (very important) (use your monitor for color or this will destroy colors, ACM will turn itself back on when changing output color depth in NvCpl so dont do that after, check 🟩 for more info)
-* Graphics > Auto HDR > Off*
+* Graphics > Auto HDR > Off* (unless testing on game that doesn't support native HDR)
 * Graphics > Optimizations for windowed games > On
 * Graphics > Advanced graphics settings > Hardware-accelerated GPU scheduling (HAGS) (Required* for framegen) > On
 * Graphics > Custom settings for applications (remove apps or make sure the games are set to high performance)
@@ -94,7 +94,7 @@
 * 4b → snycs/all the above with or w/o fps cap (gsync range) (recommended for most games and use 1 → for competitive)
 * 5 → snycs/all the above with fps cap for LFC(Low Framerate Compensation)
 #
-* gsnyc helps if a games fps is unstable and fluctuates around 70-130 fps because 130 fps as the lowest fluctiation would be harder to notice
+* gsnyc helps if a games fps is unstable and fluctuates around 70-111 fps because 111 fps as the lowest fluctiation would be harder to notice
 * latency is: Input → Game logic → GPU → Display → Your eyes
 * blur busters recommend force on vsync in NvCpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
 * ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
@@ -165,7 +165,7 @@
 * higher UI values can fix tonemapping in complex UI elements like maps in games (450+ nits values)
 * HDR is about contrast and color space
 #
-* HDR adds a little latency
+* HDR doesn't add latency on proper HDR monitors (if it does its tiny)
 * use Video > Adjust video image settings > RTX video enhancement > super resolution/high dynamic range to enhance content
 * put ICC Profiles in here press <kbd>⊞ Win+R</kbd> type %SystemDrive%Windows/System32/spool/drivers/color
 * find manufactures icc profile they are for SDR or just use windows default
@@ -278,8 +278,8 @@
 ## 🟩 mouse/keyboard:
 * dpi should be 1000/1300/1600 for lowest latency (1000 recommended)
 * hz should be 1000 or 2000hz (higher will raise cpu % usage and 8000hz should be fine for a keyboard all you need for these is USB 2.0)
-* sensitivity, i like 1:1 6in 1080° turn for freelook/reflex sights and 9in 90° for anything 4x+ scopes (for 3rd person RPG games 4in 1080° for freelook)
-* keep your sensitivity the same so you dont suck, find that perfect 1:1 sens for competitive i used to use 7in 1080° turn
+* sensitivity, i use 1:1 7in 1080° turn for freelook/reflex sights and 9in 90° for anything 4x+ scopes (for 3rd person RPG games 4in 1080° for freelook feels good)
+* keep your sensitivity the same so you dont suck, find that perfect 1:1 sens for competitive
 #
 * best rapid trigger settings all keys (0.6 actuation is pretty much a mouse click)
 * actuation point(0.6) continuous rapid trigger(0.2 sensitivity) 1000hz/8000hz (competitive games faster)
@@ -425,6 +425,8 @@
 #
 * add obs as a profile for nvidia (to check if it has weird settings)
 * run obs as admin (for gamecapture to work)
+* stream > destination > server > choose closest to you
+* uncheck all but one audio track obs (in Advanced Audio Properties > Tracks) this is for editing audio tracks out
 * CoreAudio AAC encoder not worth it unless streaming audio 128/160/192 flat out (unless FFmpeg AAC encoder is the best now idk)
 ---
 ---
@@ -442,6 +444,13 @@
 * Multiple page files are processed parallelly to split IO operations, which noticeably increases the performance.
 * click on all drives and uncheck in general compress/allow files to have contents indexed
 * use [MonitorIO](https://github.com/smo0ths/MonitorIO) i made if you want to see IO in realtime
+---
+---
+---
+## 🟩 Certificates stuff:
+* go to Personal > Certificates and remove anything suspect (be careful)
+* browsers can auto trust these (uncheck allow firefox to auto trust thrid-party root certs if you want in privacy & security)
+* press <kbd>⊞ Win+R</kbd> type "certmgr.msc"
 ---
 ---
 ---
