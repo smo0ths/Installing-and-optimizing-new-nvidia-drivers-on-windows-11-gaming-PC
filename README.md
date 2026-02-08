@@ -1,13 +1,12 @@
 ## Installing and optimizing new nvidia drivers on windows 11 gaming PC:
 #### check 🟩 Extra for advanced info (i cover a lot)
 #
-* [download driver studio/GRD](https://www.nvidia.com/en-us/geforce/drivers/) > run NVCleanstall.exe > use driver files on disk
+* [download driver studio/GRD](https://www.nvidia.com/en-us/geforce/drivers/) > run [NVCleanstall.exe](https://www.techpowerup.com/download/techpowerup-nvcleanstall/) > use driver files on disk
 * check Legacy Control Panel > Microsoft Visual C 2017 Runtimes > PhysX
 * check disable installer telemetry & advertising > perform clean install > disable Ansel
 * check show expert tweaks > disable HDCP
 * next > build package
 #
-* nvidiaProfileInspector delete "settings.xml" press <kbd>⊞ Win+R</kbd> type "%localappdata%\NVIDIA Profile Inspector"
 * update nvidiaProfileInspector: [nvidiaProfileInspector](https://github.com/Orbmu2k/nvidiaProfileInspector/releases)
 #
 * Disable GPU stuff (afterburner ect/auto-startups)
@@ -16,7 +15,7 @@
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot
 * reboot*
 * press <kbd>⊞ Win+R</kbd> type "msconfig" > boot > safe boot > uncheck > exit without restarting*
-* run Display Driver Uninstaller.exe as admin (DDU) > options > check remove physX > uncheck prevent downloads of drivers/save log files/create a restore point/auto check for DDU updates/show offers/amd/intel specific options
+* run [Display Driver Uninstaller.exe](https://www.wagnardsoft.com/display-driver-uninstaller-ddu) > options > check remove physX > uncheck prevent downloads of drivers/save log files/create a restore point/auto check for DDU updates/show offers/amd/intel specific options
 * select device type > GPU > Clean and restart (reboots*)
 #
 * install driver click custom (advanced) and next
@@ -27,11 +26,11 @@
 * in Adjust image settings with preview > check Use my preference emphasizing Performance > Apply
 * check Use the advanced 3D image settings > Apply
 #
-* 3D Settings > Manage 3D settings > Anisotropic filtering > Appplication-controlled (or off/4x/8x/16x)
+* 3D Settings > Manage 3D settings > Anisotropic filtering > Appplication-controlled (or off/4x/8x/16x) (if you set 16x you need to reset Allow LOD bias)
 * 3D Settings > Manage 3D settings > Low Latency Mode > Ultra (check 🟩 for more info)
 * 3D Settings > Manage 3D settings > Power management mode > Prefer maximum performance
 * 3D Settings > Manage 3D settings > Preferred refresh rate > Highest available
-* 3D Settings > Manage 3D settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling)
+* 3D Settings > Manage 3D settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling, i think new def is 16gb though)
 * 3D Settings > Manage 3D settings > Anisotropic sample optimization > On (or leave default)
 * 3D Settings > Manage 3D settings > Negative LOD bias > Allow (Clamp for 0 LOD bias, 0/+ helps GPU bound, -0 used in dlss ect for image quality)
 * 3D Settings > Manage 3D settings > Texture filtering Quality > High performance (or leave default)
@@ -43,8 +42,8 @@
 * Display > Adjust desktop color settings > Digital vibrance 100% (all monitors) > Apply
 * Display > Adjust desktop size and position > No scaling* seems to be the best option keeping native rendering
 * Display > Adjust desktop size and position > Perform scaling on display or gpu (gpu scaling with new cards seems to be the move test or leave default)
-* Display > Set up G-SYNC > check Enable settings for the selected display model if you are using gsnyc (check 🟩 for more info)
-* toggling gsnyc/freesync(on monitor/NvCpl) can reset digital vibrance/ACM turn vibrance up* and ACM off* again
+* Display > Set up G-SYNC > check Enable settings for the selected display model if you are using gsync (check 🟩 for more info)
+* toggling gsync/freesync(on monitor/NvCpl) can reset digital vibrance/ACM turn vibrance up* and ACM off* again
 * Display > Set up multiple displays > set your *Primary display
 * Video > Adjust video color settings > check With the NVIDIA settings > Advanced > Dynamic range > Full (0-255) (all monitors) > Apply
 #
@@ -78,7 +77,7 @@
 ---
 ---
 ## 🟩 LATENCY/VRR ect:
-* Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/vsync/ULMB2/DyAc
+* Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/vsync/ULMB2/DyAc/Pulsar
 #
 * your monitor will have an option to turn it on or off
 * Only way to tell if VRR is working is in monitor on screen display (OSD)
@@ -94,14 +93,15 @@
 * 4b → snycs/all the above with or w/o fps cap (gsync range) (recommended for most games and use 1 → for competitive)
 * 5 → snycs/all the above with fps cap for LFC(Low Framerate Compensation)
 #
-* gsnyc helps if a games fps is unstable and fluctuates around 70-111 fps because 111 fps as the lowest fluctiation would be harder to notice
+* gsync helps if a games fps is unstable and fluctuate (because what even is optimization anymore 60fps is slow motion, 111fps or 9ms should be the standard lowest 0% lows at least)
 * latency is: Input → Game logic → GPU → Display → Your eyes
 * blur busters recommend force on vsync in NvCpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
-* ULMB2 backlight strobing on some monitors with gsnyc (ULMB1 killed brightness, ULMB2 is just the best IPS tech use it if you have it)
+* ULMB2 backlight strobing on some monitors with gsync (ULMB1 killed brightness, ULMB2 was just the best IPS tech use it if you have it)
+* Pulsar with new gsync modules seem to be the best stuff out rn
 * DyAc(1/2) fastest TN panel stuff
 #
 * find stable frame times:
-* find your lowest fluctuation fps(or 1% lows) during high intensity multiplayer or heavy rpg game ect and set fps cap there or just rely on gsnyc
+* find your lowest fluctuation fps(or 1% lows) during high intensity multiplayer or heavy rpg game ect and set fps cap there or just rely on gsync
 * dont go lower than 130 fps cap with framegens or you will start to notice it (some might be fine with that)
 #
 * your goal should be to have no more than 9ms latency in your frame times
@@ -115,12 +115,11 @@
 * search for game or edit global or add game and edit
 #
 * what i use in _GLOBAL_DRIVER_PROFILE (Base Profile)
-* DLSS > Forced Preset Letter > set Preset K (Transformer) or Preset E (CNN) (recommended K)
-* DLSS-RR > Forced Preset Letter > set Preset J (Transformer) or Preset E (CNN) (recommended J)
 * rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 * Apply changes
 #
 * update your DLSS files manualy from [streamline-sdk-v#.#.#\bin\x64](https://github.com/NVIDIA-RTX/Streamline/releases) (devs dont do it and idk what nvidia is doing)
+* why demo liam? [NVIDIA/DLSS/releases](https://github.com/NVIDIA/DLSS/releases)
 * you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
 #
 * to see what preset you are using type this on/off command in cmd.exe (press <kbd>⊞ Win+R</kbd> type "cmd")
@@ -132,9 +131,9 @@
 * Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 * CUDA - Force P2 State off or on (test per-game)
 * Smooth Motion - Enable off/on (test if you cant use FG or OptiScaler/smooth motion adds lots of latency)
-* DLSS - Enable DLL Override (test its a wip)
-* DLSS-FG - Enable DLL Override (test its a wip)
-* DLSS-RR - Enable DLL Override (test its a wip)
+* DLSS - Enable DLL Override - test or leave default - Preset K (Transformer/gen1/gen2(310.5~)) - Preset E (CNN) - M = Performance - L = Ultra Performance
+* DLSS-FG - Enable DLL Override - test or leave default
+* DLSS-RR - Enable DLL Override - test or leave default - Preset J (Transformer) or Preset E (CNN)
 ---
 ---
 ---
@@ -169,7 +168,7 @@
 * use Video > Adjust video image settings > RTX video enhancement > super resolution/high dynamic range to enhance content
 * put ICC Profiles in here press <kbd>⊞ Win+R</kbd> type %SystemDrive%Windows/System32/spool/drivers/color
 * find manufactures icc profile they are for SDR or just use windows default
-* search for sRGB to Gamma 2.2 to test aswell it actually does something to SDR
+* I use [srgb_to_gamma2p2_sdr.icm](https://github.com/dylanraga/win11hdr-srgb-to-gamma2.2-icm) a lot (quick gamma lower for all windows and games threw magic that microsoft has never changed since 1996)
 * cables, make sure you have proper cables
 * ABL (Automatic Brightness Limiter) is a thing
 ---
@@ -203,7 +202,7 @@
 * 3(band)           3000.0/ 1.0/0.70 (Hz/dB/oct)
 * 4(change to Band) 7000.0/ 3.5/0.70 (Hz/dB/oct)
 #
-* RNNoise for noise cancellation settings: vad threshold 0.95 / grace period 50 / retroactive 0 (this can remove whispering/whisling and adds a little latency)
+* [RNNoise](https://github.com/werman/noise-suppression-for-voice) for noise cancellation settings: vad threshold 0.95 / grace period 50 / retroactive 0 (this can remove whispering/whisling and adds a little latency)
 * press <kbd>⊞ Win+R</kbd> type "mmsys.cpl" disable* Signal Enhancements (bass boost/virtual surround/room correction/loudness equalization/speaker fill/noise suppression/echo cancellation/automatic gain control/ect)
 * disable all other audio devices  press <kbd>⊞ Win+R</kbd> type "mmsys.cpl"
 ---
@@ -281,11 +280,11 @@
 * sensitivity, i use 1:1 7in 1080° turn for freelook/reflex sights and 9in 90° for anything 4x+ scopes (for 3rd person RPG games 4in 1080° for freelook feels good)
 * keep your sensitivity the same so you dont suck, find that perfect 1:1 sens for competitive
 #
-* best rapid trigger settings all keys (0.6 actuation is pretty much a mouse click)
-* actuation point(0.6) continuous rapid trigger(0.2 sensitivity) 1000hz/8000hz (competitive games faster)
-* actuation point(0.6) traditional rapid trigger(0.6 sensitivity) 1000hz/8000hz (momentum/physics heavier movement games faster)
-* actuation point(0.8) continuous rapid trigger(0.2 sensitivity) 1000hz/8000hz (competitive games fast)
-* actuation point(0.8) traditional rapid trigger(0.8 sensitivity) 1000hz/8000hz (momentum/physics heavier movement games fast)
+* best rapid trigger settings all keys (0.6mm actuation is pretty much a mouse click)
+* actuation point(0.6mm) continuous rapid trigger(0.2mm sensitivity) 1000hz/8000hz (competitive games faster)
+* actuation point(0.6mm) traditional rapid trigger(0.6mm sensitivity) 1000hz/8000hz (momentum/physics heavier movement games faster)
+* actuation point(0.8mm) continuous rapid trigger(0.2mm sensitivity) 1000hz/8000hz (competitive games fast)
+* actuation point(0.8mm) traditional rapid trigger(0.8mm sensitivity) 1000hz/8000hz (momentum/physics heavier movement games fast)
 ---
 ---
 ---
@@ -351,7 +350,8 @@
 * back edge sync: latency=highest, best pacing, single‑player or cinematic experiences where smoothness matters more than responsiveness
 #
 * Reflex(0)/1 fps buffer caps are lowest latency (some limiters can add frame buffers adding latency)
-* best practice -2fps under refresh rate
+* best practice -2fps under refresh rate (on static refresh rate)
+* freesync might need -10 or -5 fps lower then max hz to function correctly based on the fps limiter/panel tech used
 * AI frame gens can be capped (reflex limiter or others) to lower utilizations, smooth motion seems to like no cap (maybe fixed in newer driver)
 ---
 ---
@@ -381,7 +381,7 @@
 ---
 ---
 ---
-## 🟩 Automatically manage color/automatic color management (ACM)
+## 🟩 Automatically manage color/automatic color management (ACM) (ACM is SDR only)
 * System > Display > Color management > Automatically manage color for apps > off
 * Only used in SDR, ACM reads the EDID and tries to clamp to sRGB if your monitor has a wide gamut
 * If your monitor does not have wide gamut or is clamped to sRGB this will only make colors even less accurate (desaturate colors)
@@ -394,9 +394,10 @@
 * ideal distance your eyes should be for 4k 27inch monitor (min 16.8inch/max 20.4inch) and pointing at 33.3% below the top of your monitor flat
 * only ever use your monitor to change sharpness disable it everywhere else (unless its dlss then default is prob intentional for PQ without monitor sharpness or any PQ accurate filter in game engines who knows)
 * make sure max brightness is on, anything that dims your screen is set off, OLED users research what your settings do, then adjust brightness
-* OLED = perfect blacks, but brightness + burn‑in concerns.
-* Mini‑LED = brightness champ, but local dimming zones matter.
-* Micro‑LED = the dream tech that does it all (someday).
+* DSC(Display Stream Compression) does add latency but its said to be small but who tested it? is everyone using the same DSC? who knows...
+* OLED = perfect blacks, but brightness + burn‑in concerns
+* Mini LED = brightness champ, but local dimming zones matter
+* Micro LED = best? (the words will be a marketing scam for awhile and who knows if the tech will be called the same when its good)
 ---
 ---
 ---
@@ -405,7 +406,7 @@
 * output > rescale output disabled > constant bitrate > 6000/7500kbps > keyframe 2s > P5 > HQ > uncheck both > 2 b-frames
 * output > audio > 256kbps or 320kbps
 * audio > 48kHz
-* video > output 1664x936 > 60fps
+* video > output 1664x936 > area(~4k base)/lanczos(~2k base) > 60fps
 * advanced > sRGB > limited > enable browser source hardware acceleration (check if GPU is better uncheck if CPU is better or test it)
 #
 * 🔴 Re-add your browser(browser sources) after updates and often to fix old rendering bugs/memory leaks/Trigger optimized versions of embedded web content/reset any lingering settings or permissions that raise 3D gpu usage and lower performance
@@ -433,7 +434,7 @@
 ---
 ## 🟩 Interrupt Affinity Policy Tool and Msi Utility v3:
 * these are tools to see Interrupt Affinity and interrupt priority and they edit the registry so there's a manual way
-* all i know is drives set interrupt priority to high and advanced policies to IrqPolicySpreadMessagesAcrossAllProcessors and internet adaptors/pci/usb host controllers are defaulted
+* all i know is drives set interrupt priority to high and advanced policies to IrqPolicySpreadMessagesAcrossAllProcessors and internet adapters/pci/usb host controllers are defaulted
 * only tweak i can see helping latency is interrupt priorites to high for a sound card on one host controller or maybe anything, as long as you dont have too much on high interrupt prioirity
 * if there is data on any actual differences let me know
 ---
