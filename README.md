@@ -84,14 +84,16 @@
 * Monitor's Over Drive setting can't be higher than normal usually or it will cause inverse ghosting with VRR on
 * G‑Sync for windowed and full screen mode (can cause rare desktop stutter issues so dont use)
 #
-* loweset latency is this order from written
-* 1 → reflex no fps cap (with high fps)
-* 2 → ultra low latency mode no fps cap
-* 3 → all the above with fps cap (stable frame times)
-* 4 → Maximum Pre-Rendered Frames 1 (low latency mode on) no fps cap
-* 4a → Maximum Pre-Rendered Frames 1 (low latency mode on) with fps cap (stable frame times)
-* 4b → snycs/all the above with or w/o fps cap (gsync range) (recommended for most games and use 1 → for competitive)
-* 5 → snycs/all the above with fps cap for LFC(Low Framerate Compensation)
+* lowest latency is this order from written:
+* reflex > ULLM >= LLM on(1 pre-renderd frame) >= gsync >= fps cap if your fps is fluctuating under you gsync range > LFC
+* or
+* 1a → reflex (with high stable fps well over max hz)
+* 1b → ultra low latency mode(ULLM) (with high stable fps well over max hz)
+* 1c → reflex/ULLM with fps cap (stable frame times/highest fps stable lows you can get from your pc)
+* 2 → low latency mode on(Maximum Pre-Rendered Frames 1) (with high stable fps well over max hz)
+* 2 → low latency mode on(Maximum Pre-Rendered Frames 1) with fps cap (stable frame times/highest fps stable lows you can get from your pc)
+* 2 → gsync/freesync with or without fps cap (gsync range) (recommended for most)
+* 3 → gsync/freesync with fps cap for LFC(Low Framerate Compensation) (60 to 120 ect)
 #
 * gsync helps if a games fps is unstable and fluctuate (because what even is optimization anymore 60fps is slow motion, 111fps or 9ms should be the standard lowest 0% lows at least)
 * latency is: Input → Game logic → GPU → Display → Your eyes
