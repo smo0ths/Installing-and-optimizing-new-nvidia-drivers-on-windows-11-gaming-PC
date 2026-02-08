@@ -85,7 +85,7 @@
 * G‑Sync for windowed and full screen mode (can cause rare desktop stutter issues so dont use)
 #
 * lowest latency is this order from written:
-* reflex > ULLM >= LLM on(1 pre-renderd frame) >= gsync >= fps cap if your fps is fluctuating under you gsync range > LFC
+* reflex > ULLM >= LLM on(1 pre-rendered frame) >= gsync >= fps cap if your fps is fluctuating under you gsync range > LFC
 * or
 * 1a → reflex (with high stable fps well over max hz)
 * 1b → ultra low latency mode(ULLM) (with high stable fps well over max hz)
