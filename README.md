@@ -87,13 +87,14 @@
 * lowest latency is this order from written:
 * reflex > ULLM >= LLM on(1 pre-rendered frame) >= gsync >= fps cap if your fps is fluctuating under you gsync range > LFC
 * or
-* 1a → reflex (with high stable fps well over max hz)
-* 1b → ultra low latency mode(ULLM) (with high stable fps well over max hz)
-* 1c → reflex/ULLM with fps cap (stable frame times/highest fps stable lows you can get from your pc)
-* 2 → low latency mode on(Maximum Pre-Rendered Frames 1) (with high stable fps well over max hz)
-* 2 → low latency mode on(Maximum Pre-Rendered Frames 1) with fps cap (stable frame times/highest fps stable lows you can get from your pc)
-* 2 → gsync/freesync with or without fps cap (gsync range) (recommended for most)
-* 3 → gsync/freesync with fps cap for LFC(Low Framerate Compensation) (60 to 120 ect)
+* 1 → reflex (with high stable fps well over max hz)
+* 2 → reflex with fps cap (stable frame times/highest fps stable lows you can get from your pc)
+* 3a → ultra low latency mode(ULLM) (with high stable fps well over max hz)
+* 3b → low latency mode on(Maximum Pre-Rendered Frames 1) (with high stable fps well over max hz)
+* 4a → ultra low latency mode(ULLM) with fps cap (stable frame times/highest fps stable lows you can get from your pc)
+* 4b → low latency mode on(Maximum Pre-Rendered Frames 1) with fps cap (stable frame times/highest fps stable lows you can get from your pc)
+* 4c → gsync/freesync with or without fps cap (gsync range) (recommended for most)
+* 5 → gsync/freesync with fps cap for LFC(Low Framerate Compensation) (60 to 120 ect)
 #
 * gsync helps if a games fps is unstable and fluctuate (because what even is optimization anymore 60fps is slow motion, 111fps or 9ms should be the standard lowest 0% lows at least)
 * latency is: Input → Game logic → GPU → Display → Your eyes
