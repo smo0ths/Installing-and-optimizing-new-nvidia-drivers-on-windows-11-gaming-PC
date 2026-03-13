@@ -355,7 +355,7 @@
 #
 * Reflex(0)/1 fps buffer caps are lowest latency (some limiters can add frame buffers adding latency)
 * best practice -2fps under refresh rate (on static refresh rate)
-* freesync/gsync might need -10 or -5 fps lower then max hz to function correctly based on the fps limiter and panel tech used
+* freesync/gsync might need -10 or -5 fps lower than max hz to function correctly based on the fps limiter and panel tech used
 * AI frame gens can be capped (reflex limiter or others) to lower utilizations, smooth motion seems to like no cap (maybe fixed in newer driver)
 ---
 ---
