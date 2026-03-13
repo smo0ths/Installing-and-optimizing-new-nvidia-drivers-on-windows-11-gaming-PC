@@ -99,14 +99,15 @@
 * gsync helps if a games fps is unstable and fluctuate (because what even is optimization anymore 60fps is slow motion, 111fps or 9ms should be the standard lowest 0% lows at least)
 * latency is: Input → Game logic → GPU → Display → Your eyes
 * blur busters recommend force on vsync in NvCpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
-* ULMB2 backlight strobing on some monitors with gsync (ULMB1 killed brightness, ULMB2 was just the best IPS tech use it if you have it)
-* Pulsar with new gsync modules seem to be the best stuff out rn
+* ULMB is backlight strobing tech (ULMB1 killed brightness, ULMB2 is better) (IPS monitors)
+* Pulsar with new gsync modules seem to be the best strobing tech stuff out rn (IPS monitors)
 * DyAc(1/2) fastest TN panel stuff
 #
 * find stable frame times:
 * find your lowest fluctuation fps(or 1% lows) during high intensity multiplayer or heavy rpg game ect and set fps cap there or just rely on gsync
 * dont go lower than 130 fps cap with framegens or you will start to notice it (some might be fine with that)
 #
+* Fullscreen Exclusive(FSE) bypasses dwm for lowest latency/best performance, but alt tabbing is slow/flickery, force it by checking disable fullscreen optimizations in .exe or just setting game to fullscreen if supported
 * your goal should be to have no more than 9ms latency in your frame times
 * games without reflex will need LLM ultra to work properly with sync modes (rarely ultra can cause stutter/lag on some API)
 * if you are not using syncs/LLM ultra/reflex then use -2 fps frame cap of max hz and LLM on(Maximum Pre-Rendered Frames 1) or LLM off and Maximum Pre-Rendered Frames 1 or more set in nvidiaProfileInspector
@@ -143,9 +144,9 @@
 ## 🟩 Proper HDR calibration info:
 * install Windows HDR Calibration app, turn monitor in HDR mode, enable HDR in windows
 * Minimum luminance: ~0 nits OLED, ~0.001/0.02 nits MiniLED set to 0 (HDR10 cant encode literal zero)
-* Maximum luminance (MaxCLL): find yours on RTINGS or somewhere on the internet
-* Maximum full frame luminance (MaxFALL): find yours on RTINGS or somewhere on the internet
-* color saturation: set to 0
+* Maximum luminance (MaxCLL): find yours on RTINGS(Sustained 10% Window) or somewhere on the internet
+* Maximum full frame luminance (MaxFALL): find yours on RTINGS(Sustained 100% Window) or somewhere on the internet
+* color saturation: set to 0%(most accurate) 50% or 100% or a little if you just want more saturation (make a few profiles)
 #
 * MaxCLL = brightest pixel (single brightest pixel in the entire content in nits) 
 * MaxFALL = brightest average frame (brightest average frame in the entire content in nits)
@@ -354,7 +355,7 @@
 #
 * Reflex(0)/1 fps buffer caps are lowest latency (some limiters can add frame buffers adding latency)
 * best practice -2fps under refresh rate (on static refresh rate)
-* freesync might need -10 or -5 fps lower then max hz to function correctly based on the fps limiter/panel tech used
+* freesync/gsync might need -10 or -5 fps lower then max hz to function correctly based on the fps limiter and panel tech used
 * AI frame gens can be capped (reflex limiter or others) to lower utilizations, smooth motion seems to like no cap (maybe fixed in newer driver)
 ---
 ---
