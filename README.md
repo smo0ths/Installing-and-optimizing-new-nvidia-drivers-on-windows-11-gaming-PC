@@ -29,7 +29,7 @@
 * 3D Settings > Manage 3D settings > Anisotropic filtering > Appplication-controlled (or off/4x/8x/16x) (if you set 16x you need to reset Allow LOD bias)
 * 3D Settings > Manage 3D settings > Low Latency Mode > Ultra (check 🟩 for more info)
 * 3D Settings > Manage 3D settings > Power management mode > Prefer maximum performance
-* 3D Settings > Manage 3D settings > Preferred refresh rate > Highest available
+* 3D Settings > Manage 3D settings > Preferred refresh rate > Highest available (this can revert when changing settings)
 * 3D Settings > Manage 3D settings > Shader Cache Size > Unlimited (def is too low for lots of games will cause compile shader lag, stutters and slow compiling, i think new def is 16gb though)
 * 3D Settings > Manage 3D settings > Anisotropic sample optimization > On (or leave default)
 * 3D Settings > Manage 3D settings > Negative LOD bias > Allow (Clamp for 0 LOD bias, 0/+ helps GPU bound, -0 used in dlss ect for image quality)
@@ -118,9 +118,22 @@
 * nvidiaProfileInspector (as admin) (click magnifying glass for more options)
 * search for game or edit global or add game and edit
 #
-* what i use in _GLOBAL_DRIVER_PROFILE (Base Profile)
+* what i currently use in _GLOBAL_DRIVER_PROFILE (Base Profile)
+* DLSS - Enable DLL Override > On (v310.5.2 or higher)
+* DLSS - Forced Preset Letter > Preset L (this depends on setting, best idea is to leave default)
+* DLSS-FG - Enable DLL Override > On (v310.5.2 or higher)
+* DLSS-RR - Enable DLL Override > On (v310.5.2 or higher)
+* DLSS-RR - Forced Preset Letter > Preset E (prob best to leave default idk)
 * rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 * Apply changes
+#
+* DLSS/RR presets quality to performance(also default to other/test):
+* DLSS 4.5 (transformer gen1.5/gen2): K(default)>L(made for performance mode)>M(made for ultra performance mode)
+* DLSS 4.5 (note): L>M can look better than K in quality/balanced (ymmv)
+* DLSS 4.0 (transformer gen1): K(default)
+* DLSS 3.5 (transformer gen0): E(default)>J>D
+* DLSS 3.5 (CNN): C(default)>B>A
+* Ray Reconstruction: E(default)>D(transformer) C>B>A(CNN) J(variant)
 #
 * update your DLSS files manualy from [streamline-sdk-v#.#.#\bin\x64](https://github.com/NVIDIA-RTX/Streamline/releases) (devs dont do it and idk what nvidia is doing)
 * why demo liam? [NVIDIA/DLSS/releases](https://github.com/NVIDIA/DLSS/releases)
@@ -132,12 +145,10 @@
 * off*
 * reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 0 /f
 #
+* other settings:
 * Texture Filtering - LOD Bias set what you want (Negative LOD bias needs to be set to Allow) (for testing)
 * CUDA - Force P2 State off or on (test per-game)
-* Smooth Motion - Enable off/on (test if you cant use FG or OptiScaler/smooth motion adds lots of latency)
-* DLSS - Enable DLL Override - test or leave default - Preset K (Transformer/gen1/gen2(310.5~)) - Preset E (CNN) - M = Performance - L = Ultra Performance
-* DLSS-FG - Enable DLL Override - test or leave default
-* DLSS-RR - Enable DLL Override - test or leave default - Preset J (Transformer) or Preset E (CNN)
+* Smooth Motion - test if you cant use FG or OptiScaler, smooth motion adds lots of latency so never use it
 ---
 ---
 ---
