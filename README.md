@@ -40,8 +40,8 @@
 * Display > Change resolution > set res and hz (all monitors) > Apply
 * Display > Change resolution > check use NVIDIA color settings set BPC (8bpc or 10bpc) and output dynamic range to full (0-255 rgb) (all monitors) > Apply
 * Display > Adjust desktop color settings > Digital vibrance 100% (all monitors) > Apply
-* Display > Adjust desktop size and position > No scaling* seems to be the best option keeping native rendering
-* Display > Adjust desktop size and position > Perform scaling on display or gpu (gpu scaling with new cards seems to be the move test or leave default)
+* Display > Adjust desktop size and position > No scaling
+* Display > Adjust desktop size and position > Perform scaling on display (gpu scaling is fine)
 * Display > Set up G-SYNC > check Enable settings for the selected display model if you are using gsync (check 🟩 for more info)
 * toggling gsync/freesync(on monitor/NvCpl) can reset digital vibrance/ACM turn vibrance up* and ACM off* again
 * Display > Set up multiple displays > set your *Primary display
@@ -81,7 +81,7 @@
 #
 * your monitor will have an option to turn it on or off
 * Only way to tell if VRR is working is in monitor on screen display (OSD)
-* Monitor's Over Drive setting can't be higher than normal usually or it will cause inverse ghosting with VRR on
+* Monitor's Over Drive setting can't be higher than normal usually or it will cause aaaaaaaaaaaaaaaaaaaaaerse ghosting with VRR on
 * G‑Sync for windowed and full screen mode (can cause rare desktop stutter issues so dont use)
 #
 * lowest latency is this order from written:
@@ -98,7 +98,7 @@
 #
 * gsync helps if a games fps is unstable and fluctuate (because what even is optimization anymore 60fps is slow motion, 111fps or 9ms should be the standard lowest 0% lows at least)
 * latency is: Input → Game logic → GPU → Display → Your eyes
-* blur busters recommend force on vsync in NvCpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC)
+* blur busters recommend force on vsync in NvCpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC/VRR fluctuation i dont recommend)
 * ULMB is backlight strobing tech (ULMB1 killed brightness, ULMB2 is better) (IPS monitors)
 * Pulsar with new gsync modules seem to be the best strobing tech stuff out rn (IPS monitors)
 * DyAc(1/2) fastest TN panel stuff
@@ -119,21 +119,22 @@
 * search for game or edit global or add game and edit
 #
 * what i currently use in _GLOBAL_DRIVER_PROFILE (Base Profile)
+* (note) just forcing preset letter and making sure game has updated DLSS files might be more stable
 * DLSS - Enable DLL Override > On (v310.5.2 or higher)
-* DLSS - Forced Preset Letter > Preset L (this depends on setting, best idea is to leave default)
+* DLSS - Forced Preset Letter > Preset M (depends)
 * DLSS-FG - Enable DLL Override > On (v310.5.2 or higher)
 * DLSS-RR - Enable DLL Override > On (v310.5.2 or higher)
-* DLSS-RR - Forced Preset Letter > Preset E (prob best to leave default idk)
+* DLSS-RR - Forced Preset Letter > Preset E (test)
 * rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 * Apply changes
 #
 * DLSS/RR presets quality to performance(also default to other/test):
-* DLSS 4.5 (transformer gen1.5/gen2): K(default)>L(made for performance mode)>M(made for ultra performance mode)
-* DLSS 4.5 (note): L>M can look better than K in quality/balanced (ymmv)
+* DLSS 4.5 (transformer gen1.5/gen2): K(default)>M(made for performance mode)>L(made for ultra performance mode)
+* DLSS 4.5 (note): M>L is supported in all modes but remember what they were made for realistically upscaling to 4k
 * DLSS 4.0 (transformer gen1): K(default)
 * DLSS 3.5 (transformer gen0): E(default)>J>D
 * DLSS 3.5 (CNN): C(default)>B>A
-* Ray Reconstruction: E(default)>D(transformer) C>B>A(CNN) J(variant)
+* Ray Reconstruction(gen1): E(default/transformer)>D(transformer) C>B>A(CNN) J(variant)
 #
 * update your DLSS files manualy from [streamline-sdk-v#.#.#\bin\x64](https://github.com/NVIDIA-RTX/Streamline/releases) (devs dont do it and idk what nvidia is doing)
 * why demo liam? [NVIDIA/DLSS/releases](https://github.com/NVIDIA/DLSS/releases)
