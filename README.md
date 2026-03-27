@@ -114,7 +114,7 @@
 ---
 ---
 ---
-## 🟩 nvidia Profile Inspector:
+## 🟩 nvidia Profile Inspector/DLSS:
 * nvidiaProfileInspector (as admin) (click magnifying glass for more options)
 * search for game or edit global or add game and edit
 #
