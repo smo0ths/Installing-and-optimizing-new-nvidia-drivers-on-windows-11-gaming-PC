@@ -81,7 +81,7 @@
 #
 * your monitor will have an option to turn it on or off
 * Only way to tell if VRR is working is in monitor on screen display (OSD)
-* Monitor's Over Drive setting can't be higher than normal usually or it will cause aaaaaaaaaaaaaaaaaaaaaerse ghosting with VRR on
+* Monitor's Over Drive setting can't be higher than normal usually or it will cause inverse ghosting with VRR on
 * G‑Sync for windowed and full screen mode (can cause rare desktop stutter issues so dont use)
 #
 * lowest latency is this order from written:
