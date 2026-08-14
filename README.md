@@ -1,5 +1,6 @@
 ## Installing and optimizing new nvidia drivers on windows 11 gaming PC:
 #### check 🟩 Extra for advanced info (i cover a lot)
+* v596.49 is lastest driver before nvcpl was removed and is a GRD only (i'll be using this for awhile)
 #
 * [download driver studio/GRD](https://www.nvidia.com/en-us/geforce/drivers/) > run [NVCleanstall.exe](https://www.techpowerup.com/download/techpowerup-nvcleanstall/) > use driver files on disk
 * check Legacy Control Panel > Microsoft Visual C 2017 Runtimes > PhysX
@@ -42,8 +43,6 @@
 * Display > Adjust desktop color settings > Digital vibrance 100% (all monitors) > Apply
 * Display > Adjust desktop size and position > No scaling
 * Display > Adjust desktop size and position > Perform scaling on display (gpu scaling is fine)
-* Display > Set up G-SYNC > check Enable settings for the selected display model if you are using gsync (check 🟩 for more info)
-* toggling gsync/freesync(on monitor/NvCpl) can reset digital vibrance/ACM turn vibrance up* and ACM off* again
 * Display > Set up multiple displays > set your *Primary display
 * Video > Adjust video color settings > check With the NVIDIA settings > Advanced > Dynamic range > Full (0-255) (all monitors) > Apply
 #
@@ -57,11 +56,11 @@
 * press <kbd>⊞ Win+R</kbd> type "colorcpl" add/remove color profiles (click add... and add profiles, check Add as HDR Profile for hdr ones)
 * open Display settings > turn HDR on* and set SDR content brightness then turn off if not using (check 🟩 for more info)
 #
-* turn off extra monitors on reboots (to avoid scaling/hz problems)
 * reboot
 * Enable GPU stuff (afterburner ect/auto-startups)
 * Enable internet (press <kbd>⊞ Win+R</kbd> type ncpa.cpl)
 * reboot (again)
+* make sure ACM is off and digital vibrance is set correctly if you change settings
 ---
 ---
 ---
@@ -72,14 +71,16 @@
 ## 🟩 Advanced github i made and use:
 * [Registry Tweaks Refresh](https://github.com/smo0ths/Registry-Tweaks-Refresh.bat)
 * [My Network Adaptor Settings](https://github.com/smo0ths/My-Network-Adaptor-Settings)
-* [FIREWALL lock down but functional ruleset](https://github.com/smo0ths/FIREWALL-lock-down-but-functional-ruleset)
+* [FIREWALL lock down but functional ruleset](https://github.com/smo0ths/FIREWALL-lock-down-but-functional-ruleset) (run again after driver install)
 ---
 ---
 ---
 ## 🟩 LATENCY/VRR ect:
-* Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/vsync/ULMB2/DyAc/Pulsar
+* tech: Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/vsync/ULMB2/DyAc/Pulsar/nebula ELMB
 #
 * your monitor will have an option to turn it on or off
+* Display > Set up G-SYNC > check Enable settings for the selected display model if you are using gsync (if using)
+* toggling gsync/freesync(on monitor/NvCpl) can reset digital vibrance/ACM turn vibrance up* and ACM off* again
 * Only way to tell if VRR is working is in monitor on screen display (OSD)
 * Monitor's Over Drive setting can't be higher than normal usually or it will cause inverse ghosting with VRR on
 * G‑Sync for windowed and full screen mode (can cause rare desktop stutter issues so dont use)
@@ -119,11 +120,9 @@
 * search for game or edit global or add game and edit
 #
 * what i currently use in _GLOBAL_DRIVER_PROFILE (Base Profile)
-* (note) just forcing preset letter and making sure game has updated DLSS files might be more stable
-* DLSS - Enable DLL Override > On (v310.5.2 or higher)
+* Manually update DLSS (all .dll files in games)
 * DLSS - Forced Preset Letter > Preset M (depends)
-* DLSS-FG - Enable DLL Override > On (v310.5.2 or higher)
-* DLSS-RR - Enable DLL Override > On (v310.5.2 or higher)
+* DLSS-FG - Forced Preset Letter > Preset B (test)
 * DLSS-RR - Forced Preset Letter > Preset E (test)
 * rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 * Apply changes
@@ -134,10 +133,11 @@
 * DLSS 4.0 (transformer gen1): K(default)
 * DLSS 3.5 (transformer gen0): E(default)>J>D
 * DLSS 3.5 (CNN): C(default)>B>A
-* Ray Reconstruction(gen1): E(default/transformer)>D(transformer) C>B>A(CNN) J(variant)
+* Ray Reconstruction (gen1): E(default/transformer)>D(transformer) C>B>A(CNN) J(variant)
+* Frame Generation (transformer gen1.5/gen2): A(default) B(Newer model)
 #
 * update your DLSS files manualy from [streamline-sdk-v#.#.#\bin\x64](https://github.com/NVIDIA-RTX/Streamline/releases) (devs dont do it and idk what nvidia is doing)
-* why demo liam? [NVIDIA/DLSS/releases](https://github.com/NVIDIA/DLSS/releases)
+* [NVIDIA/DLSS/releases](https://github.com/NVIDIA/DLSS/releases)
 * you can use dev DLSS dll files from github (CTRL+ALT+] changes preset) (CTRL+ALT+Y on/off autoexposure) real time testing
 #
 * to see what preset you are using type this on/off command in cmd.exe (press <kbd>⊞ Win+R</kbd> type "cmd")
@@ -171,8 +171,8 @@
 * On Windows, the "SDR content brightness slider" controls how "SDR white maps into HDR mode" its relative to your displays peak brightness, not a fixed nit value*
 * SDR white mapping = a Windows system setting that decides how legacy SDR content is displayed inside HDR mode
 * This setting doesnt change MaxCLL/MaxFALL (content metadata), but it affects how comfortable SDR looks alongside HDR highlights
-* Reference HDR1000 → ~75/80% for ~400/600 nits → 100% for ~700/800 nits (SDR white mapping)
-* Reference HDR1700/2000 → ~50/75% for ~400/600 nits → ~75/80% for ~600/800 nits → 100% for ~1000/1200 nits (SDR white mapping)
+* Reference HDR1000 → ~75/80% for ~400/600 nits → 100% for ~700/800 nits (SDR white mapping) (approx.)
+* Reference HDR1700/2000 → ~50/75% for ~400/600 nits → ~75/80% for ~600/800 nits → 100% for ~1000/1200 nits (SDR white mapping) (approx.)
 #
 * movies/shows: MaxCLL/MaxFALL = static metadata values from mastering data (conservative, fixed for entire title)
 * games: HDR tone mapping is variable/dynamic, not bound to static MaxCLL/MaxFALL the values can shift in real time
@@ -184,7 +184,7 @@
 * use Video > Adjust video image settings > RTX video enhancement > super resolution/high dynamic range to enhance content
 * put ICC Profiles in here press <kbd>⊞ Win+R</kbd> type %SystemDrive%Windows/System32/spool/drivers/color
 * find manufactures icc profile they are for SDR or just use windows default
-* I use [srgb_to_gamma2p2_sdr.icm](https://github.com/dylanraga/win11hdr-srgb-to-gamma2.2-icm) a lot (quick gamma lower for all windows and games threw magic that microsoft has never changed since 1996)
+* I may use [srgb_to_gamma2p2_sdr.icm](https://github.com/dylanraga/win11hdr-srgb-to-gamma2.2-icm) (quick gamma lower for all windows and games threw magic that microsoft has never changed since 1996)
 * cables, make sure you have proper cables
 * ABL (Automatic Brightness Limiter) is a thing
 ---
@@ -271,7 +271,7 @@
 * markers only appear if the game itself supports Reflex and exposes those hooks
 #
 * rtss > setup > enable framerate limiter > choose (if using)
-* rtss > set fraterate limit (-2 under monitor max hz)
+* rtss > set fraterate limit
 ---
 ---
 ---
@@ -359,7 +359,7 @@
 #
 * framerate limiter types (lowest latency from written):
 * game engine(native reflex): latency=lowest, slight fps drop possible, always preferred when reflex sdk is integrated, lowest latency with proper pipeline control
-* async: latency=near‑lowest, frame pacing can look uneven, universal fallback when reflex isn’t available, competitive play where latency matters most
+* async: latency=near‑lowest, frame pacing can look uneven, universal fallback when reflex isn’t available
 * nvidia reflex (rtss): latency=near‑lowest(similar to ullm), frame pacing can look uneven, external substitute for reflex in games that don’t support it, forces near‑zero buffer
 * front edge sync: latency=moderate, balanced pacing, non‑reflex games where you want steadier frame pacing without huge latency penalties
 * nvidia driver limiter: latency=higher(adds buffer), stable pacing, only use if the game has no limiter at all, otherwise avoid due to added latency
@@ -525,6 +525,12 @@
 ---
 ---
 ---
+## 🟩 Reliability Monitor check:
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "perfmon /rel"
+* Control Panel\System and Security\Security and Maintenance\Reliability Monitor
+---
+---
+---
 ## 🟩 Windows Features (optionalfeatures):
 * press <kbd>⊞ Win+R</kbd> type "optionalfeatures" (in appwiz.cpl)
 * only things needed for gaming pc is
@@ -601,6 +607,13 @@ ForEach-Object {
     }
 } | Format-Table -AutoSize
 ```
+---
+---
+---
+## 🟩 what upscaling to use for DLSS/TAAU/TSR/CAS/FSR/XESS/PSSR/NIS/IS
+* 2560x1440 use 58%,67%,70%,77% for performance
+* 3328x1872 use 50%,58%,67%,70%,77% for performance
+* 3840x2160 use 33%,50%,58%,67%,70%,77% for performance
 ---
 ---
 ---
