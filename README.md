@@ -76,8 +76,6 @@
 ---
 ---
 ## 🟩 LATENCY/VRR ect:
-* tech: Variable Refresh Rate/FreeSync/G-Sync/AdaptiveSync/vsync/ULMB2/DyAc/Pulsar/nebula ELMB
-#
 * your monitor will have an option to turn it on or off
 * Display > Set up G-SYNC > check Enable settings for the selected display model if you are using gsync (if using)
 * toggling gsync/freesync(on monitor/NvCpl) can reset digital vibrance/ACM turn vibrance up* and ACM off* again
@@ -86,7 +84,7 @@
 * G‑Sync for windowed and full screen mode (can cause rare desktop stutter issues so dont use)
 #
 * lowest latency is this order from written:
-* reflex > ULLM >= LLM on(1 pre-rendered frame) >= gsync >= fps cap if your fps is fluctuating under you gsync range > LFC
+* reflex > ULLM ≥ LLM on(1 pre-rendered frame) ≥ gsync ≥ fps cap if your fps is fluctuating under you gsync range > LFC
 * or
 * 1 → reflex (with high stable fps well over max hz)
 * 2 → reflex with fps cap (stable frame times/highest fps stable lows you can get from your pc)
@@ -100,9 +98,8 @@
 * gsync helps if a games fps is unstable and fluctuate (because what even is optimization anymore 60fps is slow motion, 111fps or 9ms should be the standard lowest 0% lows at least)
 * latency is: Input → Game logic → GPU → Display → Your eyes
 * blur busters recommend force on vsync in NvCpl so when sync goes below or above monitor supported gsync hz it will still only show synced frames (test this may help LFC/VRR fluctuation i dont recommend)
-* ULMB is backlight strobing tech (ULMB1 killed brightness, ULMB2 is better) (IPS monitors)
-* Pulsar with new gsync modules seem to be the best strobing tech stuff out rn (IPS monitors)
-* DyAc(1/2) fastest TN panel stuff
+* best monitors (IMO): Pulsar ≥ Nebula ELMB ≥ DyAc > ULMB2
+* VA panel latency sucks in darker transition response don't game on one
 #
 * find stable frame times:
 * find your lowest fluctuation fps(or 1% lows) during high intensity multiplayer or heavy rpg game ect and set fps cap there or just rely on gsync
@@ -121,9 +118,9 @@
 #
 * what i currently use in _GLOBAL_DRIVER_PROFILE (Base Profile)
 * Manually update DLSS (all .dll files in games)
-* DLSS - Forced Preset Letter > Preset M (depends)
+* DLSS - Forced Preset Letter > Preset K or M
 * DLSS-FG - Forced Preset Letter > Preset B (test)
-* DLSS-RR - Forced Preset Letter > Preset E (test)
+* DLSS-RR - Forced Preset Letter > Preset F (test)
 * rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 * Apply changes
 #
@@ -133,8 +130,8 @@
 * DLSS 4.0 (transformer gen1): K(default)
 * DLSS 3.5 (transformer gen0): E(default)>J>D
 * DLSS 3.5 (CNN): C(default)>B>A
-* Ray Reconstruction (gen1): E(default/transformer)>D(transformer) C>B>A(CNN) J(variant)
-* Frame Generation (transformer gen1.5/gen2): A(default) B(Newer model)
+* Ray Reconstruction (gen1/gen2): F(4.5 transformer)>E(default/transformer)>D(transformer) C>B>A(CNN) J(variant)
+* Frame Generation (transformer gen1.5/gen2): B(Newer model)>A(default)
 #
 * update your DLSS files manualy from [streamline-sdk-v#.#.#\bin\x64](https://github.com/NVIDIA-RTX/Streamline/releases) (devs dont do it and idk what nvidia is doing)
 * [NVIDIA/DLSS/releases](https://github.com/NVIDIA/DLSS/releases)
@@ -209,7 +206,7 @@
 * (31Hz/62Hz/125Hz/250Hz/500Hz/1kHz/2kHz/4kHz/8kHz/16kHz) (0/0/+1/0/-1/+1/0/0/+1/+1) more color lower/medium volumes
 * for more bass/treble raise 62Hz/4kHz might need to raise higher freqs when you do for brightness (again 10bands kinda sucks)
 #
-* EQ voice: set your format to 1 channel* and 24bit/48kHz 
+* EQ voice: set your format to 1 channel*(or mono cable) and 24bit/48kHz(or hi-res)
 * everyone has a different sound freq and women might need a bit different eq
 * use Equalizer APO or something (Equalizer APO needs Signal Enhancements(enable audio enhancements) to function)
 * best universal from flat response eq: (i use VSTPlugins\ReaPlugs\reaeq-standalone.dll)
@@ -476,18 +473,45 @@
 * press <kbd>⊞ Win+R</kbd> type "control.exe keymgr.dll"
 * add/remove accounts
 * press <kbd>⊞ Win+R</kbd> type "ms-settings:emailandaccounts"
----
----
----
-## 🟩 power stuff:
-* press <kbd>⊞ Win+R</kbd> type "cmd" then type "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61" unlocks ultimate Performance
-* press <kbd>⊞ Win+R</kbd> type "powercfg.cpl" > check ultimate Performance
-* i also do
-* press <kbd>⊞ Win+R</kbd> type "cmd" then type "powercfg -setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0" default 15 minutes
-* press <kbd>⊞ Win+R</kbd> type "control.exe powercfg.cpl,,3" > desktop background settings > slide show > setting: paused
-* press <kbd>⊞ Win+R</kbd> type "control.exe powercfg.cpl,,3" > usb settings > usb selective suspend setting > setting: disabled
 #
+* check info on windows updates: [bleepingcomputer](https://www.bleepingcomputer.com/news/microsoft)
+---
+---
+---
+## 🟩 power stuff (Power Options):
+* press <kbd>⊞ Win+R</kbd> type "cmd" then type "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61" unlocks ultimate Performance
+* find GUID "powercfg /list"
+* set power scheme "powercfg /setactive *Power Scheme GUID*"
+#
+* list of commands in order:
+* Hard disk never
+* slide show paused
+* wireless adapter settings maximum performance
+* sleep never
+* allow wake timers disable
+* usb settings disable 
+* pci express power management off
+* processor power minimum state 100%
+* processor power maximum state 100%
+* display turn off never
+#
+* commands:
+* powercfg -setdcvalueindex SCHEME_CURRENT SUB_DISK DISKIDLE 0
+* powercfg -setdcvalueindex SCHEME_CURRENT 0d7dbae2-4294-402a-ba8e-26777e8488cd 309dce9b-bef4-4119-9921-a851fb12f0f4 1
+* powercfg -setdcvalueindex SCHEME_CURRENT 19cbb8fa-5279-450e-9fac-8a3d5fedd0c1 12bbebe6-58d6-4636-95bb-3217ef867c1a 0
+* powercfg -setdcvalueindex SCHEME_CURRENT SUB_SLEEP STANDBYIDLE 0
+* powercfg -setdcvalueindex SCHEME_CURRENT SUB_SLEEP HIBERNATEIDLE 0
+* powercfg -setdcvalueindex SCHEME_CURRENT 2a737441-1930-4402-8d77-b2bebba308a3 48e6b7a6-50f5-4782-a5d4-53bb8f07e226 0
+* powercfg -setdcvalueindex SCHEME_CURRENT SUB_PCIEXPRESS ASPM 0
+* powercfg -setdcvalueindex SCHEME_CURRENT SUB_PROCESSOR PROCTHROTTLEMIN 100
+* powercfg -setdcvalueindex SCHEME_CURRENT SUB_PROCESSOR PROCTHROTTLEMAX 100
+* powercfg -setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0
+#
+* or press <kbd>⊞ Win+R</kbd> type "powercfg.cpl" > check ultimate performance and do settings in there
 * debug or start over press <kbd>⊞ Win+R</kbd> type "powercfg -restoredefaultschemes"
+* check all "powercfg /query"
+* for Power Mode Plugged-in (AC): use -setdcvalueindex
+* for Power Mode Battery (DC): use -setacvalueindex and make your own for battery savings obviously
 ---
 ---
 ---
@@ -577,8 +601,6 @@
 #
 * turn rebar off if/when microsoft or nvidia break it
 * ReBAR needs CSM off/UEFI on/Above 4G memory/Crypto Currency mining/MMIO BIOS assignment
-#
-* install m.2 drivers (random info)
 ---
 ---
 ---
@@ -617,5 +639,8 @@ ForEach-Object {
 ---
 ---
 ---
-## 🟩 RamDisk
-* its a thing
+## 🟩 other
+* same drive for windows/cache/games/ect i've found to be better
+* RamDisk is still a thing that could be utilized
+* m.2's have drivers
+* update Chipset Device Software drivers [intel Chipset INF Utility](https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
