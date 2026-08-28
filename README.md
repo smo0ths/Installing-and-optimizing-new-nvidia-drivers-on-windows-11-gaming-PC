@@ -124,7 +124,7 @@
 * rBAR - Enable > Enabled (rebar can cause games to stutter/lag randomly/crash and run slow so test per-game)
 * Apply changes
 #
-* DLSS/RR presets quality to performance(also default to other/test):
+* DLSS/RR/FG preset info:
 * DLSS 4.5 (transformer gen1.5/gen2): K(default)>M(made for performance mode)>L(made for ultra performance mode)
 * DLSS 4.5 (note): M>L is supported in all modes but remember what they were made for realistically upscaling to 4k
 * DLSS 4.0 (transformer gen1): K(default)
