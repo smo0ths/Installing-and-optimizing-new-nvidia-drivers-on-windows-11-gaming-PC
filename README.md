@@ -505,7 +505,7 @@
 * powercfg -setdcvalueindex SCHEME_CURRENT SUB_PCIEXPRESS ASPM 0
 * powercfg -setdcvalueindex SCHEME_CURRENT SUB_PROCESSOR PROCTHROTTLEMIN 100
 * powercfg -setdcvalueindex SCHEME_CURRENT SUB_PROCESSOR PROCTHROTTLEMAX 100
-* powercfg -setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0
+* powercfg -setdcvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0
 #
 * or press <kbd>⊞ Win+R</kbd> type "powercfg.cpl" > check ultimate performance and do settings in there
 * debug or start over press <kbd>⊞ Win+R</kbd> type "powercfg -restoredefaultschemes"
